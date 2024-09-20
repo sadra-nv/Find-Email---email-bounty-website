@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Merriweather-Regular';
+        src: url(/app/fonts/Merriweather-Regular.ttf);
+        /* font-weight: 400; */
+    }
+}
