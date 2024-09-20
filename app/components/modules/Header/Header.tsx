@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Header() {
     return (
-        <header>
+        <header className='absolute top-0 left-0 w-full z-50'>
             <div className="container">
                 <div className="flex justify-between items-center py-12">
                     <Link href={'/'} className='flex items-center gap-2.5'>
