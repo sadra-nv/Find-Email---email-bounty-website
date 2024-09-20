@@ -1,7 +1,10 @@
 import Image from "next/image";
+import HeaderAnimation from "./components/modules/HeaderAnimation/HeaderAnimation";
 
 export default function Home() {
     return (
-        <div className="">Home</div>
+        <div className=" flex justify-center items-center">
+            <HeaderAnimation></HeaderAnimation>
+        </div>
     );
 }
