@@ -13,7 +13,7 @@ export default function page() {
                         <div className="col-span-5">
                             <div className="">
                                 <div className="">
-                                    <img src="/vectors/q-6c12dbae.png.svg" alt="" />
+                                    <img className="mix-blend-lighten" src="/vectors/q-6c12dbae.png.svg" alt="" />
                                 </div>
                             </div>
                         </div>
