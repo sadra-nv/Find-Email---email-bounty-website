@@ -9,6 +9,10 @@ export default function page() {
             <HeroSection></HeroSection>
             <CategoryList></CategoryList>
             <FilterableCardGallery></FilterableCardGallery>
+            <div className="">
+                
+            <img src="/vectors/Container.svg" alt="" />
+            </div>
         </div>
     )
 }

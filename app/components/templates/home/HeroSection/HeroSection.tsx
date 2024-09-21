@@ -938,7 +938,7 @@ export default function HeroSection() {
                         className="w-full absolute h-full z-30 top-0 left-0"
                         ref={canvasRef}
                     ></canvas>
-
+                    
                 </div>
             </div>
         </div>
