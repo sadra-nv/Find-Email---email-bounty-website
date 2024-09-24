@@ -29,7 +29,7 @@ export default function HeroSection() {
                         <h1 className=" text-4xl">Blog</h1>
                     </div>
                     <img
-                        className="absolute bottom-1/2 translate-y-1/2  left-1/2 -translate-x-1/2"
+                        className="w-14 absolute bottom-[calc(50%-15px)] lg:w-32 xl:w-auto  translate-y-1/2  left-1/2 -translate-x-1/2"
                         src="/images/database.svg"
                         alt=""
                     />

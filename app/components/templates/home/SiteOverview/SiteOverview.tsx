@@ -3,7 +3,7 @@ import React from 'react'
 export default function SiteOverview() {
     return (
         <section>
-            <div className="container">
+            <div className="container hidden">
                 <div className="flex flex-col pb-10">
                     <div className="py-6 mx-auto">
                         <img src="/images/q-7bea4872.png.png" alt="" />

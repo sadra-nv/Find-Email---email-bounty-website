@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function CategoryList() {
     return (
-        <div className="mb-12">
+        <div className="mb-12 hidden">
             <div className="container">
                 <div className="flex justify-center gap-10 w-full">
                     <Link

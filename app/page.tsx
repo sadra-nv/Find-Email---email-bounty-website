@@ -4,7 +4,7 @@ import HeaderAnimation from "./components/modules/HeaderAnimation/HeaderAnimatio
 export default function Home() {
     return (
         <div className=" flex justify-center items-center">
-            <HeaderAnimation></HeaderAnimation>
+            home
         </div>
     );
 }
