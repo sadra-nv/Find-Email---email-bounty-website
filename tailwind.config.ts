@@ -18,6 +18,15 @@ const config: Config = {
             },
             fontFamily: {
                 'merriweather-regular': 'Merriweather-Regular'
+            },
+            keyframes: {
+                rotate: {
+                    '0%, 100%': { transform: 'rotate(-201deg)' },
+                    '100%': { transform: 'rotate(159deg)' },
+                }
+            },
+            animation: {
+                "normal": 'rotate 3s infinite linear'
             }
         },
     },

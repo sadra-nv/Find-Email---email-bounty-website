@@ -4,15 +4,15 @@ export default function SiteOverview() {
     return (
         <section>
             <div className="container">
-                <div className="flex flex-col">
+                <div className="flex flex-col pb-10">
                     <div className="py-6 mx-auto">
                         <img src="/images/q-7bea4872.png.png" alt="" />
                     </div>
                     <div className="flex justify-center relative items-center">
                         <img src="/vectors/Background 1.png" className='absolute h-full' alt="" />
-                        <div className="absolute inset-0 pointer-events-none research-radar-scanner-wrapper-visible h-full animate-spin" >
-                            <div className="absolute w-full h-full -rotate-[201deg] research-radar-scanner">
-                                <div className="absolute inset-0 rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(99,102,241,.4)13.23%,rgba(3,0,20,0)50%)] before:rounded-full"></div>
+                        <div className="absolute inset-0 mx-auto h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-normal" >
+                            <div className="absolute h-full w-full -rotate-[201deg] research-radar-scanner">
+                                <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(99,102,241,.4)13.23%,rgba(3,0,20,0)50%)] before:rounded-full before:block"></div>
                             </div>
                         </div>
                         <img src="/icons/Group 238477.svg" className='absolute' alt="" />
