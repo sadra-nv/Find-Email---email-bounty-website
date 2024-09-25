@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function SiteOverview() {
     return (
-        <section>
-            <div className="container hidden">
+        <section className='overflow-hidden hidden'>
+            <div className="container">
                 <div className="flex flex-col pb-10">
                     <div className="py-6 mx-auto">
                         <img src="/images/q-7bea4872.png.png" alt="" />
@@ -16,6 +16,14 @@ export default function SiteOverview() {
                             </div>
                         </div>
                         <img src="/icons/Group 238477.svg" className='absolute' alt="" />
+                        <video className="absolute -right-1/3 h-4/5 mix-blend-lighten opacity-50" autoPlay muted loop>
+                            <source src="/videos/q-ba39153a.webm" type="video/webm" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <video className="absolute -left-1/3 h-4/5 mix-blend-lighten opacity-50" autoPlay muted loop>
+                            <source src="/videos/q-ba39153a.webm" type="video/webm" />
+                            Your browser does not support the video tag.
+                        </video>
                         <div className="grid grid-cols-2 w-full items-center justify-center">
                             <div className="flex flex-col justify-center items-center px-20 py-12">
                                 <img src="/vectors/11281907 1.svg" alt="" />

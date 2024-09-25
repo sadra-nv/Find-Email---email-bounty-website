@@ -6,7 +6,7 @@ export default function FilterableCardGallery() {
         <div className="">
             <div className="container">
                 <div className="grid grid-cols-7 gap-6">
-                <div className="col-span-2 flex flex-col gap-6">
+                    <div className="col-span-2 flex flex-col gap-6">
                         <div className="flex flex-col rounded-lg overflow-hidden bg-[#0B0B25]">
                             <div className="text-sm py-4 bg-gradient-to-t from-[#07255B] to-[#061742] text-center">
                                 Categories
