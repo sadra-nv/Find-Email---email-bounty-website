@@ -18,22 +18,22 @@ export default function HeroSection() {
     return (
         <div className="bg-gradient-to-b from-[#06265c] via-[#030014] to-[#030014]">
             <div className="container">
-                <div className="relative overflow-y-hidden pt-36 sm:pt-40 lg:pt-52 overflow-hidden flex items-center justify-center">
+                <div className="relative overflow-y-hidden pt-40 lg:pt-52 overflow-hidden flex items-center justify-center">
                     <video className="mix-blend-lighten" autoPlay muted loop>
                         <source src="/videos/q-c3d7becf.webm" type="video/webm" />
                         Your browser does not support the video tag.
                     </video>
-                    <div className="absolute flex items-center gap-0.5 top-36 sm:top-40 lg:top-52 left-1/2 -translate-x-1/2 ">
+                    <div className="absolute flex items-center gap-0.5 top-24 sm:top-40 lg:top-52 left-1/2 -translate-x-1/2 ">
                         <img className="w-6 sm:w-8 md:w-12" src="/icons/Email.svg" alt="" />
                         <h1 className="text-xl sm:text-2xl md:text-4xl">Blog</h1>
                     </div>
                     <img
-                        className="w-14 sm:w-24 md:w-28 absolute lg:w-36 xl:w-40"
+                        className="w-16 sm:w-24 md:w-28 absolute lg:w-36 xl:w-40"
                         src="/images/database.svg"
                         alt=""
                     />
 
-                    <svg className="w-full absolute top-36 sm:top-40 lg:top-52"
+                    <svg className="w-full absolute top-40 lg:top-52"
                         preserveAspectRatio="xMidYMax meet"
                         viewBox="0 0 1318 500"
                         fill="none"
