@@ -8,7 +8,7 @@ const Headersm = () => {
   return (
     <header className="absolute top-0 left-0 w-full z-50">
       <div className="container">
-        <div className="flex justify-between items-center py-12">
+        <div className="flex justify-between items-center py-8">
           <Link href={"/"} className="flex items-center gap-2.5">
             <img src="/images/logo.svg" alt="" />
             <h4 className="text-xl text-white font-bold">FindEmail</h4>
