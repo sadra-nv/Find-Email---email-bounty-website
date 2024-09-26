@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "./components/modules/Header/Header";
 import Footer from "./components/modules/Footer/Footer";
 import Headersm from "./components/modules/Header/Headersm";
-// import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",

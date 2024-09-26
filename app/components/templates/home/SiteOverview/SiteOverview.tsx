@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SiteOverview() {
     return (
-        <section className='overflow-hidden hidden'>
+        <section className='overflow-hidden'>
             <div className="container">
                 <div className="flex flex-col pb-10">
                     <div className="py-6 mx-auto">

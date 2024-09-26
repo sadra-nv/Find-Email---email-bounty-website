@@ -7,8 +7,10 @@ export default function page() {
     return (
         <div>
             <HeroSection></HeroSection>
+            <div className="hidden">
             <CategoryList></CategoryList>
             <FilterableCardGallery></FilterableCardGallery>
+            </div>
             <SiteOverview></SiteOverview>
         </div>
     )
