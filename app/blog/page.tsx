@@ -5,13 +5,13 @@ import SiteOverview from "../components/templates/home/SiteOverview/SiteOverview
 
 export default function page() {
     return (
-        <div>
+        <>
             <HeroSection></HeroSection>
             <div className="hidden">
-            <CategoryList></CategoryList>
-            <FilterableCardGallery></FilterableCardGallery>
+                <CategoryList></CategoryList>
+                <FilterableCardGallery></FilterableCardGallery>
             </div>
             <SiteOverview></SiteOverview>
-        </div>
+        </>
     )
 }
