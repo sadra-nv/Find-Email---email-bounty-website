@@ -6,8 +6,8 @@ export default function Footer() {
     <div className="bg-gradient-to-b from-[#8F5CE1] to-[#2E2291]">
       <div className="bg-[url('/images/bgfooter.svg')]">
       <div className="container">
-        <div className=" p-8  flex flex-col-reverse md:flex-row gap-10 md:justify-between">
-          <div className="b l flex justify-evenly md:flex-row-reverse w-full">
+        <div className=" p-8  flex flex-col-reverse md:flex-row gap-10 sm:gap-20 lg:gap-40 md:justify-between">
+          <div className="b l flex justify-between md:flex-row-reverse w-full">
             <ul className="flex flex-col gap-5  text-xs font-normal md:text-base">
               <li className="text-base md:text-[22px] font-bold">site</li>
               <li className="opacity-75">Pricing</li>
