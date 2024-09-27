@@ -8,10 +8,10 @@ export default function page() {
         <>
             <HeroSection></HeroSection>
             <div className="">
-                <CategoryList></CategoryList>
+                {/* <CategoryList></CategoryList> */}
                 {/* <FilterableCardGallery></FilterableCardGallery> */}
             </div>
-            {/* <SiteOverview></SiteOverview> */}
+            <SiteOverview></SiteOverview>
         </>
     )
 }
