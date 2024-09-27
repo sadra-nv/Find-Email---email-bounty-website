@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Pagination from "../Pagination/Pagination";
 
 export default function FilterableCardGallery() {
   return (
@@ -168,6 +169,9 @@ export default function FilterableCardGallery() {
                   </Link>
                 </button>
               </div>
+            </div>
+            <div className="hidden xl:flex justify-center col-span-3 mt-14">
+            <Pagination></Pagination>    
             </div>
           </div>
           <div className="xl:col-span-2 flex flex-col gap-6">
