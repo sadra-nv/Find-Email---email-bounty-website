@@ -15,12 +15,12 @@ export default function FilterableCardGallery() {
                   alt=""
                 />
                 <img
-                  className="absolute top-14 w-32 sm:w-auto sm:top-16"
+                  className="absolute top-14 w-32 sm:w-auto sm:top-16 xl:w-32 xl:top-14 2xl:w-auto 2xl:top-16"
                   src="/images/bitcoincore.png"
                   alt=""
                 />
               </div>
-              <div className="flex flex-col gap-4 md:ml-10">
+              <div className="flex flex-col gap-4 sm:ml-32 md:ml-10 lg:ml-36 xl:ml-10">
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-1">
                     <img src="/icons/Group 238267.svg" alt="" />
@@ -57,12 +57,12 @@ export default function FilterableCardGallery() {
                   alt=""
                 />
                 <img
-                  className="absolute top-14 w-32 sm:w-auto sm:top-16"
+                  className="absolute top-14 w-32 sm:w-auto sm:top-16 xl:w-32 xl:top-14 2xl:w-auto 2xl:top-16"
                   src="/images/bitcoincore.png"
                   alt=""
                 />
               </div>
-              <div className="flex flex-col gap-4 md:ml-10">
+              <div className="flex flex-col gap-4 sm:ml-32 md:ml-10 lg:ml-36 xl:ml-10">
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-1">
                     <img src="/icons/Group 238267.svg" alt="" />
@@ -96,12 +96,12 @@ export default function FilterableCardGallery() {
                   alt=""
                 />
                 <img
-                  className="absolute top-14 w-32 sm:w-auto sm:top-16"
+                  className="absolute top-14 w-32 sm:w-auto sm:top-16 xl:w-32 xl:top-14 2xl:w-auto 2xl:top-16"
                   src="/images/bitcoincore.png"
                   alt=""
                 />
               </div>
-              <div className="flex flex-col gap-4 md:ml-10">
+              <div className="flex flex-col gap-4 sm:ml-32 md:ml-10 lg:ml-36 xl:ml-10">
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-1">
                     <img src="/icons/Group 238267.svg" alt="" />
@@ -138,12 +138,12 @@ export default function FilterableCardGallery() {
                   alt=""
                 />
                 <img
-                  className="absolute top-14 w-32 sm:w-auto sm:top-16"
+                  className="absolute top-14 w-32 sm:w-auto sm:top-16 xl:w-32 xl:top-14 2xl:w-auto 2xl:top-16"
                   src="/images/bitcoincore.png"
                   alt=""
                 />
               </div>
-              <div className="flex flex-col gap-4 md:ml-10">
+              <div className="flex flex-col gap-4 sm:ml-32 md:ml-10 lg:ml-36 xl:ml-10">
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-1">
                     <img src="/icons/Group 238267.svg" alt="" />
