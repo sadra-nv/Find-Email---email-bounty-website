@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -43,26 +44,30 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="t r flex flex-col gap-5">
-            <h2 className="font-bold md:text-[22px]">Find email addresses in seconds</h2>
-            <p className="text-xs opacity-75 md:text-base">Subscribe to newsletter</p>
-            <div className="flex w-[248px] h-10 rounded-md overflow-hidden">
-              <input
-                placeholder="Your email"
-                className="w-full h-full px-3 text-black placeholder:text-sm"
-                type="text"
-                name=""
-                id=""
-              />
-              <button className="w-20 bg-gradient-to-b from-[#8F5CE1] to-[#2E2291]">
-                <i className="bi bi-arrow-right text-white"></i>
-              </button>
+              <div className="t r flex flex-col gap-5">
+                <h2 className="font-bold md:text-[22px]">
+                  Find email addresses in seconds
+                </h2>
+                <p className="text-xs opacity-75 md:text-base">
+                  Subscribe to newsletter
+                </p>
+                <div className="flex w-[248px] h-10 rounded-md overflow-hidden">
+                  <input
+                    placeholder="Your email"
+                    className="w-full h-full px-3 text-black placeholder:text-sm"
+                    type="text"
+                    name=""
+                    id=""
+                  />
+                  <button className="w-20 bg-gradient-to-b from-[#8F5CE1] to-[#2E2291]">
+                    <i className="bi bi-arrow-right text-white"></i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
-    </div>
       <div className="flex justify-center text-xs py-5">
         <p>©2024 Find Email All rights reserved.</p>
       </div>
