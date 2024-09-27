@@ -15,7 +15,7 @@ export default function SiteOverview() {
                                 <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(99,102,241,.4)13.23%,rgba(3,0,20,0)50%)] before:rounded-full before:block"></div>
                             </div>
                         </div>
-                        <img src="/icons/Group 238477.svg" className='absolute sm:h-20 sm:w-20' alt="" />
+                        <img src="/icons/Group 238477.svg" className='absolute h-20 sm:h-24' alt="" />
                         <video className="hidden lg:block absolute -right-1/2 xl:-right-1/3 h-4/5 mix-blend-lighten opacity-50" autoPlay muted loop>
                             <source src="/videos/q-ba39153a.webm" type="video/webm" />
                             Your browser does not support the video tag.
