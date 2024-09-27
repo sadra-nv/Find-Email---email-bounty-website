@@ -3,8 +3,8 @@ import React from 'react'
 export default function SiteOverview() {
     return (
         <section className='overflow-hidden'>
-            <div className="pt-6 mx-auto">
-                <img src="/images/q-7bea4872.png.png" alt="" />
+            <div className="pt-6 w-full">
+                <img src="/images/q-7bea4872.png.png" className='mx-auto' alt="" />
             </div>
             <div className="container">
                 <div className="flex flex-col pb-10">
@@ -16,15 +16,15 @@ export default function SiteOverview() {
                             </div>
                         </div>
                         <img src="/icons/Group 238477.svg" className='absolute sm:h-20 sm:w-20' alt="" />
-                        {/* <video className="absolute -right-1/3 h-4/5 mix-blend-lighten opacity-50" autoPlay muted loop>
+                        <video className="hidden lg:block absolute -right-1/2 xl:-right-1/3 h-4/5 mix-blend-lighten opacity-50" autoPlay muted loop>
                             <source src="/videos/q-ba39153a.webm" type="video/webm" />
                             Your browser does not support the video tag.
                         </video>
-                        <video className="absolute -left-1/3 h-4/5 mix-blend-lighten opacity-50" autoPlay muted loop>
+                        <video className="hidden lg:block absolute -left-1/2 xl:-left-1/3 h-4/5 mix-blend-lighten opacity-50" autoPlay muted loop>
                             <source src="/videos/q-ba39153a.webm" type="video/webm" />
                             Your browser does not support the video tag.
-                        </video> */}
-                        <div className="grid grid-cols-2 w-full items-center justify-center sm:px-24">
+                        </video>
+                        <div className="grid grid-cols-2 w-full items-center justify-center sm:px-32">
                             <div className="flex flex-col justify-center items-center py-12">
                                 <img src="/vectors/11281907 1.svg" alt="" />
                                 <span className='text-sm md:text-xl mt-2'>

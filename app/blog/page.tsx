@@ -9,7 +9,7 @@ export default function page() {
       <HeroSection></HeroSection>
       <CategoryList></CategoryList>
       <FilterableCardGallery></FilterableCardGallery>
-      {/* <SiteOverview></SiteOverview> */}
+      <SiteOverview></SiteOverview>
     </>
   );
 }
