@@ -2,15 +2,20 @@ import React from 'react'
 
 export default function SiteOverview() {
     return (
-        <section className='overflow-hidden'>
+        <section className='overflow-hidden pb-6'>
             <div className="pt-6 w-full">
                 <img src="/images/q-7bea4872.png.png" className='mx-auto' alt="" />
+            </div>
+            <div className="flex justify-center -translate-y-4 sm:-translate-y-10">
+                <a href="" className='text-sm md:text-lg rounded-lg bg-gradient-to-t from-[#07255B] to-[#061742] py-1.5 sm:py-2 px-4 sm:px-5'>
+                    Lorem Ipsum
+                </a>
             </div>
             <div className="container">
                 <div className="flex flex-col pb-10">
                     <div className="flex justify-center relative items-center">
                         <img src="/vectors/Background 1.png" className='absolute h-full object-cover' alt="" />
-                        <div className="hidden sm:block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-normal" >
+                        <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-normal" >
                             <div className="absolute h-full w-full -rotate-[201deg] research-radar-scanner">
                                 <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(99,102,241,.4)13.23%,rgba(3,0,20,0)50%)] before:rounded-full before:block"></div>
                             </div>
@@ -26,7 +31,7 @@ export default function SiteOverview() {
                         </video>
                         <div className="grid grid-cols-2 w-full items-center justify-center sm:px-32">
                             <div className="flex flex-col justify-center items-center py-12">
-                                <img src="/vectors/11281907 1.svg" alt="" />
+                                <img src="/vectors/11281907 1.svg" alt="" className='w-10 sm:w-auto' />
                                 <span className='text-sm md:text-xl mt-2'>
                                     2,028,741,188
                                 </span>
@@ -35,7 +40,7 @@ export default function SiteOverview() {
                                 </span>
                             </div>
                             <div className="flex flex-col justify-center items-center py-12">
-                                <img src="/vectors/m003t0635_i_business_growth_06oct_22 1.svg" alt="" />
+                                <img src="/vectors/m003t0635_i_business_growth_06oct_22 1.svg" alt="" className='w-10 sm:w-auto' />
                                 <span className='text-sm md:text-xl mt-2'>
                                     76,523
                                 </span>
@@ -44,7 +49,7 @@ export default function SiteOverview() {
                                 </span>
                             </div>
                             <div className="flex flex-col justify-center items-center py-12">
-                                <img src="/vectors/Email 2.svg" alt="" />
+                                <img src="/vectors/Email 2.svg" alt="" className='w-10 sm:w-auto' />
                                 <span className='text-sm md:text-xl mt-2'>
                                     496,580,230
                                 </span>
@@ -53,7 +58,7 @@ export default function SiteOverview() {
                                 </span>
                             </div>
                             <div className="flex flex-col justify-center items-center py-12">
-                                <img src="/vectors/data_management_10 1.svg" alt="" />
+                                <img src="/vectors/data_management_10 1.svg" alt="" className='w-10 sm:w-auto' />
                                 <span className='text-sm md:text-xl mt-2'>
                                     6,117,822,935
                                 </span>
