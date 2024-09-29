@@ -27,12 +27,13 @@ export default function FilterableCardGallery() {
                     <img src="/icons/Group 238267.svg" alt="" />
                     <span className="text-xs">New</span>
                   </div>
+                  <img src="/images/home/dot.png" alt="" />
                   <div className="flex items-center gap-1">
                     <img src="/icons/Group 238266.svg" alt="" />
                     <span className="text-xs">September 13, 2024</span>
                   </div>
                 </div>
-                <h2 className="text-sm">
+                <h2 className="text-sm/8">
                   What is Data Leakage and How to Prevent It? What is Data
                   Leakage
                 </h2>
@@ -69,12 +70,13 @@ export default function FilterableCardGallery() {
                     <img src="/icons/Group 238267.svg" alt="" />
                     <span className="text-xs">New</span>
                   </div>
+                  <img src="/images/home/dot.png" alt="" />
                   <div className="flex items-center gap-1">
                     <img src="/icons/Group 238266.svg" alt="" />
                     <span className="text-xs">September 13, 2024</span>
                   </div>
                 </div>
-                <h2 className="text-sm">
+                <h2 className="text-sm/8">
                   What is Data Leakage and How to Prevent It? What is Data
                   Leakage
                 </h2>
@@ -108,12 +110,13 @@ export default function FilterableCardGallery() {
                     <img src="/icons/Group 238267.svg" alt="" />
                     <span className="text-xs">New</span>
                   </div>
+                  <img src="/images/home/dot.png" alt="" />
                   <div className="flex items-center gap-1">
                     <img src="/icons/Group 238266.svg" alt="" />
                     <span className="text-xs">September 13, 2024</span>
                   </div>
                 </div>
-                <h2 className="text-sm">
+                <h2 className="text-sm/8">
                   What is Data Leakage and How to Prevent It? What is Data
                   Leakage
                 </h2>
@@ -150,12 +153,13 @@ export default function FilterableCardGallery() {
                     <img src="/icons/Group 238267.svg" alt="" />
                     <span className="text-xs">New</span>
                   </div>
+                  <img src="/images/home/dot.png" alt="" />
                   <div className="flex items-center gap-1">
                     <img src="/icons/Group 238266.svg" alt="" />
                     <span className="text-xs">September 13, 2024</span>
                   </div>
                 </div>
-                <h2 className="text-sm">
+                <h2 className="text-sm/8">
                   What is Data Leakage and How to Prevent It? What is Data
                   Leakage
                 </h2>
