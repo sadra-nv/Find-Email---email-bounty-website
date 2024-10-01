@@ -15,11 +15,11 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
       >
         <nav>
           <ul className="flex flex-col gap-6  text-sm px-6 py-5">
-            <i
-              onClick={() => setIsShowMenu((e) => !e)}
-              className="bi bi-x-square text-2xl cursor-pointer w-fit"
-            ></i>
-            <li className="mt-16">
+            <span className="cursor-pointer w-fit" onClick={() => setIsShowMenu((e) => !e)}>
+              <img src="/icons/cancel.svg" alt="" />
+            </span>
+            
+            <li className="mt-10">
               <Link href={"/"} className="flex items-center gap-1">
                 <img src="/icons/Group.svg" alt="" />
                 Home
