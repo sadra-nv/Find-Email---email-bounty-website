@@ -1,4 +1,4 @@
-import HeroSection from "@/app/components/templates/home/HeroSection/HeroSection";
+// import HeroSection from "@/app/components/templates/home/HeroSection/HeroSection";
 import Link from "next/link";
 import React from "react";
 

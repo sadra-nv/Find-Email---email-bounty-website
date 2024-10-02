@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Pagination from "../Pagination/Pagination";
+import FilterableCard from "./FiltrableCard";
 
 export default function FilterableCardGallery() {
   return (
@@ -8,174 +9,18 @@ export default function FilterableCardGallery() {
       <div className="container">
         <div className="grid xl:grid-cols-7 gap-24">
           <div className="xl:col-span-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-            <div className="">
-              <div className="relative flex justify-center items-center">
-                <img
-                  className="mix-blend-lighten "
-                  src="/images/ii.png"
-                  alt=""
-                />
-                <img
-                  className="absolute top-14 w-32 sm:w-auto sm:top-16 xl:w-32 xl:top-14 2xl:w-auto 2xl:top-16"
-                  src="/images/bitcoincore.png"
-                  alt=""
-                />
-              </div>
-              <div className="flex flex-col gap-4 sm:ml-32 md:ml-10 lg:ml-36 xl:ml-10">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1">
-                    <img src="/icons/Group 238267.svg" alt="" />
-                    <span className="text-xs">New</span>
-                  </div>
-                  <img src="/images/home/dot.png" alt="" />
-                  <div className="flex items-center gap-1">
-                    <img src="/icons/Group 238266.svg" alt="" />
-                    <span className="text-xs">September 13, 2024</span>
-                  </div>
-                </div>
-                <h2 className="text-sm/8">
-                  What is Data Leakage and How to Prevent It? What is Data
-                  Leakage
-                </h2>
-                <button className="w-fit">
-                  <Link
-                    href={"/"}
-                    className="flex items-center gap-1 py-4 px-5 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
-                  >
-                    Login/Register
-                    <img src="/icons/13 1.svg" alt="" />
-                  </Link>
-                </button>
-              </div>
-            </div>
+            <FilterableCard />
             <div className="justify-center items-center hidden xl:flex">
-                <img src="/images/home/mon.png" alt="" />
+              <img src="/images/home/mon.png" alt="" />
             </div>
-            <div className="">
-              <div className="relative flex justify-center items-center">
-                <img
-                  className="mix-blend-lighten"
-                  src="/images/ii.png"
-                  alt=""
-                />
-                <img
-                  className="absolute top-14 w-32 sm:w-auto sm:top-16 xl:w-32 xl:top-14 2xl:w-auto 2xl:top-16"
-                  src="/images/bitcoincore.png"
-                  alt=""
-                />
-              </div>
-              <div className="flex flex-col gap-4 sm:ml-32 md:ml-10 lg:ml-36 xl:ml-10">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1">
-                    <img src="/icons/Group 238267.svg" alt="" />
-                    <span className="text-xs">New</span>
-                  </div>
-                  <img src="/images/home/dot.png" alt="" />
-                  <div className="flex items-center gap-1">
-                    <img src="/icons/Group 238266.svg" alt="" />
-                    <span className="text-xs">September 13, 2024</span>
-                  </div>
-                </div>
-                <h2 className="text-sm/8">
-                  What is Data Leakage and How to Prevent It? What is Data
-                  Leakage
-                </h2>
-                <button className="w-fit">
-                  <Link
-                    href={"/"}
-                    className="flex items-center gap-1 py-4 px-5 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
-                  >
-                    Login/Register
-                    <img src="/icons/13 1.svg" alt="" />
-                  </Link>
-                </button>
-              </div>
-            </div>
-            <div className="">
-              <div className="relative flex justify-center items-center">
-                <img
-                  className="mix-blend-lighten"
-                  src="/images/ii.png"
-                  alt=""
-                />
-                <img
-                  className="absolute top-14 w-32 sm:w-auto sm:top-16 xl:w-32 xl:top-14 2xl:w-auto 2xl:top-16"
-                  src="/images/bitcoincore.png"
-                  alt=""
-                />
-              </div>
-              <div className="flex flex-col gap-4 sm:ml-32 md:ml-10 lg:ml-36 xl:ml-10">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1">
-                    <img src="/icons/Group 238267.svg" alt="" />
-                    <span className="text-xs">New</span>
-                  </div>
-                  <img src="/images/home/dot.png" alt="" />
-                  <div className="flex items-center gap-1">
-                    <img src="/icons/Group 238266.svg" alt="" />
-                    <span className="text-xs">September 13, 2024</span>
-                  </div>
-                </div>
-                <h2 className="text-sm/8">
-                  What is Data Leakage and How to Prevent It? What is Data
-                  Leakage
-                </h2>
-                <button className="w-fit">
-                  <Link
-                    href={"/"}
-                    className="flex items-center gap-1 py-4 px-5 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
-                  >
-                    Login/Register
-                    <img src="/icons/13 1.svg" alt="" />
-                  </Link>
-                </button>
-              </div>
-            </div>
+            <FilterableCard />
+            <FilterableCard />
             <div className="justify-center items-center hidden xl:flex">
-                <img src="/images/home/mon.png" alt="" />
+              <img src="/images/home/mon.png" alt="" />
             </div>
-            <div className="">
-              <div className="relative flex justify-center items-center">
-                <img
-                  className="mix-blend-lighten"
-                  src="/images/ii.png"
-                  alt=""
-                />
-                <img
-                  className="absolute top-14 w-32 sm:w-auto sm:top-16 xl:w-32 xl:top-14 2xl:w-auto 2xl:top-16"
-                  src="/images/bitcoincore.png"
-                  alt=""
-                />
-              </div>
-              <div className="flex flex-col gap-4 sm:ml-32 md:ml-10 lg:ml-36 xl:ml-10">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1">
-                    <img src="/icons/Group 238267.svg" alt="" />
-                    <span className="text-xs">New</span>
-                  </div>
-                  <img src="/images/home/dot.png" alt="" />
-                  <div className="flex items-center gap-1">
-                    <img src="/icons/Group 238266.svg" alt="" />
-                    <span className="text-xs">September 13, 2024</span>
-                  </div>
-                </div>
-                <h2 className="text-sm/8">
-                  What is Data Leakage and How to Prevent It? What is Data
-                  Leakage
-                </h2>
-                <button className="w-fit">
-                  <Link
-                    href={"/"}
-                    className="flex items-center gap-1 py-4 px-5 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
-                  >
-                    Login/Register
-                    <img src="/icons/13 1.svg" alt="" />
-                  </Link>
-                </button>
-              </div>
-            </div>
+            <FilterableCard />
             <div className="hidden xl:flex justify-center col-span-3 mt-14">
-            <Pagination></Pagination>    
+              <Pagination></Pagination>
             </div>
           </div>
           <div className="xl:col-span-2 flex flex-col gap-6">
