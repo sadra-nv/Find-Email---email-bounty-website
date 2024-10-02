@@ -75,6 +75,43 @@
   transform: rotateX(40deg) translateX(-50%);
 }
 
+/* BLOGS HALOS */
+/* .card-halo {
+  animation: halo-glow 1s ease-in-out infinite alternate;
+  
+} */
+
+/* .card-halo {
+  background: linear-gradient(95deg, #f5d0fe, #7e22ce);
+  background-size: 400% 400%;
+
+  animation: AnimationName 5s ease infinite,
+    halo-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 22% 0%;
+  }
+  50% {
+    background-position: 79% 100%;
+  }
+  100% {
+    background-position: 22% 0%;
+  }
+}
+
+@keyframes halo-glow {
+  0% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #7e22ce, 0 0 20px #f5d0fe,
+      0 0 25px #030014, 0 0 30px #030014, 0 0 35px #030014;
+  }
+  100% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #f5d0fe, 0 0 15px #f5d0fe,
+      0 0 15px #7e22ce, 0 0 10px #7e22ce, 0 0 15px #7e22ce, 0 0 5px #7e22ce;
+  }
+} */
+
 /* BLOGS OVERVIEW ARC GLOW */
 .glowing-circle {
   animation: glowing 1s ease-in-out infinite alternate;

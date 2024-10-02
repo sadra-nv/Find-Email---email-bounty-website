@@ -93,7 +93,7 @@ export default function HeroSection() {
     const shootingStarSpeed = { min: 10, max: 15 };
     const shootingStarOpacityDelta = 0.01;
     const trailLengthDelta = 0.01;
-    const shootingStarEmittingInterval = 2000;
+    const shootingStarEmittingInterval = 500;
     const shootingStarLifeTime = 500;
     const maxTrailLength = 300;
 

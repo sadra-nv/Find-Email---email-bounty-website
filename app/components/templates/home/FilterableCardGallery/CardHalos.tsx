@@ -1,21 +1,14 @@
 export default function CardHalos() {
   return (
     <>
-      <div className="card-halo justify-center items-center hidden xl:flex-col xl:flex xl:gap-y-5 perspective-1600">
-        <img
-          src="/images/halo.png"
-          alt="article card halo"
-          width={128}
-          height={80}
-          className="w-32 h-20"
-        />
-        <img
-          className="w-32 h-20 blur-sm rotate-180 scale-90"
-          src="/images/halo.png"
-          alt="article card halo"
-          width={128}
-          height={80}
-        />
+      <div className=" justify-center items-center hidden xl:flex-col xl:flex xl:gap-y-5">
+        <div className="card-halo w-32 h-32 bg-gradient-to-t from-[#f5d0fe] rounded-full relative">
+          <div
+            className="w-40 h-40 bg-[#030014] rounded-full 
+          scale-x-125 -translate-y-16 top-0 absolute -right-8"
+          ></div>
+          <div className="w-48 h-20 rotate-12 bg-[#030014]  -top-1 absolute -right-8"></div>
+        </div>
       </div>
     </>
     // <div className="justify-center items-center hidden xl:flex gap-y-3">

@@ -8,7 +8,7 @@ export default function SiteOverview() {
                 <img src="/images/q-7bea4872.png.png" className='mx-auto' alt="" />
             </div> */}
       <SiteOverviewArc />
-      <div className="flex justify-center -translate-y-4 sm:-translate-y-10">
+      <div className="flex justify-center -translate-y-2 sm:-translate-y-10">
         <a
           href=""
           className="text-sm md:text-lg rounded-lg bg-gradient-to-t from-[#07255B] to-[#061742] py-1.5 sm:py-2 px-4 sm:px-5"
