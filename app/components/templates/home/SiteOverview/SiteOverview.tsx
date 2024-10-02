@@ -4,6 +4,9 @@ import SiteOverviewArc from "./SiteOverviewArc";
 export default function SiteOverview() {
   return (
     <section className="overflow-hidden pb-6">
+      {/* <div className="pt-6 w-full">
+                <img src="/images/q-7bea4872.png.png" className='mx-auto' alt="" />
+            </div> */}
       <SiteOverviewArc />
       <div className="flex justify-center -translate-y-4 sm:-translate-y-10">
         <a

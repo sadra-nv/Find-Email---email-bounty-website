@@ -10,6 +10,8 @@
   }
 }
 
+/* ROTATING PLANETS BLOGS HERO SECTION */
+
 #rotate,
 #rotate_2,
 #rotate_3,
@@ -28,3 +30,19 @@
     transform: rotateZ(360deg);
   }
 }
+
+/* BLOGS OVERVIEW ARC GLOW */
+.glowing-circle {
+  animation: glowing 1s ease-in-out infinite alternate;
+}
+@keyframes glowing {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7e22ce, 0 0 40px #f5d0fe,
+      0 0 50px #030014, 0 0 60px #030014, 0 0 70px #030014;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #f5d0fe, 0 0 40px #f5d0fe,
+      0 0 50px #7e22ce, 0 0 60px #7e22ce, 0 0 70px #7e22ce, 0 0 80px #7e22ce;
+  }
+}
+/* 179deg, #F5D0FE -11.49%, #7E22CE 18.99%, #1E1B4B 53.86%)", */

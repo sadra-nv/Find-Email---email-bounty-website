@@ -237,7 +237,7 @@ export default function HeroSection() {
   return (
     <div className="bg-gradient-to-b from-[#06265c] via-[#030014] to-[#030014]">
       <div className="container">
-        <div className="relative overflow-y-hidden pt-40 lg:pt-52 overflow-hidden flex items-center justify-center">
+        <div className="relative min-h-fit overflow-y-hidden pt-40 lg:pt-52 overflow-hidden flex items-center justify-center">
           <video
             className="mix-blend-lighten relative z-10"
             autoPlay
@@ -245,7 +245,7 @@ export default function HeroSection() {
             loop
           >
             <source src="/videos/q-c3d7becf.webm" type="video/webm" />
-            Your browser does not support the video tag.
+            Your browser does not support the video playback.
           </video>
           <div className="absolute flex items-center gap-0.5 top-24 sm:top-40 lg:top-52 left-1/2 -translate-x-1/2 ">
             <img className="w-6 sm:w-8 md:w-12" src="/icons/Email.svg" alt="" />
