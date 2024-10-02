@@ -3,28 +3,28 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: 'Merriweather-Regular';
-        src: url(/app/fonts/Merriweather-Regular.ttf);
-        /* font-weight: 400; */
-    }
+  @font-face {
+    font-family: "Merriweather-Regular";
+    src: url(/app/fonts/Merriweather-Regular.ttf);
+    /* font-weight: 400; */
+  }
 }
 
 #rotate,
 #rotate_2,
 #rotate_3,
 #rotate_4 {
-    transform-origin: center;
-    animation: rotate 8s infinite linear;
-    transform-box: fill-box;
+  transform-origin: center;
+  animation: rotate 8s infinite linear;
+  transform-box: fill-box;
 }
 
 @keyframes rotate {
-    from {
-        transform: rotateZ(0deg);
-    }
+  0% {
+    transform: rotateZ(0deg);
+  }
 
-    to {
-        transform: rotateZ(360deg);
-    }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
