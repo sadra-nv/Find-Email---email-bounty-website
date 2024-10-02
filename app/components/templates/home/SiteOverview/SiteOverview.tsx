@@ -15,11 +15,11 @@ export default function SiteOverview() {
                 <div className="flex flex-col pb-10">
                     <div className="flex justify-center relative items-center">
                         <img src="/vectors/Background 1.png" className='absolute h-full object-cover' alt="" />
-                        {/* <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-normal" >
+                        <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-normal" >
                             <div className="absolute h-full w-full -rotate-[201deg] research-radar-scanner">
                                 <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(99,102,241,.4)13.23%,rgba(3,0,20,0)50%)] before:rounded-full before:block"></div>
                             </div>
-                        </div> */}
+                        </div>
                         <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-ping-normal">
                             <div className="absolute h-full w-full -rotate-[201deg] research-radar-scanner">
                                 <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(143,92,225,.4)100%,rgba(3,0,20,0)100%)] before:rounded-full before:block">
