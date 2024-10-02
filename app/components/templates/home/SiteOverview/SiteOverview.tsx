@@ -22,13 +22,13 @@ export default function SiteOverview() {
                         </div> */}
                         <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-ping-normal">
                             <div className="absolute h-full w-full -rotate-[201deg] research-radar-scanner">
-                                <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(14,44,140,.4)100%,rgba(3,0,20,0)100%)] before:rounded-full before:block">
+                                <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(143,92,225,.4)100%,rgba(3,0,20,0)100%)] before:rounded-full before:block">
                                     <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-ping-normal" >
                                         <div className="absolute h-full w-full -rotate-[201deg] research-radar-scanner">
-                                            <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(14,44,140,.8)100%,rgba(3,0,20,0)100%)] before:rounded-full before:block">
+                                            <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(46,34,145,.8)100%,rgba(3,0,20,0)100%)] before:rounded-full before:block">
                                                 <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-ping-normal" >
                                                     <div className="absolute h-full w-full -rotate-[201deg] research-radar-scanner">
-                                                        <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(14,44,140,1)100%,rgba(3,0,20,0)100%)] before:rounded-full before:block"></div>
+                                                        <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(143,92,225,1)100%,rgba(3,0,20,0)100%)] before:rounded-full before:block"></div>
                                                     </div>
                                                 </div>
                                             </div>
