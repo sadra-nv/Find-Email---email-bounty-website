@@ -31,18 +31,61 @@
   }
 }
 
+/* BLOG FILTRABLE CARDS */
+.filter-card div:first-child div {
+  perspective: 1000px;
+}
+.filter-card div:first-child div div:first-child {
+  transition: all ease-in 0.3s 0.1s;
+
+  background: linear-gradient(
+    180deg,
+    #030014 0%,
+    #7e22ce 68.13%,
+    #f5d0fe 107.62%
+  );
+  z-index: 6;
+}
+.filter-card div:first-child div div:nth-child(2) {
+  transition: all ease-in 0.1s 0.2s;
+  z-index: 5;
+  transform: rotateX(60deg) translateY(-3.5rem) scale(111%);
+  background: linear-gradient(
+    180deg,
+    #7a3da9 2.09%,
+    #2e0e71 52.66%,
+    rgba(3, 0, 20, 0.1) 100%
+  );
+}
+
+.filter-card:hover div:first-child div div:nth-child(2) {
+  transform: rotateX(60deg) translateY(-2rem) scale(112%);
+}
+.filter-card:hover div:first-child div div:first-child {
+  transform: rotateX(-20deg);
+}
+
+.filter-card div:first-child div ul {
+  transition: all ease-in 0.3s;
+  z-index: 7;
+  transform: rotateX(60deg) translateX(-50%);
+}
+
+.filter-card:hover div:first-child ul {
+  transform: rotateX(40deg) translateX(-50%);
+}
+
 /* BLOGS OVERVIEW ARC GLOW */
 .glowing-circle {
   animation: glowing 1s ease-in-out infinite alternate;
 }
 @keyframes glowing {
-  from {
+  0% {
     box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7e22ce, 0 0 40px #f5d0fe,
       0 0 50px #030014, 0 0 60px #030014, 0 0 70px #030014;
   }
-  to {
+  100% {
     box-shadow: 0 0 20px #fff, 0 0 30px #f5d0fe, 0 0 40px #f5d0fe,
       0 0 50px #7e22ce, 0 0 60px #7e22ce, 0 0 70px #7e22ce, 0 0 80px #7e22ce;
   }
 }
-/* 179deg, #F5D0FE -11.49%, #7E22CE 18.99%, #1E1B4B 53.86%)", */
