@@ -20,7 +20,7 @@ export default function SiteOverview() {
                                 <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(99,102,241,.4)13.23%,rgba(3,0,20,0)50%)] before:rounded-full before:block"></div>
                             </div>
                         </div>
-                        <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-ping-normal">
+                        {/* <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-ping-normal">
                             <div className="absolute h-full w-full -rotate-[201deg] research-radar-scanner">
                                 <div className="h-full w-full rounded-full before:content-[''] before:absolute before:w-full before:h-full before:bg-[linear-gradient(267deg,rgba(143,92,225,.4)100%,rgba(3,0,20,0)100%)] before:rounded-full before:block">
                                     <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-ping-normal" >
@@ -36,7 +36,7 @@ export default function SiteOverview() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <img src="/icons/Group 238477.svg" className='absolute h-20 sm:h-24' alt="" />
                         <video className="hidden lg:block absolute -right-1/2 xl:-right-1/3 h-4/5 mix-blend-lighten opacity-50" autoPlay muted loop>
                             <source src="/videos/q-ba39153a.webm" type="video/webm" />
