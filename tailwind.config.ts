@@ -23,10 +23,17 @@ const config: Config = {
                 rotate: {
                     '0%, 100%': { transform: 'rotate(-201deg)' },
                     '100%': { transform: 'rotate(159deg)' },
+                },
+                'ping-lg': {
+                    "90%, 100%" :{
+                        transform: 'scale(1.5)',
+                        opacity: '0'
+                    }
                 }
             },
             animation: {
-                "normal": 'rotate 3s infinite linear'
+                "normal": 'rotate 3s infinite linear',
+                "ping-normal": 'ping-lg 2s cubic-bezier(0, 0, 0.2, 1) infinite;',
             }
         },
     },
