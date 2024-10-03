@@ -32,6 +32,10 @@ const config: Config = {
         "merriweather-regular": "Merriweather-Regular",
       },
       keyframes: {
+        database: {
+          "0%": { transform: "translateY(0rem)" },
+          "100%": { transform: "translateY(-1rem)" },
+        },
         rotate: {
           "0%, 100%": { transform: "rotate(-201deg)" },
           "100%": { transform: "rotate(159deg)" },
@@ -44,6 +48,7 @@ const config: Config = {
         },
       },
       animation: {
+        databse: "database 5s ease infinite alternate",
         normal: "rotate 3s infinite linear",
         "ping-normal": "ping-lg 2s cubic-bezier(0, 0, 0.2, 1) infinite;",
       },
