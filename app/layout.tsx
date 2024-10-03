@@ -38,7 +38,7 @@ export default function RootLayout({
           <Headersm></Headersm>
         </div>
         <div className="">
-          <div className="absolute top-0 right-0 w-full h-[calc(30%)] md:h-[calc(60%)] bg-gradient-to-b from-[#f80e1e75] to-transparent"></div>
+          <div className="absolute top-0 right-0 w-full h-[calc(30%)] md:h-[calc(60%)] bg-gradient-to-b from-[#f80ed94a] to-transparent"></div>
           {/* f80e1e75 */}
           {children}
         </div>
