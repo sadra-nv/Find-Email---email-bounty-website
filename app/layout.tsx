@@ -37,7 +37,11 @@ export default function RootLayout({
         <div className="flex lg:hidden">
           <Headersm></Headersm>
         </div>
-        {children}
+        <div className="">
+          <div className="absolute top-0 right-0 w-full h-[calc(60%)] bg-gradient-to-b from-[#f80e1e75] to-transparent"></div>
+          {/* f80e1e75 */}
+          {children}
+        </div>
         <Footer></Footer>
       </body>
     </html>

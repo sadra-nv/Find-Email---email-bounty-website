@@ -4,7 +4,7 @@ import React from "react";
 
 export default function page() {
   return (
-    <div>
+    <div className="z-20 relative">
       <div className="">
         <div className="container">
           <div className="md:pt-52 pt-32">
