@@ -126,3 +126,11 @@
       0 0 50px #7e22ce, 0 0 60px #7e22ce, 0 0 70px #7e22ce, 0 0 80px #7e22ce;
   }
 }
+
+
+
+@layer components{
+  .hover-btn {
+    @apply relative overflow-hidden bg-gradient-to-r border border-[#c50c1883] from-[#C24B76] to-[#FD8330] shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-full before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40
+  }
+}

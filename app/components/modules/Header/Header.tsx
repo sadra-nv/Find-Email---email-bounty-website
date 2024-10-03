@@ -51,7 +51,7 @@ export default function Header() {
                             </li>
                         </ul>
                     </nav>
-                    <button className="before:ease relative overflow-hidden bg-gradient-to-r border border-[#c50c1883] from-[#c50c1969] to-[#a50b156e] text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-full before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40 rounded-lg flex items-center justify-center text-xs px-5 py-4 gap-1">
+                    <button className="hover-btn rounded-lg flex items-center justify-center text-xs px-5 py-4 gap-1">
                         Login/Register
                         <img src="/icons/13 1.svg" alt="" />
                     </button>

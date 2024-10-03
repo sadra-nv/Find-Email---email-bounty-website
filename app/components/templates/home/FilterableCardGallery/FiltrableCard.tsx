@@ -89,7 +89,7 @@ export default function FilterableCard() {
         <button className="w-fit mb-8">
           <Link
             href={"/"}
-            className="flex items-center gap-1 py-4 px-5 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
+            className="flex items-center gap-1 py-4 px-5 rounded-lg text-xs text-white hover-btn"
           >
             Login/Register
             <img src="/icons/13 1.svg" alt="" />

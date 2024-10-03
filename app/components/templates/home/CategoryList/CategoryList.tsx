@@ -8,7 +8,7 @@ export default function CategoryList() {
                 <div className="flex sm:justify-center gap-6 md:gap-10 w-full overflow-auto">
                     <Link
                         href={"/"}
-                        className="px-10 py-2 rounded-lg text-xs ml-6 bg-gradient-to-t from-[#2E2291] to-[#8F5CE1] shrink-0"
+                        className="px-10 py-2 rounded-lg text-xs ml-6 hover-btn shrink-0"
                     >
                         All Tags
                     </Link>

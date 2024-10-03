@@ -58,7 +58,7 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
             <button className="w-fit h-fit">
               <Link
                 href={"/"}
-                className="flex items-center gap-1 px-5 py-3 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
+                className="flex items-center gap-1 px-5 py-3 rounded-lg text-xs text-white hover-btn"
               >
                 Login/Register
                 <img src="/icons/13 1.svg" alt="" />
