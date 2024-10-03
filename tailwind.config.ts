@@ -48,7 +48,7 @@ const config: Config = {
         },
       },
       animation: {
-        databse: "database 5s ease infinite alternate",
+        databse: "database 3s ease infinite alternate",
         normal: "rotate 3s infinite linear",
         "ping-normal": "ping-lg 2s cubic-bezier(0, 0, 0.2, 1) infinite;",
       },
