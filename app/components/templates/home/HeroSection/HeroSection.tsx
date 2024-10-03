@@ -257,11 +257,10 @@ export default function HeroSection() {
                         <h1 className="text-xl sm:text-2xl md:text-4xl">Blog</h1>
                     </div>
                     <img
-                        className="w-16 sm:w-24 md:w-28 absolute lg:w-36 xl:w-40"
+                        className="w-16 sm:w-24 md:w-28 absolute lg:w-36 xl:w-40 z-30"
                         src="/images/database.svg"
                         alt=""
                     />
-
                     <svg
                         className="w-full absolute top-40 lg:top-52"
                         preserveAspectRatio="xMidYMax meet"
@@ -1366,6 +1365,7 @@ export default function HeroSection() {
                         className="w-full absolute h-full z-30 top-0 left-0"
                         ref={canvasRef}
                     ></canvas>
+                    <div className="absolute z-40 bottom-0 right-0 w-full h-28 bg-gradient-to-b to-[#030014] via-[#030014] from-transparent"></div>
                 </div>
             </div>
         </div>
