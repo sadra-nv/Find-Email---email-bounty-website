@@ -4,13 +4,12 @@ import FilterableCardGallery from "../components/templates/home/FilterableCardGa
 import SiteOverview from "../components/templates/home/SiteOverview/SiteOverview";
 
 export default function page() {
-  return (
-    <>
-      
-      <HeroSection></HeroSection>
-      <CategoryList></CategoryList>
-      <FilterableCardGallery></FilterableCardGallery>
-      <SiteOverview></SiteOverview>
-    </>
-  );
+    return (
+        <>
+            <HeroSection></HeroSection>
+            <CategoryList></CategoryList>
+            <FilterableCardGallery></FilterableCardGallery>
+            <SiteOverview></SiteOverview>
+        </>
+    );
 }
