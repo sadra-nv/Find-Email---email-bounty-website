@@ -1,4 +1,5 @@
 // import HeroSection from "@/app/components/templates/home/HeroSection/HeroSection";
+import FilterableCard from "@/app/components/templates/home/FilterableCardGallery/FiltrableCard";
 import Link from "next/link";
 import React from "react";
 
@@ -175,6 +176,17 @@ export default function page() {
             Related Posts
           </div>
         </div>
+      </div>
+      <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
+        <FilterableCard />
+        <div className="justify-center items-center hidden xl:flex">
+          <img src="/images/home/mon.png" alt="" />
+        </div>
+        <FilterableCard />
+        <div className="justify-center items-center hidden xl:flex">
+          <img src="/images/home/mon.png" alt="" />
+        </div>
+        <FilterableCard />
       </div>
     </div>
   );
