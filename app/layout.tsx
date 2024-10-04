@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#030014] text-white`}
+        className={`font-merriweather-regular bg-[#030014] text-white`}
       >
         <div className="hidden lg:flex">
           <Header></Header>

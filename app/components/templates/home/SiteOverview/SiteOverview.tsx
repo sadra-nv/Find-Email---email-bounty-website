@@ -31,7 +31,7 @@ export default function SiteOverview() {
             </div>
             <img
               src="/icons/Group 238477.svg"
-              className="absolute h-20 sm:h-24"
+              className="absolute h-20 sm:h-24 animate-pulse"
               alt=""
             />
             <video
