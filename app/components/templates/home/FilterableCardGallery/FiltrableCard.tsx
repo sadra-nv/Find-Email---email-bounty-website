@@ -89,10 +89,12 @@ export default function FilterableCard() {
         <button className="w-fit mb-8">
           <Link
             href={"/"}
-            className="flex items-center gap-1 py-4 px-5 rounded-lg text-xs text-white hover-btn"
+            className="flex items-center gap-1 py-3 px-4 rounded-lg text-xs text-white hover-btn"
           >
-            Login/Register
-            <img src="/icons/13 1.svg" alt="" />
+            Read More
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
           </Link>
         </button>
       </div>
