@@ -9,8 +9,8 @@ export default function FAQ() {
     <div>
       <div className="container">
         <div className="">
-          <div className="flex justify-center">
-            <Halo />
+          <div className="flex justify-center mb-32">
+            <Halo className="size-80" />
           </div>
           <div className="flex gap-2 items-center mb-8">
             <span className="grow bg-gradient-to-l from-white via-transparent to-transparent h-0.5"></span>
@@ -60,9 +60,9 @@ export default function FAQ() {
                     width="1556.67"
                     height="1539.67"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"

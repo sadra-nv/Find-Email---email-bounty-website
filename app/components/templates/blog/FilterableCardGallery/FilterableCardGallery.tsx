@@ -2,21 +2,24 @@ import Link from "next/link";
 import React from "react";
 import Pagination from "../../home/Pagination/Pagination";
 import FilterableCard from "./FiltrableCard";
+import Halo from "../../UI/Halo/Halo";
+import pic from "@/public/images/546 4.png";
+import Image from "next/image";
 
 export default function FilterableCardGallery() {
   return (
     <div className="">
       <div className="container">
         <div className="grid xl:grid-cols-7 gap-24">
-          <div className="xl:col-span-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+          <div className="xl:col-span-5 gap-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             <FilterableCard />
             <div className="justify-center items-center hidden xl:flex">
-              <img src="/images/home/mon.png" alt="" />
+              <Halo className="size-40" />
             </div>
             <FilterableCard />
             <FilterableCard />
             <div className="justify-center items-center hidden xl:flex">
-              <img src="/images/home/mon.png" alt="" />
+              <Halo className="size-40" />
             </div>
             <FilterableCard />
             <div className="hidden xl:flex justify-center col-span-3 mt-14">
@@ -59,7 +62,14 @@ export default function FilterableCardGallery() {
                     href={"/"}
                     className="flex gap-3 items-center p-4 bg-[#131332] rounded-lg"
                   >
-                    <img src="/images/546 4.png" alt="" />
+                    <Image
+                      placeholder="blur"
+                      width={100}
+                      height={60}
+                      alt="dwa"
+                      src={pic}
+                    />
+
                     <div className="flex flex-col text-xs gap-1">
                       <p>FindEmail.io:</p>
                       <span>Secret Weapon for</span>

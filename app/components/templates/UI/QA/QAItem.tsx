@@ -13,7 +13,7 @@ export default function QAItem({ faq }: { faq: any }) {
   return (
     <li
       className={cn(
-        "w-full max-h-14 text-sm overflow-hidden p-4  bg-[#1A1B31] rounded-lg ",
+        "w-full max-h-[3.25rem] text-sm overflow-hidden p-4  bg-[#1A1B31] rounded-lg ",
         {
           "max-h-fit  p-0 bg-transparent": open,
         }
@@ -22,8 +22,8 @@ export default function QAItem({ faq }: { faq: any }) {
       <button
         onClick={clickHandler}
         className={cn(
-          "w-full  font-bold max-h-14 flex justify-between text-justify gap-3",
-          "items-start rounded-lg  min-h-fit relative z-10",
+          "w-full  font-bold max-h-[3.25rem] flex justify-between text-justify gap-3",
+          "items-start rounded-lg relative z-10",
 
           {
             "border p-4 h-fit max-h-fit bg-[#1A1B31]": open,

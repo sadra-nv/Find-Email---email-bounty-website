@@ -4,7 +4,6 @@ export default function FilterableCard() {
   return (
     <div className="filter-card group w-fit">
       <div className="relative flex justify-center items-center ">
-        {/* <img className="mix-blend-lighten " src="/images/ii.png" alt="" /> */}
         <div className="justify-center items-start flex flex-col relative">
           <div
             className="bg-red-100 w-40 h-40 relative
@@ -71,7 +70,7 @@ export default function FilterableCard() {
           alt=""
         />
       </div>
-      <div className="flex flex-col gap-4 sm:ml-32 md:ml-10 lg:ml-36 xl:ml-10">
+      <div className="flex flex-col gap-4 ">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1">
             <img src="/icons/Group 238267.svg" alt="" />
@@ -92,8 +91,19 @@ export default function FilterableCard() {
             className="flex items-center gap-1 py-3 px-4 rounded-lg text-xs text-white hover-btn"
           >
             Read More
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+              />
             </svg>
           </Link>
         </button>
