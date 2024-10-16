@@ -1,0 +1,75 @@
+"use client";
+
+import { cn } from "@/lib/utils";
+
+import { useState } from "react";
+
+export default function QAItem({ faq }: { faq: any }) {
+  const [open, setOpen] = useState(false);
+  const clickHandler = () => {
+    setOpen((prevState) => !prevState);
+  };
+
+  return (
+    <li
+      className={cn(
+        "w-full max-h-14 text-sm overflow-hidden p-4  bg-[#1A1B31] rounded-lg ",
+        {
+          "max-h-fit  p-0 bg-transparent": open,
+        }
+      )}
+    >
+      <button
+        onClick={clickHandler}
+        className={cn(
+          "w-full  font-bold max-h-14 flex justify-between text-justify gap-3",
+          "items-start rounded-lg  min-h-fit relative z-10",
+
+          {
+            "border p-4 h-fit max-h-fit bg-[#1A1B31]": open,
+          }
+        )}
+      >
+        <h4
+          className={cn("truncate xl:w-11/12 w-4/5", {
+            "overflow-auto text-wrap": open,
+          })}
+        >
+          dwdawj iwdwad jidw wjidjiw jidjwijiwdj?
+          {/* {faq.question} */}
+        </h4>
+        <svg
+          viewBox="0 0 20 20"
+          className={cn(
+            "size-5 fill-neutral-50  rotate-90",
+            "ease-in duration-200 transition-all",
+            {
+              "-rotate-90": open,
+            }
+          )}
+        >
+          <path
+            fillRule="evenodd"
+            d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
+      <div
+        className={cn(
+          "relative z-0 h-0 opacity-0 overflow-hidden -translate-y-full tran-fast bg-blue-900 bg-opacity-10 py-7",
+          "text-sm ",
+          " rounded-b-lg tablet-medium:rounded-b-md transition-transform duration-300 leading-loose text-justify lg:space-y-4 space-y-2",
+          {
+            "-translate-y-4 h-fit opacity-100 pb-4 px-4": open,
+          }
+        )}
+      >
+        dwandaijdwj jpdwjopawdj jawj owjoajwd jdowajdjaw jopwdojadwj
+        {/* {faq.answer.split(/\\n|\n/).map((paragraph, index) => (
+          <p key={index}>{paragraph.trim()}</p>
+        ))} */}
+      </div>
+    </li>
+  );
+}

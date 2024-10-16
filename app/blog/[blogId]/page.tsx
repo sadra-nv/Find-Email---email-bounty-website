@@ -1,5 +1,5 @@
 // import HeroSection from "@/app/components/templates/home/HeroSection/HeroSection";
-import FilterableCard from "@/app/components/templates/home/FilterableCardGallery/FiltrableCard";
+import FilterableCard from "@/app/components/templates/blog/FilterableCardGallery/FiltrableCard";
 import Link from "next/link";
 import React from "react";
 

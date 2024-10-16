@@ -9,7 +9,13 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
     },
     extend: {
       backgroundImage: {
@@ -46,8 +52,27 @@ const config: Config = {
             opacity: "0",
           },
         },
+        "3d-qa": {
+          "0%": {
+            transform: "translateY(0rem)  translateX(0%)",
+          },
+          "25%": {
+            transform: "translateY(0.8rem) translateX( 0.4rem)",
+          },
+          "50%": {
+            transform: "translateY(0rem) translateX(-0.6rem)",
+          },
+          "75%": {
+            transform: "translateY(-0.4rem) translateX(+ 0.6rem)",
+          },
+          "100%": {
+            transform: "translateY(0rem) translateX(0%)",
+          },
+        },
       },
       animation: {
+        "3d-qa": "3d-qa 7s linear infinite alternate",
+        blob: "pulse 3s ease infinite alternate",
         databse: "database 3s ease infinite alternate",
         normal: "rotate 3s infinite linear",
         "ping-normal": "ping-lg 2s cubic-bezier(0, 0, 0.2, 1) infinite;",

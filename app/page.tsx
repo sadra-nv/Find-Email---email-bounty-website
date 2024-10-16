@@ -1,11 +1,13 @@
+import SiteOverview from "./components/templates/UI/SiteOverview/SiteOverview";
 import FAQ from "./components/templates/home/FAQ/FAQ";
-import SelectHome from "./components/templates/home/SelectHome/SelectHome";
+import HeroSection from "./components/templates/home/HeroSection/HeroSection";
 
 export default function Home() {
   return (
-    <div className="mt-40 relative z-30">
-        <SelectHome></SelectHome>
-        <FAQ></FAQ>
-    </div>
+    <>
+      <HeroSection />
+      <SiteOverview className="z-30 relative -translate-y-20 sm:-translate-y-44" />
+      <FAQ />
+    </>
   );
 }

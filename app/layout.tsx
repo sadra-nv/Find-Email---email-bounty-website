@@ -4,16 +4,10 @@ import "./globals.css";
 import Header from "./components/modules/Header/Header";
 import Footer from "./components/modules/Footer/Footer";
 import Headersm from "./components/modules/Header/Headersm";
-// import 'bootstrap-icons/font/bootstrap-icons.css'
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const merriweather = localFont({
+  src: "./fonts/Merriweather-Regular.ttf",
+  display: "auto",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`font-merriweather-regular bg-[#030014] text-white`}
-      >
+      <body className={`${merriweather.className} bg-[#030014] text-white`}>
         <div className="hidden lg:flex">
           <Header></Header>
         </div>
@@ -38,8 +30,7 @@ export default function RootLayout({
           <Headersm></Headersm>
         </div>
         <div className="">
-          <div className="absolute top-0 right-0 w-full h-[calc(30%)] md:h-[calc(60%)] bg-gradient-to-b from-[#f80ed94a] to-transparent"></div>
-          {/* f80e1e75 */}
+          <div className="absolute top-0 right-0 w-full h-[calc(30%)] md:h-[calc(60%)] bg-gradient-to-b from-[#f80ed94a] to-transparent pointer-events-none"></div>
           {children}
         </div>
         <Footer></Footer>

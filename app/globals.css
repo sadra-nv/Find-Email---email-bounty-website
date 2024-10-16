@@ -3,10 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: "Merriweather-Regular";
-    src: url(/app/fonts/Merriweather-Regular.ttf);
-    /* font-weight: 400; */
+}
+
+@layer components {
+  .center-sec {
+    @apply mx-auto w-[90%];
+  }
+
+  .tran-fast {
+    @apply duration-200 ease-in transition-all;
+  }
+  .hover-btn {
+    @apply relative overflow-hidden bg-gradient-to-r border border-[#c50c1883] from-[#C24B76] to-[#FD8330] shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-full before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40;
   }
 }
 
@@ -59,7 +67,7 @@
 }
 
 .filter-card:hover div:first-child div div:nth-child(2) {
-  transform: rotateX(60deg) translateY(-2rem) scale(112%);
+  transform: rotateX(55deg) translateY(-3rem) scale(109%);
 }
 .filter-card:hover div:first-child div div:first-child {
   transform: rotateX(-20deg);
@@ -124,13 +132,5 @@
   100% {
     box-shadow: 0 0 20px #fff, 0 0 30px #f5d0fe, 0 0 40px #f5d0fe,
       0 0 50px #7e22ce, 0 0 60px #7e22ce, 0 0 70px #7e22ce, 0 0 80px #7e22ce;
-  }
-}
-
-
-
-@layer components{
-  .hover-btn {
-    @apply relative overflow-hidden bg-gradient-to-r border border-[#c50c1883] from-[#C24B76] to-[#FD8330] shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-full before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40
   }
 }

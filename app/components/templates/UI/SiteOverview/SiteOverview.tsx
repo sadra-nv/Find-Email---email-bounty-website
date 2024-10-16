@@ -1,17 +1,27 @@
-import React from "react";
-import SiteOverviewArc from "./SiteOverviewArc";
+import { cn } from "@/lib/utils";
+import React, { ReactNode } from "react";
 
-export default function SiteOverview() {
+export default function SiteOverview({
+  children,
+  className,
+  blog,
+}: {
+  children?: ReactNode;
+  className?: string;
+  blog?: boolean;
+}) {
   return (
-    <section className="overflow-hidden pb-6">
-      {/* <div className="pt-6 w-full">
-                <img src="/images/q-7bea4872.png.png" className='mx-auto' alt="" />
-            </div> */}
-      <SiteOverviewArc />
-      <div className="flex justify-center -translate-y-2 sm:-translate-y-10">
+    <section className={cn("overflow-hidden pb-6 ", className)}>
+      {children}
+      <div
+        className={cn("flex justify-center mb-6 ", {
+          "-translate-y-2 sm:-translate-y-10": blog,
+        })}
+      >
         <a
           href=""
-          className="text-sm md:text-lg rounded-lg bg-gradient-to-t from-[#07255B] to-[#061742] py-1.5 sm:py-2 px-4 sm:px-5"
+          className="text-sm md:text-lg rounded-lg bg-gradient-to-t from-[#07255B]
+           to-[#061742] py-1.5 sm:py-2 px-4 sm:px-5"
         >
           Lorem Ipsum
         </a>
