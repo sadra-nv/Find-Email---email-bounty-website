@@ -29,10 +29,24 @@ const config: Config = {
           "linear-gradient(179deg, #F5D0FE -11.49%, #7E22CE 18.99%, #1E1B4B 53.86%)",
         "blog-arc-second":
           "linear-gradient(180deg, #060317 -7.87%, #7E22CE 23.9%)",
+        "pyramid-left":
+          "linear-gradient(221deg, rgba(3, 0, 21, 0.00) 60.95%, rgba(3, 0, 21, 0.50) 71.31%, #030015 84.88%)",
+        "pyramid-right":
+          " linear-gradient(-221deg, rgba(3, 0, 21, 0.00) 60.95%, rgba(3, 0, 21, 0.50) 71.31%, #030015 84.88%)",
+        "pyramid-bottom":
+          "linear-gradient(178deg, rgba(3, 0, 21, 0.00) 34.17%, rgba(3, 0, 21, 0.50) 61.68%, #030015 97.71%)",
+        "pyramid-top":
+          "linear-gradient(3deg, rgba(3, 0, 21, 0.00) 38.71%, #030015 83.18%, #030015 103.81%)",
+        "pyramid-tl":
+          "linear-gradient(312deg, rgba(3, 0, 21, 0.00) 57.55%, rgba(3, 0, 21, 0.50) 63.98%, #030015 72.4%)",
+        "pyramid-tr":
+          "linear-gradient(50deg, rgba(3, 0, 21, 0.00) 57.55%, rgba(3, 0, 21, 0.50) 63.98%, #030015 72.4%)",
       },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#030015",
+        "highlight-med": "#7a3da9",
+        "highlight-dark": "#2e0e71",
+        "highlight-light": "#f5d0fe",
       },
       fontFamily: {
         "merriweather-regular": "Merriweather-Regular",

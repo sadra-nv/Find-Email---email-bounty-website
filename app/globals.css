@@ -120,7 +120,7 @@
   }
 } */
 
-/* BLOGS OVERVIEW ARC GLOW */
+/*  ARC GLOW */
 .glowing-circle {
   animation: glowing 1s ease-in-out infinite alternate;
 }

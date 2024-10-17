@@ -1,0 +1,257 @@
+"use client";
+import Pillar from "./Pillar";
+import { useObserver } from "@/hooks/useObserver";
+import { cn } from "@/lib/utils";
+import { LegacyRef } from "react";
+
+export default function Pyramid() {
+  const [observeRef, isInView] = useObserver(
+    {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.8,
+    },
+    false
+  );
+  return (
+    <div
+      ref={observeRef as LegacyRef<HTMLDivElement>}
+      className="w-full h-fit flex justify-center items-center overflow-hidden "
+    >
+      <div
+        className="w-full h-auto md:w-[655px] md:h-[613px] min-w-fit relative after:-top-6 md:after:top-0 
+        after:w-full after:bg-pyramid-top
+      after:left-0 after:h-3/5 after:absolute after:z-20"
+      >
+        <div
+          className="absolute -top-16 left-0 z-20 bg-pyramid-tl
+          w-full  h-full"
+        ></div>
+        <div
+          className="absolute -top-16 right-0 z-20 bg-pyramid-tr
+          w-full  h-full "
+        ></div>
+        <div className="absolute w-full h-full left-0 bottom-0 grid grid-cols-2 ">
+          <svg
+            className="w-full absolute left-0 top-0 animate-blob scale-75 md:scale-100"
+            preserveAspectRatio="xMidYMax meet"
+            viewBox="0 0 1441 1421"
+            fill="none"
+          >
+            <g filter="url(#filter0_f_36_313)">
+              <ellipse
+                cx="720.5"
+                cy="710.5"
+                rx="261.5"
+                ry="251.5"
+                fill="#f5d0fe"
+                fill-opacity="0.6"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_36_313"
+                x="0.670013"
+                y="0.670013"
+                width="1439.66"
+                height="1419.66"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="229.165"
+                  result="effect1_foregroundBlur_36_313"
+                />
+              </filter>
+            </defs>
+          </svg>
+
+          <div className=" flex justify-between gap-4 mr-4">
+            <Pillar
+              className={cn(
+                "-translate-y-[31.25rem] duration-700 delay-500 transition-transform ease-linear ",
+                {
+                  "-translate-y-0": isInView,
+                }
+              )}
+            />
+            <Pillar
+              className={cn(
+                "-translate-y-[31.25rem] duration-700 delay-300 transition-transform ease-linear ",
+                {
+                  "-translate-y-0": isInView,
+                }
+              )}
+            />
+            <Pillar
+              className={cn(
+                "-translate-y-[37.5rem] duration-700  transition-transform ease-linear ",
+                {
+                  "-translate-y-0": isInView,
+                }
+              )}
+            />
+          </div>
+          <div className=" flex flex-row-reverse justify-between gap-4 ml-9">
+            <Pillar
+              className={cn(
+                "-translate-y-[31.25rem] duration-700 delay-500 transition-transform ease-linear ",
+                {
+                  "-translate-y-0": isInView,
+                }
+              )}
+            />
+            <Pillar
+              className={cn(
+                "-translate-y-[31.25rem] duration-700 delay-300 transition-transform ease-linear ",
+                {
+                  "-translate-y-0": isInView,
+                }
+              )}
+            />
+            <Pillar
+              className={cn(
+                "-translate-y-[37.5rem] duration-700  transition-transform ease-linear ",
+                {
+                  "-translate-y-0": isInView,
+                }
+              )}
+            />
+          </div>
+        </div>
+
+        <div className="z-10 relative  ">
+          <div className="bg-pyramid-bottom absolute bottom-0 md:-bottom-4 w-full h-2/3 left-0"></div>
+          <svg
+            preserveAspectRatio="xMidYMax meet"
+            viewBox="0 0 662 611"
+            fill="none"
+          >
+            <g filter="url(#filter0_i_35_295)">
+              <path
+                d="M341 0C334.569 256.839 267.785 367.123 0 484.5C241.596 632.041 381.783 673.029 661.5 484.5C434.448 363.748 344.217 271.142 341 0Z"
+                fill="url(#paint0_radial_35_295)"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_i_35_295"
+                x="0"
+                y="0"
+                width="661.5"
+                height="635.991"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="50" />
+                <feGaussianBlur stdDeviation="12.5" />
+                <feComposite
+                  in2="hardAlpha"
+                  operator="arithmetic"
+                  k2="-1"
+                  k3="1"
+                />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0.180392 0 0 0 0 0.054902 0 0 0 0 0.443137 0 0 0 0.23 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="shape"
+                  result="effect1_innerShadow_35_295"
+                />
+              </filter>
+              <radialGradient
+                id="paint0_radial_35_295"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(337.5 163.5) rotate(90.8642) scale(447.542 484.539)"
+              >
+                <stop stop-color="#F0F1FF" />
+                <stop offset="1" stop-color="#2E0E71" />
+              </radialGradient>
+            </defs>
+          </svg>
+          <svg
+            className="animate-blob absolute left-0 -top-10 scale-105"
+            preserveAspectRatio="xMidYMax meet"
+            viewBox="0 0 689 663"
+            fill="none"
+          >
+            <g filter="url(#filter0_f_35_295)">
+              <path
+                d="M354.401 25C348.189 282.684 283.677 393.33 25 511.093C258.379 659.119 393.797 700.242 664 511.093C444.671 389.944 357.509 297.033 354.401 25Z"
+                fill="url(#paint0_radial_35_295)"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_35_295"
+                x="0"
+                y="0"
+                width="689"
+                height="663"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="12.5"
+                  result="effect1_foregroundBlur_35_295"
+                />
+              </filter>
+              <radialGradient
+                id="paint0_radial_35_295"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(351.02 189.037) rotate(90.8321) scale(449.01 468.062)"
+              >
+                <stop stop-color="#F0F1FF" />
+                <stop offset="1" stop-color="#2E0E71" />
+              </radialGradient>
+            </defs>
+          </svg>
+
+          <div
+            className="absolute bottom-0 right-8 md:right-20
+        bg-pyramid-right w-full h-[400px] scale-x-125 "
+          ></div>
+          <div
+            className="absolute bottom-0 left-8 md:left-20 bg-pyramid-left
+          w-full h-[400px] scale-x-125"
+          ></div>
+        </div>
+      </div>
+    </div>
+  );
+}
