@@ -19,6 +19,10 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
+        "how-circle":
+          "radial-gradient(55.49% 57.73% at 49.86% 50%,#7a3da9 0%,rgba(46, 14, 113, 0.46) 88.64%)",
+        "how-circle-2":
+          "linear-gradient(358deg, rgba(3, 0, 20, 0.00) 56.46%, rgba(46, 14, 113, 0.35) 97.98%)",
         "blog-arc":
           "linear-gradient(118deg,  rgba(217, 217, 217, 0.00) 16%, #030014 52.7%)",
         "blog-arc-left":
@@ -48,10 +52,12 @@ const config: Config = {
         "highlight-dark": "#2e0e71",
         "highlight-light": "#f5d0fe",
       },
-      fontFamily: {
-        "merriweather-regular": "Merriweather-Regular",
-      },
+
       keyframes: {
+        "how-circle": {
+          "0%": { opacity: "1", transform: "scale(0%)" },
+          "100%": { opacity: "0", transform: "scale(100%)" },
+        },
         database: {
           "0%": { transform: "translateY(0rem)" },
           "100%": { transform: "translateY(-1rem)" },
@@ -85,6 +91,9 @@ const config: Config = {
         },
       },
       animation: {
+        "how-circle": "how-circle ease 1.8s infinite",
+        "how-circle2": "how-circle ease 1.8s 0.3s  infinite",
+        "how-circle3": "how-circle ease 1.8s  0.6s infinite",
         "3d-qa": "3d-qa 7s linear infinite alternate",
         blob: "pulse 3s ease infinite alternate",
         databse: "database 3s ease infinite alternate",

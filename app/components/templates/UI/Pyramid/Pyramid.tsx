@@ -9,7 +9,7 @@ export default function Pyramid() {
     {
       root: null,
       rootMargin: "0px",
-      threshold: 0.8,
+      threshold: 0.4,
     },
     false
   );
