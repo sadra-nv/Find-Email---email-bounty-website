@@ -21,6 +21,14 @@ const config: Config = {
       backgroundImage: {
         "how-circle":
           "radial-gradient(55.49% 57.73% at 49.86% 50%,#7a3da9 0%,rgba(46, 14, 113, 0.46) 88.64%)",
+        "how-box":
+          "linear-gradient(180deg, rgba(3, 0, 21, 0.8) 47.63%, rgba(46, 14, 113, 0.9) 60.96%, #F5D0FE 108.35%)",
+        "how-box-2":
+          " linear-gradient(180deg, rgba(3, 0, 21, 0.00) 54.09%, #2E0E71 100%)",
+        "how-box-3":
+          "linear-gradient(180deg, rgba(3, 0, 20, 0.0) 20.62%, #030014 62.62%)",
+        "how-btn":
+          "linear-gradient(180deg, rgba(29, 255, 228, 0.20) 0%, rgba(3, 166, 0, 0.20) 100%)",
         "how-circle-2":
           "linear-gradient(358deg, rgba(3, 0, 20, 0.00) 56.46%, rgba(46, 14, 113, 0.35) 97.98%)",
         "blog-arc":

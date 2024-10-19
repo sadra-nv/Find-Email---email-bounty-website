@@ -1,7 +1,7 @@
 export default function Circle() {
   return (
     <div className=" absolute top-0 left-1/2 -translate-x-1/2 flex justify-center z-0">
-      <div className="w-[330px] h-[330px] md:w-[750px] md:h-[750px] relative top-0 opacity-25">
+      <div className="w-[300px] h-[300px]  md:w-[600px]  md:h-[600px] lg:w-[750px]  lg:h-[750px] relative top-0 opacity-25">
         <div
           className="w-full h-full border-2 border-highlight-dark absolute 
         rounded-full flex justify-center items-center bg-how-circle-2 "
