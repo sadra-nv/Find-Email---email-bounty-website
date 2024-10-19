@@ -32,7 +32,7 @@ export default function HowTo() {
               Criminal IP’s API integration will detect and block potential
               malicious users accessing login services in real time
             </p>
-            <button className="text-sm lg:text-lg p-4 bg-gradient-to-t from-highlight-dark to-highlight-med hover-btn rounded-lg border-none">
+            <button className="text-sm lg:text-lg p-4 lg:px-6 bg-gradient-to-t from-highlight-dark to-highlight-med hover-btn rounded-lg border-none">
               Criminal IP scoring MEtrics
             </button>
           </div>
