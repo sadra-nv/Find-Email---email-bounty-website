@@ -8,7 +8,7 @@ export default function FeaturesItems() {
     before:absolute before:w-16 before:left-1/2 before:-translate-x-1/2 
     before:top-1/2 before:-translate-y-1/2 before:h-16 before:opacity-0 before:tran-fast hover:before:opacity-100"
     >
-      <div className="w-full h-full z-20 absolute px-20 flex justify-center items-center flex-col">
+      <div className="w-full h-full z-20 absolute px-20 flex justify-center items-start flex-col">
         <Image alt="icon" src={pic} width={35} height={30} />
         <h2 className="font-bold lg:text-base text-sm mb-4 mt-3">
           Collect Email
