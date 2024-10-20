@@ -4,6 +4,7 @@ import FAQ from "./components/templates/home/FAQ/FAQ";
 import HeroSection from "./components/templates/home/HeroSection/HeroSection";
 import Features from "./components/templates/home/Features/Features";
 import HowTo from "./components/templates/home/HowTo/HowTo";
+import APIInteg from "./components/templates/home/APIInteg/APIInteg";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <SiteOverview className="z-30 relative -translate-y-20 sm:-translate-y-44" />
       <Features />
+      <APIInteg />
       <BlogList />
       <HowTo />
       <FAQ />

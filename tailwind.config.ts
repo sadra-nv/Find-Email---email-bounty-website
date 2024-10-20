@@ -108,6 +108,9 @@ const config: Config = {
         normal: "rotate 3s infinite linear",
         "ping-normal": "ping-lg 2s cubic-bezier(0, 0, 0.2, 1) infinite;",
       },
+      boxShadow: {
+        "api-code": "0px 2px 250px 0px rgba(55, 14, 44, 0.78)",
+      },
     },
   },
   plugins: [],

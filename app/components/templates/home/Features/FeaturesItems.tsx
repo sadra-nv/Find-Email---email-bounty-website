@@ -6,11 +6,11 @@ export default function FeaturesItems() {
     <li
       className="h-[250px] relative before:bg-[#3300FF] before:blur-3xl before:rounded-full 
     before:absolute before:w-16 before:left-1/2 before:-translate-x-1/2 
-    before:top-1/2 before:-translate-y-1/2 before:h-16 before:opacity-0 before:tran-fast hover:before:opacity-100"
+    before:top-1/2 before:-translate-y-1/2 before:h-16 before:opacity-100 lg:before:opacity-0 before:tran-fast hover:before:opacity-100"
     >
       <div className="w-full h-full z-20 absolute px-20 flex justify-center items-start flex-col">
         <Image alt="icon" src={pic} width={35} height={30} />
-        <h2 className="font-bold lg:text-base text-sm mb-4 mt-3">
+        <h2 className="font-bold lg:text-base text-sm mb-1 lg:mb-4 mt-3">
           Collect Email
         </h2>
         <p className="text-justify lg:text-base leading-10 text-xs h-fit">
