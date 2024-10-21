@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./components/modules/Header/Header";
-import Footer from "./components/modules/Footer/Footer";
-import Headersm from "./components/modules/Header/Headersm";
-import "bootstrap-icons/font/bootstrap-icons.min.css"
+
+import "bootstrap-icons/font/bootstrap-icons.min.css";
 const merriweather = localFont({
   src: "./fonts/Merriweather-Regular.ttf",
   display: "auto",
@@ -23,17 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${merriweather.className} bg-[#030014] text-white`}>
-        <div className="hidden lg:flex">
-          <Header></Header>
-        </div>
-        <div className="flex lg:hidden">
-          <Headersm></Headersm>
-        </div>
-        <main className="">
-          <div className="absolute top-0 right-0 w-full h-[calc(30%)] md:h-[calc(60%)] bg-gradient-to-b from-[#f80ed94a] to-transparent pointer-events-none"></div>
-          {children}
-        </main>
-        <Footer></Footer>
+        {children}
       </body>
     </html>
   );

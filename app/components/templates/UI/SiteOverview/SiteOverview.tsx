@@ -40,8 +40,9 @@ export default function SiteOverview({
             <Image
               alt="background"
               src={bg}
-              className="absolute h-full w-auto object-cover"
-              placeholder="blur"
+              height={526}
+              width={947}
+              className="absolute  object-cover"
             />
 
             <div className="block absolute inset-0 mx-auto h-auto sm:h-full aspect-square pointer-events-none research-radar-scanner-wrapper-visible m-auto animate-normal">
@@ -52,9 +53,9 @@ export default function SiteOverview({
             <Image
               alt="particle-ball"
               src={ball}
-              placeholder="blur"
               width={97}
               height={97}
+              placeholder="blur"
               className="absolute animate-pulse mix-blend-color-dodge"
             />
             <CodeVideo className="-right-1/2 xl:-right-1/3 mix-blend-lighten" />
@@ -65,7 +66,6 @@ export default function SiteOverview({
                 <Image
                   alt="list"
                   src={list}
-                  placeholder="blur"
                   width={97}
                   height={97}
                   className="w-10 sm:w-auto"
@@ -80,7 +80,6 @@ export default function SiteOverview({
                 <Image
                   alt="grows"
                   src={chart}
-                  placeholder="blur"
                   width={97}
                   height={97}
                   className="w-10 sm:w-auto"
@@ -95,7 +94,6 @@ export default function SiteOverview({
                 <Image
                   alt="email"
                   src={email}
-                  placeholder="blur"
                   width={97}
                   height={97}
                   className="w-10 sm:w-auto"
@@ -110,7 +108,6 @@ export default function SiteOverview({
                 <Image
                   alt="database"
                   src={data}
-                  placeholder="blur"
                   width={97}
                   height={97}
                   className="w-10 sm:w-auto"

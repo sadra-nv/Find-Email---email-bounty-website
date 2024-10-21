@@ -1,7 +1,8 @@
 "use client";
+import { cn } from "@/lib/utils";
 import React, { useEffect, useRef } from "react";
 
-export default function StarsSection() {
+export default function StarsSection({ className }: { className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -249,7 +250,7 @@ export default function StarsSection() {
   }, []);
   return (
     <canvas
-      className="w-full absolute h-full z-30 top-0 left-0"
+      className={cn("w-full absolute h-full z-30 top-0 left-0", className)}
       ref={canvasRef}
     ></canvas>
   );

@@ -4,7 +4,7 @@ import StarsSection from "../../UI/StarsSection/StarsSection";
 
 export default function HeroSection() {
   return (
-    <section className="bg-gradient-to-b from-[#030014] via-[#030014] to-[#030014] z-10 relative">
+    <section className="bg-gradient-to-b from-[#030014] via-[#030014] to-[#030014] z-10 relative hero-grad">
       <StarsSection></StarsSection>
       <div className="absolute z-40 bottom-0 right-0 w-full h-28 bg-gradient-to-b to-[#030014] via-[#030014] from-transparent"></div>
       <div className="container ">

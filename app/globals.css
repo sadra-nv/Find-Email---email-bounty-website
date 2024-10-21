@@ -24,6 +24,12 @@
     @apply relative overflow-hidden before:absolute before:right-0 before:top-0 before:h-full before:w-6 before:translate-x-12
     before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40;
   }
+
+  .hero-grad {
+    @apply before:absolute before:top-0 before:right-0 before:w-full before:h-[45%]
+     md:before:h-[calc(60%)] before:bg-gradient-to-b
+     before:from-[#f80ed94a] before:to-transparent before:pointer-events-none;
+  }
 }
 
 /* ROTATING PLANETS BLOGS HERO SECTION */
