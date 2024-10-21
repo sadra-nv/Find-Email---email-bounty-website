@@ -4,11 +4,14 @@ import { cn } from "@/lib/utils";
 
 import { useState } from "react";
 
-export default function QAItem({ faq }: { faq: any }) {
+export default function QAItem({ faq }: { faq: number }) {
   const [open, setOpen] = useState(false);
   const clickHandler = () => {
     setOpen((prevState) => !prevState);
   };
+
+  // TOdo remove this
+  console.log(faq);
 
   return (
     <li

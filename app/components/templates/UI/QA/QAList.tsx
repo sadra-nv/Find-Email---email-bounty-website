@@ -1,6 +1,6 @@
 import QAItem from "./QAItem";
 
-export default function QAList({ faq }: { faq: any }) {
+export default function QAList({ faq }: { faq: number }) {
   return (
     <ul className="flex w-full justify-start items-start flex-col gap-4 mobile-medium:gap-3">
       <QAItem faq={faq} />
