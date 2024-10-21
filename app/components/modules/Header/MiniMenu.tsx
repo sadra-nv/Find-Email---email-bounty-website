@@ -11,7 +11,7 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
       <div
         className={`z-50 duration-500 ${
           !isShowMenu ? "translate-x-full" : "translate-x-0"
-        } fixed top-0 w-[calc(100dvw-25%)] right-0 h-dvh bg-gradient-to-b from-[#06265c] to-[#030015] flex flex-col py-16`}
+        } fixed top-0 w-[calc(100dvw-25%)] right-0 h-dvh bg-gradient-to-b from-[#400C27] to-[#030015] flex flex-col py-16`}
       >
         <nav>
           <ul className="flex flex-col gap-6  text-sm px-6 py-5">

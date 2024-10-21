@@ -10,8 +10,9 @@ const Headersm = () => {
       <div className="container">
         <div className="flex justify-between items-center py-8">
           <Link href={"/"} className="flex items-center gap-2.5">
+            <img className="animate-spin" src="/images/owl.svg" alt="" />
             <img className="" src="/images/logo.svg" alt="" />
-            <h4 className="text-xl text-white font-bold">FindEmail</h4>
+            {/* <h4 className="text-xl text-white font-bold">FindEmail</h4> */}
           </Link>
           <button
             onClick={() => setIsShowMenu((e) => !e)}

@@ -5,14 +5,14 @@ export default function Header() {
     return (
         <header className="absolute top-0 left-0 w-full z-50">
             <div className="container">
-                <div className="flex justify-between items-center py-12">
+                <div className="flex justify-between items-center py-12 gap-5 ">
                     <Link href={"/"} className="flex items-center gap-2.5">
+                        <img className="animate-spin" src="/images/owlmd.svg" alt="" />
                         <img className="" src="/images/logomd.svg" alt="" />
-
-                        <h4 className="text-xl text-white font-bold">FindEmail</h4>
+                        {/* <h4 className="text-xl text-white font-bold">FindEmail</h4> */}
                     </Link>
                     <nav>
-                        <ul className="flex items-center gap-6 bg-white/15 rounded-xl text-white text-sm px-6 py-5">
+                        <ul className="flex items-center gap-6 bg-white/15 rounded-xl text-white text-xs xl:text-sm text-center xl:px-6 px-2 py-3">
                             <li>
                                 <Link href={"/"} className="flex items-center gap-1">
                                     <img src="/icons/Group.svg" alt="" />
@@ -34,7 +34,8 @@ export default function Header() {
                             <li>
                                 <Link href={"/"} className="flex items-center gap-1">
                                     <img src="/icons/9079356 1.svg" alt="" />
-                                    Online Tools
+                                    <span>Online Tools</span>
+                                    <i className="bi bi-chevron-down"></i>
                                 </Link>
                             </li>
                             <li>

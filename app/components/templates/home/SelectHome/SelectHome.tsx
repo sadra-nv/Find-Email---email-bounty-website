@@ -29,7 +29,7 @@ const SelectHome = () => {
     <div className="h-fit relative z-40">
       <div className="flex flex-col gap-10">
         <div className="flex justify-center items-center ">
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-2 md:gap-5 items-center text-xs md:text-base ">
             <span>4</span>
             <span className="bg-[#D9D9D9] bg-opacity-10 p-2 rounded">
               keyword
@@ -78,7 +78,7 @@ const SelectHome = () => {
           </select>
         </div>
         <div className="lg:grid lg:grid-cols-12 lg:items-center">
-          <div className="w-fit h-fit hidden lg:flex lg:col-span-2 translate-x-7 xl:translate-x-14 2xl:translate-x-24 transition-transform ">
+          <div className="w-fit h-fit hidden lg:flex lg:col-span-2 translate-x-7  2xl:translate-x-16 transition-transform ">
             <div
               className={`relative duration-500`}
               style={{ transform: `rotate(${rotation}deg)` }} // اعمال چرخش

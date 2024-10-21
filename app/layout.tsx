@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "./components/modules/Header/Header";
 import Footer from "./components/modules/Footer/Footer";
 import Headersm from "./components/modules/Header/Headersm";
-
+import "bootstrap-icons/font/bootstrap-icons.min.css"
 const merriweather = localFont({
   src: "./fonts/Merriweather-Regular.ttf",
   display: "auto",
