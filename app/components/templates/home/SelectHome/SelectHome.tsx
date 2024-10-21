@@ -15,6 +15,7 @@ const SelectHome = () => {
   const [rotationImg, setRotationImg] = useState(0); // state برای چرخش
 
   const handleChangeNumber = (newNumber: number, isUp: boolean) => {
+    console.log("dwadwdawd");
     setFade(false);
     setTimeout(() => {
       setChangeNumber(newNumber);
@@ -25,7 +26,7 @@ const SelectHome = () => {
   };
 
   return (
-    <div className="h-fit">
+    <div className="h-fit relative z-40">
       <div className="flex flex-col gap-10">
         <div className="flex justify-center items-center ">
           <div className="flex gap-5 items-center">

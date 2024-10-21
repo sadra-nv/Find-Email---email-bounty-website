@@ -1,4 +1,4 @@
-import pic from "@/public/icons/Email.svg";
+import pic from "@/public/images/Email 1.png";
 import Image from "next/image";
 
 export default function FeaturesItems() {

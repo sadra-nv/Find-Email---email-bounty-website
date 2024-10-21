@@ -22,7 +22,7 @@ export default function Pyramid({ className }: { className?: string }) {
       )}
     >
       <div
-        className="w-full h-auto md:w-[655px] md:h-[613px] min-w-fit relative after:-top-6 md:after:top-0 
+        className="w-full h-auto md:w-[40.9375rem] md:h-[613px] min-w-fit relative after:-top-6 md:after:top-0 
         after:w-full after:bg-pyramid-top
       after:left-0 after:h-3/5 after:absolute after:z-20"
       >
@@ -48,7 +48,7 @@ export default function Pyramid({ className }: { className?: string }) {
                 rx="261.5"
                 ry="251.5"
                 fill="#f5d0fe"
-                fill-opacity="0.6"
+                fillOpacity="0.6"
               />
             </g>
             <defs>
@@ -59,9 +59,9 @@ export default function Pyramid({ className }: { className?: string }) {
                 width="1439.66"
                 height="1419.66"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -151,9 +151,9 @@ export default function Pyramid({ className }: { className?: string }) {
                 width="661.5"
                 height="635.991"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -192,8 +192,8 @@ export default function Pyramid({ className }: { className?: string }) {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(337.5 163.5) rotate(90.8642) scale(447.542 484.539)"
               >
-                <stop stop-color="#F0F1FF" />
-                <stop offset="1" stop-color="#2E0E71" />
+                <stop stopColor="#F0F1FF" />
+                <stop offset="1" stopColor="#2E0E71" />
               </radialGradient>
             </defs>
           </svg>
@@ -217,9 +217,9 @@ export default function Pyramid({ className }: { className?: string }) {
                 width="689"
                 height="663"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -239,19 +239,19 @@ export default function Pyramid({ className }: { className?: string }) {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(351.02 189.037) rotate(90.8321) scale(449.01 468.062)"
               >
-                <stop stop-color="#F0F1FF" />
-                <stop offset="1" stop-color="#2E0E71" />
+                <stop stopColor="#F0F1FF" />
+                <stop offset="1" stopColor="#2E0E71" />
               </radialGradient>
             </defs>
           </svg>
 
           <div
             className="absolute bottom-0 right-8 md:right-20
-        bg-pyramid-right w-full h-[400px] scale-x-125 "
+        bg-pyramid-right w-full h-[25rem] scale-x-125 "
           ></div>
           <div
             className="absolute bottom-0 left-8 md:left-20 bg-pyramid-left
-          w-full h-[400px] scale-x-125"
+          w-full h-[25rem] scale-x-125"
           ></div>
         </div>
       </div>

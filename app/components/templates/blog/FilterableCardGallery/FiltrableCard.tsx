@@ -80,12 +80,12 @@ export default function FilterableCard() {
       <div className="flex flex-col gap-4 ">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1">
-            <Image alt="speaker" src={speaker} placeholder="blur" />
+            <Image alt="speaker" src={speaker} />
             <span className="text-xs">New</span>
           </div>
           <div className="w-2 h-2 rounded-full bg-gradient-to-tr from-highlight-dark to-highlight-light"></div>
           <div className="flex items-center gap-1">
-            <Image alt="calender" src={calender} placeholder="blur" />
+            <Image alt="calender" src={calender} />
             <span className="text-xs">September 13, 2024</span>
           </div>
         </div>

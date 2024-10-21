@@ -96,14 +96,15 @@ export default function StarsSection() {
     const shootingStarOpacityDelta = 0.01;
     const trailLengthDelta = 0.01;
     // THE FREQUENCY
-    const shootingStarEmittingInterval = 500;
-    const shootingStarLifeTime = 200;
+    let shootingStarEmittingInterval = 300;
+    // let counter = 0;
+    let shootingStarLifeTime = 0;
     const maxTrailLength = 300;
 
     const shootingStarRadius = 3;
     let paused = false;
     // Initialize shooting star emission timing
-    let lastShootingStarTime = 0;
+    // let lastShootingStarTime = 0;
 
     // Generate static dots
     const staticDots: Point[] = [];
@@ -152,12 +153,17 @@ export default function StarsSection() {
     }
     // Function to handle the shooting star's lifecycle
     function killShootingStar(shootingStar: Particle): void {
-      setTimeout(() => {
+      if (shootingStarLifeTime > 100) {
         shootingStar.isDying = true;
-      }, shootingStarLifeTime);
+        shootingStarLifeTime = 0;
+      }
+      // setTimeout(() => {
+      // }, shootingStarLifeTime);
     }
     // Main update function for rendering and updating shooting stars
     function updateShootingStars(): void {
+      shootingStarEmittingInterval++;
+      shootingStarLifeTime++;
       shootingStars.forEach((shootingStar) => {
         // Handle spawning (fading in)
         if (shootingStar.isSpawning) {
@@ -206,7 +212,7 @@ export default function StarsSection() {
       context.fill();
     }
     // Function to handle the main animation loop using requestAnimationFrame
-    function animateShootingStars(time: number): void {
+    function animateShootingStars(): void {
       if (!context) return;
 
       // Clear the canvas and redraw the background
@@ -217,10 +223,14 @@ export default function StarsSection() {
       drawStaticDots();
 
       // Generate a new shooting star if enough time has passed
-      if (time - lastShootingStarTime > shootingStarEmittingInterval) {
+      if (shootingStarEmittingInterval > 20) {
         if (!paused) createShootingStar();
-        lastShootingStarTime = time;
+        shootingStarEmittingInterval = 0;
       }
+      // if (time - lastShootingStarTime > shootingStarEmittingInterval) {
+      //   if (!paused) createShootingStar();
+      //   lastShootingStarTime = time;
+      // }
       //  Update and render the stars and shooting stars
 
       updateShootingStars();

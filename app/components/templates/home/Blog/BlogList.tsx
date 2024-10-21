@@ -11,7 +11,6 @@ export default function BlogList() {
         <Image
           src={pic}
           alt="email icon"
-          placeholder="blur"
           width={30}
           height={30}
           className="size-7 sm:size-14"

@@ -40,7 +40,7 @@ export default function SiteOverview({
             <Image
               alt="background"
               src={bg}
-              className="absolute h-full object-cover"
+              className="absolute h-full w-auto object-cover"
               placeholder="blur"
             />
 

@@ -18,7 +18,7 @@ export default function Pillar({ className }: { className?: string }) {
           d="M75 601H1V1H75V601Z"
           fill="url(#paint0_linear_35_296)"
           stroke="#FEF7F7"
-          stroke-opacity="0.19"
+          strokeOpacity="0.19"
         />
         <defs>
           <linearGradient
@@ -29,8 +29,8 @@ export default function Pillar({ className }: { className?: string }) {
             y2="909.665"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#D9D9D9" stop-opacity="0" />
-            <stop offset="1" stop-color="#737373" stop-opacity="0.38" />
+            <stop stopColor="#D9D9D9" stopOpacity="0" />
+            <stop offset="1" stopColor="#737373" stopOpacity="0.38" />
           </linearGradient>
         </defs>
       </svg>
