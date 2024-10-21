@@ -92,7 +92,7 @@ export default function FilterableCard() {
         <h2 className="text-sm/8">
           What is Data Leakage and How to Prevent It? What is Data Leakage
         </h2>
-        <button className="w-fit mb-8">
+        <button className="w-fit mb-8 ">
           <Link
             href={"/"}
             className="flex items-center gap-1 py-3 px-4 rounded-lg text-xs text-white hover-btn"
