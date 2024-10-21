@@ -7,7 +7,7 @@ import BGGlow from "../../UI/BGGlow/BGGlow";
 
 export default function FAQ() {
   return (
-    <section className="lg:mt-36">
+    <section className="lg:mt-36 mb-20 lg:mb-32">
       <div className="container">
         <div className="">
           <div className="flex justify-center mb-32 w-full relative">
