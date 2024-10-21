@@ -68,9 +68,9 @@ const SelectHome = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center rounded-full bg-gradient-to-r from-[#C24B76] to-[#FD8330] lg:hidden w-full">
+        <div className="px-3 text-neutral-50 flex justify-center rounded-full bg-gradient-to-r from-[#C24B76] to-[#FD8330] lg:hidden w-full">
           <img className="w-5" src="/icons/Email.svg" alt="" />
-          <select className="p-3 w-full bg-transparent outline-none text-gray-800">
+          <select className="p-3 w-full bg-transparent active:text-neutral-900 focus:text-neutral-900 outline-none ">
             <option value="">Company Email</option>
             <option value="">Leaked Database</option>
             <option value="">News</option>
@@ -142,10 +142,10 @@ const SelectHome = () => {
               </div>
             </div>
           </div>
-          <div className="items-center lg:col-span-10 pl-14 px-3 w-full rounded-full flex bg-white overflow-hidden">
+          <div className="items-center lg:col-span-10 lg:pl-14 px-3 w-full rounded-full flex bg-white overflow-hidden">
             <label
               htmlFor=""
-              className={`text-[#0E0B29] font-bold text-nowrap transition-opacity duration-300 ${
+              className={`text-[#0E0B29] hidden lg:inline font-bold text-nowrap transition-opacity duration-300 ${
                 fade ? "opacity-100" : "opacity-0"
               }`}
             >
