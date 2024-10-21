@@ -84,8 +84,10 @@ export default function StarsSection() {
     // Canvas and settings
     const context = canvasRef.current?.getContext("2d");
     if (!context) return;
-    const width = (context.canvas.width = window.innerWidth);
-    const height = (context.canvas.height = window.innerHeight);
+    const scaleFactor = window.devicePixelRatio || 1;
+    const width = (context.canvas.width = window.innerWidth * scaleFactor);
+    const height = (context.canvas.height = window.innerHeight * scaleFactor);
+    context.scale(scaleFactor, scaleFactor);
 
     let shootingStars: Particle[] = [];
 
