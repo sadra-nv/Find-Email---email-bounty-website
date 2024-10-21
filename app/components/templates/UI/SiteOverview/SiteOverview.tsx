@@ -29,7 +29,7 @@ export default function SiteOverview({
         <a
           href=""
           className="text-sm md:text-lg rounded-lg bg-gradient-to-t from-[#07255B]
-           to-[#061742] py-1.5 sm:py-2 px-4 sm:px-5"
+           to-[#061742] py-1.5 sm:py-2 px-4 sm:px-5 "
         >
           Lorem Ipsum
         </a>

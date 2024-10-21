@@ -4,7 +4,7 @@ import { useObserver } from "@/hooks/useObserver";
 import { cn } from "@/lib/utils";
 import { LegacyRef } from "react";
 
-export default function Pyramid() {
+export default function Pyramid({ className }: { className?: string }) {
   const [observeRef, isInView] = useObserver(
     {
       root: null,
@@ -16,7 +16,10 @@ export default function Pyramid() {
   return (
     <div
       ref={observeRef as LegacyRef<HTMLDivElement>}
-      className="w-full h-fit flex justify-center items-center overflow-hidden "
+      className={cn(
+        "w-full h-fit flex justify-center items-center overflow-hidden",
+        className
+      )}
     >
       <div
         className="w-full h-auto md:w-[655px] md:h-[613px] min-w-fit relative after:-top-6 md:after:top-0 

@@ -60,7 +60,7 @@ export default function APIPic() {
         </div>
       </div>
 
-      <div className="flex justify-between lg:justify-center items-center gap-4 w-full mt-6 lg:mt-8">
+      <div className="flex flex-col xs:flex-row justify-between lg:justify-center items-center gap-4 w-full mt-6 lg:mt-8">
         <button className="w-full lg:w-fit group py-4 px-6 btn-hover bg-orange-grad-btn font-bold text-sm rounded-md">
           <span>Get Started</span>
           <svg

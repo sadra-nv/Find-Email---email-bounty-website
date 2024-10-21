@@ -2,6 +2,7 @@ import Image from "next/image";
 import FilterableCard from "../../blog/FilterableCardGallery/FiltrableCard";
 import Halo from "../../UI/Halo/Halo";
 import pic from "@/public/images/Email 1.png";
+import Link from "next/link";
 
 export default function BlogList() {
   return (
@@ -27,6 +28,14 @@ export default function BlogList() {
           <Halo className="size-36" />
         </div>
         <FilterableCard />
+      </div>
+      <div className="w-full mt-6 lg:mt-8">
+        <Link
+          className="block text-base lg:text-lg w-fit mx-auto px-6 py-3 bg-back-dark btn-hover overflow-hidden rounded-md"
+          href="/blog"
+        >
+          View All
+        </Link>
       </div>
     </section>
   );

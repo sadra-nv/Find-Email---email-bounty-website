@@ -6,9 +6,9 @@ import hexagone from "@/public/vectors/hegzagone-box.png";
 export default function Features() {
   return (
     <section className="container">
-      <Pyramid />
+      <Pyramid className="-translate-y-20 lg:-translate-y-28" />
 
-      <ul className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 mt-12 ">
+      <ul className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 ">
         <FeaturesItems />
         <div className="flex justify-center items-center lg:hidden">
           <Image src={hexagone} alt="hex" width={70} height={38} />

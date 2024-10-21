@@ -10,7 +10,7 @@ export default function page() {
       <HeroSection></HeroSection>
       <CategoryList></CategoryList>
       <FilterableCardGallery></FilterableCardGallery>
-      <SiteOverview blog>
+      <SiteOverview blog className="max-h-[43.75rem]">
         <GlowingArc className="scale-x-[140%] scale-y-125 sm:scale-x-100 sm:scale-y-100 translate-y-16 md:translate-y-0" />
       </SiteOverview>
     </>

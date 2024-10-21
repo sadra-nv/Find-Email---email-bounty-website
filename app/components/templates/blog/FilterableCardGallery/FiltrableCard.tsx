@@ -1,4 +1,8 @@
 import Link from "next/link";
+import bitcoin from "@/public/images/bitcoincore.png";
+import Image from "next/image";
+import speaker from "@/public/images/speaker 1.png";
+import calender from "@/public/images/calender.png";
 
 export default function FilterableCard() {
   return (
@@ -63,22 +67,25 @@ export default function FilterableCard() {
             <li className="border border-purple-900 "></li>
           </ul>
         </div>
-        <img
-          className="absolute top-2  w-auto group-hover:translate-y-4
-           group-hover:scale-[115%] duration-300 ease-in transition-all"
-          src="/images/bitcoincore.png"
-          alt=""
+        <Image
+          alt="bitcoin"
+          src={bitcoin}
+          placeholder="blur"
+          width={140}
+          height={140}
+          className="absolute top-2 group-hover:translate-y-4
+                  group-hover:scale-[115%] duration-300 ease-in transition-all"
         />
       </div>
       <div className="flex flex-col gap-4 ">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1">
-            <img src="/icons/Group 238267.svg" alt="" />
+            <Image alt="speaker" src={speaker} placeholder="blur" />
             <span className="text-xs">New</span>
           </div>
-          <img src="/images/home/dot.png" alt="" />
+          <div className="w-2 h-2 rounded-full bg-gradient-to-tr from-highlight-dark to-highlight-light"></div>
           <div className="flex items-center gap-1">
-            <img src="/icons/Group 238266.svg" alt="" />
+            <Image alt="calender" src={calender} placeholder="blur" />
             <span className="text-xs">September 13, 2024</span>
           </div>
         </div>
@@ -92,7 +99,6 @@ export default function FilterableCard() {
           >
             Read More
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}

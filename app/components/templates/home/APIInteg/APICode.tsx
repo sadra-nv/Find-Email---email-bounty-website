@@ -1,4 +1,25 @@
+import { Code } from "bright";
+
 export default function APICode() {
+  Code.theme = "github-dark";
+  const myCode = `root@criminalip ~ % curl --request GET --url "https://api.criminalip.io/v1/asset/ip/summary?ip=<ip>" --header "x-api-key: <YOUR_API_KEY>" | {
+   "ip": "8.8.8.8",
+   "score": { "inbound": "Moderate", "outbound": "Low" },
+   "country": "United States",
+   "country_code": "us",
+   "region": "California",
+   "city": "Los Angeles",
+   "isp": "GOOGLE",
+   "org_name": "Google",
+   "as_no": 15169,
+   "postal_code": "90009",
+   "latitude": 34.0544,
+   "longitude": -118.2441,
+   "status": 200
+}
+root@criminalip ~ %
+`;
+
   return (
     <div className="row-start-1 row-end-2 lg:-row-start-1 lg:-row-end-2 lg:col-start-2 ">
       <h2 className="text-xl lg:text-3xl font-bold text-neutral-50 ">
@@ -10,7 +31,9 @@ export default function APICode() {
         to seamlessly integrate all other functions and the database in your
         organization’s infrastructure
       </p>
-      <div className="bg-[#0C172D] h-[31.25rem] rounded-lg shadow-api-code p-4 lg:p-6"></div>
+      <Code lang="shell" className=" rounded-lg shadow-api-code ">
+        {myCode}
+      </Code>
     </div>
   );
 }

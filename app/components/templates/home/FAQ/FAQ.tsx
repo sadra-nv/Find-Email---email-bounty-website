@@ -7,7 +7,7 @@ import BGGlow from "../../UI/BGGlow/BGGlow";
 
 export default function FAQ() {
   return (
-    <div>
+    <section className="lg:mt-36">
       <div className="container">
         <div className="">
           <div className="flex justify-center mb-32 w-full relative">
@@ -47,6 +47,6 @@ export default function FAQ() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

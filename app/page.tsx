@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <SiteOverview className="z-30 relative -translate-y-20 sm:-translate-y-44" />
+      <SiteOverview className="z-30 relative -translate-y-20 sm:-translate-y-44 max-h-[43.75rem]" />
       <Features />
       <APIInteg />
       <BlogList />
