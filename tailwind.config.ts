@@ -19,6 +19,7 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
+        "orange-grad-btn": "linear-gradient(90deg, #C24B76 0%, #FD8330 100%)",
         "how-circle":
           "radial-gradient(55.49% 57.73% at 49.86% 50%,#7a3da9 0%,rgba(46, 14, 113, 0.46) 88.64%)",
         "how-box":
@@ -56,6 +57,7 @@ const config: Config = {
       },
       colors: {
         background: "#030015",
+        "back-dark": "#0a142f",
         "highlight-med": "#7a3da9",
         "highlight-dark": "#2e0e71",
         "highlight-light": "#f5d0fe",

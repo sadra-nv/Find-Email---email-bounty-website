@@ -93,7 +93,8 @@ export default function StarsSection() {
     const shootingStarSpeed = { min: 10, max: 15 };
     const shootingStarOpacityDelta = 0.01;
     const trailLengthDelta = 0.01;
-    const shootingStarEmittingInterval = 200;
+    // THE FREQUENCY
+    const shootingStarEmittingInterval = 500;
     const shootingStarLifeTime = 200;
     const maxTrailLength = 300;
 

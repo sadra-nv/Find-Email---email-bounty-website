@@ -11,7 +11,7 @@ export default function page() {
       <CategoryList></CategoryList>
       <FilterableCardGallery></FilterableCardGallery>
       <SiteOverview blog>
-        <GlowingArc />
+        <GlowingArc className="scale-x-[140%] scale-y-125 sm:scale-x-100 sm:scale-y-100 translate-y-16 md:translate-y-0" />
       </SiteOverview>
     </>
   );

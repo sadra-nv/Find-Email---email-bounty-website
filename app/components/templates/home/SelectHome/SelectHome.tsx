@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 
 const SelectHome = () => {
-  const allNameSelect = [
-    { id: 1, name: "Company Email" },
-    { id: 2, name: "Leaked Database" },
-    { id: 3, name: "News" },
-    { id: 4, name: "Tools" },
-  ];
+  // const allNameSelect = [
+  //   { id: 1, name: "Company Email" },
+  //   { id: 2, name: "Leaked Database" },
+  //   { id: 3, name: "News" },
+  //   { id: 4, name: "Tools" },
+  // ];
 
   const [changNumber, setChangeNumber] = useState(1);
   const [fade, setFade] = useState(true);
