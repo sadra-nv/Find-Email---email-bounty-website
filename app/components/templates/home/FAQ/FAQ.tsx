@@ -42,7 +42,7 @@ export default function FAQ() {
             <div className="flex flex-col gap-5 relative">
               <BGGlow className=" top-8 sm:-top-20" />
 
-              <QAList faq={"a"} />
+              <QAList faq={1} />
             </div>
           </div>
         </div>
