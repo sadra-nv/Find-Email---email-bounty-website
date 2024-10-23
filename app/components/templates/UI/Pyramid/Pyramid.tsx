@@ -236,7 +236,7 @@ export default function Pyramid({ className }: { className?: string }) {
             </defs>
           </svg>
           <svg
-            className="animate-blob absolute left-0 -top-10 scale-105"
+            className="animate-pyramid-glow absolute left-0 -top-10 scale-105"
             preserveAspectRatio="xMidYMax meet"
             viewBox="0 0 689 663"
             fill="none"

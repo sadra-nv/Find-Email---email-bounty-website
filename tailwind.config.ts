@@ -85,6 +85,8 @@ const config: Config = {
         },
         "pyramid-glow": {
           "0%": { opacity: "0" },
+          "35%": { opacity: "0.5" },
+          "65%": { opacity: "0.2" },
           "100%": { opacity: "0.7" },
         },
         "3d-qa": {
@@ -106,7 +108,7 @@ const config: Config = {
         },
       },
       animation: {
-        "pyramid-glow": "pyramid-glow 3s ease infinite alternate",
+        "pyramid-glow": "pyramid-glow 5s ease infinite alternate",
         "logo-spin": "spin ease 5s infinite",
         "how-circle": "how-circle ease 1.8s infinite",
         "how-circle2": "how-circle ease 1.8s 0.3s  infinite",

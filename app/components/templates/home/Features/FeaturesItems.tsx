@@ -5,8 +5,8 @@ export default function FeaturesItems() {
   return (
     <li
       className="h-[250px] relative before:bg-[#3300FF] before:blur-3xl before:rounded-full 
-    before:absolute before:w-16 before:left-1/2 before:-translate-x-1/2 
-    before:top-1/2 before:-translate-y-1/2 before:h-16 before:opacity-100  "
+    before:absolute before:w-28 before:left-1/2 before:-translate-x-1/2 
+    before:top-1/2 before:-translate-y-1/2 before:h-28 before:opacity-100  "
     >
       <div className="w-full h-full z-20 absolute px-20 flex justify-center items-start flex-col">
         <Image alt="icon" src={pic} width={35} height={30} />
