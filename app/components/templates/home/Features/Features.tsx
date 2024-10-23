@@ -39,6 +39,19 @@ export default function Features() {
           <Image src={hexagone} alt="hex" width={70} height={38} />
         </div>
         <FeaturesItems />
+
+        {/* <div className=" flex justify-center items-center lg:hidden">
+          <Image src={hexagone} alt="hex" width={70} height={38} />
+        </div> */}
+        {/* <div className="hidden justify-center items-center xl:flex">
+          <Image src={hexagone} alt="hex" width={70} height={38} />
+        </div>
+        <div className="hidden justify-center items-center xl:flex">
+          <Image src={hexagone} alt="hex" width={70} height={38} />
+        </div>
+        <div className="hidden justify-center items-center xl:flex">
+          <Image src={hexagone} alt="hex" width={70} height={38} />
+        </div> */}
       </ul>
     </section>
   );

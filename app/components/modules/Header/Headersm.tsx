@@ -1,7 +1,12 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
 import MiniMenu from "./MiniMenu";
+import Link from "next/link";
+import logo from "@/public/images/logo.png";
+import logoText from "@/public/images/logo-text.png";
+import burger from "@/public/icons/header-open.png";
+
+import Image from "next/image";
 
 const Headersm = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
@@ -10,19 +15,31 @@ const Headersm = () => {
       <div className="container">
         <div className="flex justify-between items-center py-8">
           <Link href={"/"} className="flex items-center gap-2.5">
-            <img className="animate-spin" src="/images/owl.svg" alt="" />
-            <img className="" src="/images/logo.svg" alt="" />
-            {/* <h4 className="text-xl text-white font-bold">FindEmail</h4> */}
+            <Image
+              className="animate-logo-spin"
+              alt="find email logo"
+              src={logo}
+              placeholder="blur"
+              width={32}
+              height={32}
+            />
+            <Image
+              alt="find email logo text"
+              src={logoText}
+              placeholder="blur"
+              height={26}
+              width={89}
+            />
           </Link>
           <button
             onClick={() => setIsShowMenu((e) => !e)}
             className="cursor-pointer"
           >
-            <img src="/icons/hamber.svg" alt="" />
+            <Image alt="burger menu button" src={burger} />
           </button>
         </div>
       </div>
-        <MiniMenu isShowMenu={isShowMenu} setIsShowMenu={setIsShowMenu}></MiniMenu>
+      <MiniMenu isShowMenu={isShowMenu} setIsShowMenu={setIsShowMenu} />
     </header>
   );
 };

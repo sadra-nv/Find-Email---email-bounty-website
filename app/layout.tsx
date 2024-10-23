@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-import "bootstrap-icons/font/bootstrap-icons.min.css";
 const merriweather = localFont({
-  src: "./fonts/Merriweather-Regular.ttf",
-  display: "auto",
+  src: "../public/fonts/merriweather-regular.woff2",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

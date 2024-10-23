@@ -102,6 +102,7 @@ const config: Config = {
         },
       },
       animation: {
+        "logo-spin": "spin ease 5s infinite",
         "how-circle": "how-circle ease 1.8s infinite",
         "how-circle2": "how-circle ease 1.8s 0.3s  infinite",
         "how-circle3": "how-circle ease 1.8s  0.6s infinite",
