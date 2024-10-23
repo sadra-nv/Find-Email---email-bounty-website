@@ -17,7 +17,7 @@ export default function Pyramid({ className }: { className?: string }) {
     <div
       ref={observeRef as LegacyRef<HTMLDivElement>}
       className={cn(
-        "w-full h-fit flex justify-center items-center overflow-hidden",
+        "w-full h-fit flex justify-center items-center overflow-hidden relative pb-12 lg:pb-0",
         className
       )}
     >
@@ -36,7 +36,45 @@ export default function Pyramid({ className }: { className?: string }) {
         ></div>
         <div className="absolute w-full h-full left-0 bottom-0 grid grid-cols-2 ">
           <svg
-            className="w-full absolute left-0 top-0 animate-blob scale-75 md:scale-100"
+            className="w-1/3 z-30 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 "
+            preserveAspectRatio="xMidYMax meet"
+            viewBox="0 0 278 352"
+            fill="none"
+          >
+            <g filter="url(#filter0_f_117_287)">
+              <path
+                d="M40 280L151.5 40L238 280L196 220L175 312L151.5 199.5L131.5 232L81.5 312L90 220L40 280Z"
+                fill="#F0F1FF"
+                fillOpacity="0.44"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_117_287"
+                x="0"
+                y="0"
+                width="278"
+                height="352"
+                filterUnits="userSpaceOnUse"
+                colorInterpolationFilters="sRGB"
+              >
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="20"
+                  result="effect1_foregroundBlur_117_287"
+                />
+              </filter>
+            </defs>
+          </svg>
+
+          <svg
+            className="z-40 w-full absolute left-0 top-0 animate-pyramid-glow scale-75 md:scale-100"
             preserveAspectRatio="xMidYMax meet"
             viewBox="0 0 1441 1421"
             fill="none"
@@ -192,8 +230,8 @@ export default function Pyramid({ className }: { className?: string }) {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(337.5 163.5) rotate(90.8642) scale(447.542 484.539)"
               >
-                <stop stopColor="#F0F1FF" />
-                <stop offset="1" stopColor="#2E0E71" />
+                <stop stopColor="#FEF7F7" />
+                <stop offset="1" stopColor="#2D2EC0" />
               </radialGradient>
             </defs>
           </svg>
@@ -239,8 +277,8 @@ export default function Pyramid({ className }: { className?: string }) {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(351.02 189.037) rotate(90.8321) scale(449.01 468.062)"
               >
-                <stop stopColor="#F0F1FF" />
-                <stop offset="1" stopColor="#2E0E71" />
+                <stop stopColor="#FEF7F7" />
+                <stop offset="1" stopColor="#2D2EC0" />
               </radialGradient>
             </defs>
           </svg>
@@ -254,6 +292,23 @@ export default function Pyramid({ className }: { className?: string }) {
           w-full h-[25rem] scale-x-125"
           ></div>
         </div>
+      </div>
+
+      <div className="w-full absolute left-1/2 -translate-x-1/2 bottom-4 lg:bottom-6 z-30">
+        <div
+          className="p-1 lg:p-2 btn-hover bg-gradient-to-t from-highlight-dark to-highlight-med 
+         w-fit rounded-xl mx-auto"
+        >
+          <button
+            className=" lg:text-xl lg:font-bold bg-gradient-to-t from-highlight-dark to-highlight-med
+        border-none lg:px-24 lg:py-6 rounded-md mx-auto text-sm px-6 py-3 block"
+          >
+            Useful Features
+          </button>
+        </div>
+        <h2 className="block w-fit lg:mt-9 mt-5 mx-auto text-xs font-bold lg:text-xl">
+          Bulid A lead Base For Any Purpose
+        </h2>
       </div>
     </div>
   );

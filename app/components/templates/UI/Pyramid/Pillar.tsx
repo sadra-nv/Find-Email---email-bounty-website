@@ -4,7 +4,7 @@ export default function Pillar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "w-10 md:w-[4.375rem] h-full left-0 bottom-0 z-0 relative bg-highlight-med scale-95 bg-opacity-30 rounded-b-full overflow-hidden",
+        "w-10 md:w-[4.375rem] h-full left-0 bottom-0 z-0 relative bg-[#2D2EC0] scale-95 bg-opacity-30 rounded-b-full overflow-hidden",
         className
       )}
     >

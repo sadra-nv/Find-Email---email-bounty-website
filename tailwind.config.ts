@@ -83,6 +83,10 @@ const config: Config = {
             opacity: "0",
           },
         },
+        "pyramid-glow": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "0.7" },
+        },
         "3d-qa": {
           "0%": {
             transform: "translateY(0rem)  translateX(0%)",
@@ -102,6 +106,7 @@ const config: Config = {
         },
       },
       animation: {
+        "pyramid-glow": "pyramid-glow 3s ease infinite alternate",
         "logo-spin": "spin ease 5s infinite",
         "how-circle": "how-circle ease 1.8s infinite",
         "how-circle2": "how-circle ease 1.8s 0.3s  infinite",
