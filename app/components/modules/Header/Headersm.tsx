@@ -35,7 +35,7 @@ const Headersm = () => {
             onClick={() => setIsShowMenu((e) => !e)}
             className="cursor-pointer"
           >
-            <Image alt="burger menu button" src={burger} />
+            <Image alt="burger menu button" placeholder="blur" src={burger} />
           </button>
         </div>
       </div>

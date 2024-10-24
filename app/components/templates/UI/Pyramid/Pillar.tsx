@@ -4,11 +4,11 @@ export default function Pillar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "w-10 md:w-[4.375rem] h-full left-0 bottom-0 z-0 relative bg-[#2D2EC0] scale-95 bg-opacity-30 rounded-b-full overflow-hidden",
+        "w-10 md:w-[4.375rem] h-full left-0 bottom-0 z-0 relative bg-[#10034B] scale-95  rounded-b-full overflow-hidden",
         className
       )}
     >
-      <svg
+      {/* <svg
         className=" absolute w-full h-full  left-0 top-0"
         preserveAspectRatio="xMidYMax meet"
         viewBox="0 0 76 602"
@@ -33,7 +33,7 @@ export default function Pillar({ className }: { className?: string }) {
             <stop offset="1" stopColor="#737373" stopOpacity="0.38" />
           </linearGradient>
         </defs>
-      </svg>
+      </svg> */}
     </div>
   );
 }

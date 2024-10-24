@@ -36,6 +36,45 @@ export default function Pyramid({ className }: { className?: string }) {
         ></div>
         <div className="absolute w-full h-full left-0 bottom-0 grid grid-cols-2 ">
           <svg
+            id="inner-pyramid"
+            className="z-30 absolute left-1/2 -translate-x-1/2 blur-md lg:blur-none top-[20%]  "
+            preserveAspectRatio="xMidYMax meet"
+            viewBox="0 0 365 464"
+            fill="none"
+          >
+            <g filter="url(#filter0_f_130_292)">
+              <path
+                d="M50 371.176L199.23 50L315 371.176L258.788 290.882L230.682 414L199.23 263.449L172.462 306.941L105.543 414L116.919 290.882L50 371.176Z"
+                fill="#F0F1FF"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_f_130_292"
+                x="0"
+                y="0"
+                width="365"
+                height="464"
+                filterUnits="userSpaceOnUse"
+                colorInterpolationFilters="sRGB"
+              >
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  result="shape"
+                />
+                <feGaussianBlur
+                  stdDeviation="25"
+                  result="effect1_foregroundBlur_130_292"
+                />
+              </filter>
+            </defs>
+          </svg>
+
+          {/* <svg
+          id="inner-pyramid"
             className="w-1/3 z-30 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 "
             preserveAspectRatio="xMidYMax meet"
             viewBox="0 0 278 352"
@@ -71,9 +110,10 @@ export default function Pyramid({ className }: { className?: string }) {
                 />
               </filter>
             </defs>
-          </svg>
+          </svg> */}
 
           <svg
+            id="pyramid-back-glow"
             className="z-40 w-full absolute left-0 top-0 animate-pyramid-glow scale-75 md:scale-100"
             preserveAspectRatio="xMidYMax meet"
             viewBox="0 0 1441 1421"
@@ -171,6 +211,32 @@ export default function Pyramid({ className }: { className?: string }) {
         <div className="z-10 relative  ">
           <div className="bg-pyramid-bottom absolute bottom-0 md:-bottom-4 w-full h-2/3 left-0"></div>
           <svg
+            id="main-pyramid"
+            preserveAspectRatio="xMidYMax meet"
+            viewBox="0 0 662 611"
+            fill="none"
+          >
+            <path
+              d="M341 0C334.569 256.839 267.785 367.123 0 484.5C241.596 632.041 381.783 673.029 661.5 484.5C434.448 363.748 344.217 271.142 341 0Z"
+              fill="url(#paint0_radial_130_290)"
+            />
+            <defs>
+              <radialGradient
+                id="paint0_radial_130_290"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(337.5 163.5) rotate(90.8642) scale(447.542 484.539)"
+              >
+                <stop stopColor="#F0F1FF" />
+                <stop offset="0.454039" stopColor="#25C0F9" />
+                <stop offset="1" stopColor="#3D4ADF" />
+              </radialGradient>
+            </defs>
+          </svg>
+
+          {/* <svg
             preserveAspectRatio="xMidYMax meet"
             viewBox="0 0 662 611"
             fill="none"
@@ -234,8 +300,10 @@ export default function Pyramid({ className }: { className?: string }) {
                 <stop offset="1" stopColor="#2D2EC0" />
               </radialGradient>
             </defs>
-          </svg>
+          </svg> */}
+
           <svg
+            id="pyramid-outer-glow"
             className="animate-pyramid-glow absolute left-0 -top-10 scale-105"
             preserveAspectRatio="xMidYMax meet"
             viewBox="0 0 689 663"
@@ -277,8 +345,8 @@ export default function Pyramid({ className }: { className?: string }) {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(351.02 189.037) rotate(90.8321) scale(449.01 468.062)"
               >
-                <stop stopColor="#FEF7F7" />
-                <stop offset="1" stopColor="#2D2EC0" />
+                <stop stopColor="#3D4ADF" />
+                <stop offset="1" stopColor="#10034B" />
               </radialGradient>
             </defs>
           </svg>
