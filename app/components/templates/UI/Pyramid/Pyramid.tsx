@@ -364,11 +364,11 @@ export default function Pyramid({ className }: { className?: string }) {
 
       <div className="w-full absolute left-1/2 -translate-x-1/2 bottom-4 lg:bottom-6 z-30">
         <div
-          className="p-1 lg:p-2 btn-hover bg-gradient-to-t from-highlight-dark to-highlight-med 
+          className="p-1 lg:p-2 btn-hover bg-gradient-to-t from-highlight-dark to-highlight-med relative z-40 
          w-fit rounded-xl mx-auto"
         >
           <button
-            className=" lg:text-xl lg:font-bold bg-gradient-to-t from-highlight-dark to-highlight-med
+            className="btn-hover lg:text-xl lg:font-bold bg-gradient-to-t from-highlight-dark to-highlight-med
         border-none lg:px-24 lg:py-6 rounded-md mx-auto text-sm px-6 py-3 block"
           >
             Useful Features

@@ -121,6 +121,7 @@
   }
 }
 
+/* API CODE TYPE ANIMATION */
 .code-type {
   opacity: 1;
   color: transparent;
@@ -147,4 +148,9 @@
 .code-appear {
   transition: opacity 0.5s linear calc(var(--n) * 0.05s);
   opacity: 1;
+}
+
+.wheel-icon {
+  transform-origin: center;
+  transform-box: fill-box;
 }

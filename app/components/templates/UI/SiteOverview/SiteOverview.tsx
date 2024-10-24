@@ -19,7 +19,7 @@ export default function SiteOverview({
   blog?: boolean;
 }) {
   return (
-    <section className={cn("overflow-hidden pb-6 ", className)}>
+    <section className={cn("overflow-hidden pb-6 z-0", className)}>
       {children}
       <div
         className={cn("flex justify-center mb-6 ", {
