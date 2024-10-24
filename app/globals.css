@@ -32,6 +32,15 @@
   }
 }
 
+@layer utilities {
+  .thin-bar {
+    scrollbar-width: thin;
+  }
+  .no-bar {
+    scrollbar-width: none;
+  }
+}
+
 /* ROTATING PLANETS BLOGS HERO SECTION */
 
 #rotate,
@@ -110,4 +119,32 @@
     box-shadow: 0 0 20px #fff, 0 0 30px #f5d0fe, 0 0 40px #f5d0fe,
       0 0 50px #7e22ce, 0 0 60px #7e22ce, 0 0 70px #7e22ce, 0 0 80px #7e22ce;
   }
+}
+
+.code-type {
+  opacity: 1;
+  color: transparent;
+  background: linear-gradient(-90deg, #fafafa 1px, #0000 0) 10px 0,
+    linear-gradient(#fafafa 0 0) 0 0;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: b 0.5s infinite steps(1),
+    t calc(var(--n) * 0.05s) steps(var(--n)) forwards;
+}
+@keyframes t {
+  0% {
+    background-size: 0 200%;
+  }
+}
+@keyframes b {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
+}
+
+.code-appear {
+  transition: opacity 0.5s linear calc(var(--n) * 0.05s);
+  opacity: 1;
 }
