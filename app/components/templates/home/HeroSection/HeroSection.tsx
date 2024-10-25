@@ -1,22 +1,24 @@
 import StarsSection from "../../UI/StarsSection/StarsSection";
-import SelectHome from "../SelectHome/SelectHome";
 import HeroSearch from "./HeroSearch";
 
 export default function HeroSection() {
   return (
     <section
       className="bg-gradient-to-b from-[#030014] via-[#030014] to-[#030014] 
-      relative hero-grad xl:min-h-screen h-[31.25rem] sm:h-[43.75rem] xl:h-[56.25rem] "
+      relative hero-grad  h-[25rem] sm:h-[400px] lg:h-[550px]  "
     >
-      {/* <StarsSection className="z-0" /> */}
+      <StarsSection className="z-0 xl:h-screen " />
       <div
+        className="w-full absolute h-full xl:h-0 after:z-10 after:bottom-0 after:right-0 after:w-full after:h-28 after:bg-gradient-to-b 
+      after:to-[#030014] after:via-[#030014] after:from-transparent after:absolute"
+      ></div>
+      {/* <div
         className="absolute z-10 bottom-0 right-0 w-full h-28 bg-gradient-to-b 
       to-[#030014] via-[#030014] from-transparent"
-      ></div>
+      ></div> */}
 
-      <div className="container h-full pt-28 lg:pt-72">
+      <div className="container h-full pt-36 lg:pt-64">
         <HeroSearch />
-        {/* <SelectHome /> */}
       </div>
     </section>
   );

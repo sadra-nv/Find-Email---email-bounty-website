@@ -20,6 +20,8 @@ const config: Config = {
     extend: {
       screens: { xs: "25rem" },
       backgroundImage: {
+        "orange-grad-btn-op":
+          "linear-gradient(90deg, rgba(194, 75, 118, 0.20) 0%, rgba(253, 131, 48, 0.20) 100%)",
         "orange-grad-btn": "linear-gradient(90deg, #C24B76 0%, #FD8330 100%)",
         "how-circle":
           "radial-gradient(55.49% 57.73% at 49.86% 50%,#7a3da9 0%,rgba(46, 14, 113, 0.46) 88.64%)",

@@ -20,6 +20,8 @@ export default function SearchCircleBtn({
   rotateWheel: (id: number) => void;
 }) {
   const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // if(!e.currentTarget.dataset.id) return
+    // const minusID = e.currentTarget.dataset.id -1
     const id = e.currentTarget.dataset.id ? e.currentTarget.dataset.id : 1;
     // console.log(id);
     rotateWheel(Number(id));
@@ -32,7 +34,7 @@ export default function SearchCircleBtn({
       className={cn(
         "p-2 min-w-10 max-w-10 relative rounded-full bg-highlight-dark border-2 border-neutral-50 flex justify-center items-center",
         className,
-        { "bg-orange-grad-btn": id === focusId || (focusId === 0 && id === 4) }
+        { "bg-orange-grad-btn": id === focusId }
       )}
     >
       {/* <div className="absolute -right-14 -top-2">News</div> */}
