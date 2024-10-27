@@ -11,7 +11,7 @@ export default function HowToBtn({
   return (
     <button
       className={cn(
-        "font-bold px-7 py-3 bg-how-btn rounded-md text-xs md:text-sm btn-hover",
+        " px-7 py-3 bg-how-btn rounded-md text-xs md:text-sm btn-hover",
         className
       )}
     >

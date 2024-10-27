@@ -91,8 +91,18 @@ export default function Footer() {
                     name=""
                     id=""
                   />
-                  <button className="w-20 bg-gradient-to-b from-[#8F5CE1] to-[#2E2291]">
-                    <i className="bi bi-arrow-right text-white"></i>
+                  <button className="w-14 bg-gradient-to-b from-[#8F5CE1] group to-[#2E2291]">
+                    <svg
+                      width="16"
+                      height="16"
+                      className="fill-neutral-50  inline-block tran-fast group-hover:translate-x-1"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                      />
+                    </svg>
                   </button>
                 </div>
               </div>

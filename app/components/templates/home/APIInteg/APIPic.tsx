@@ -58,7 +58,7 @@ export default function APIPic() {
       </div>
 
       <div className="flex flex-col xs:flex-row justify-between lg:justify-center items-center gap-4 w-full mt-6 lg:mt-8">
-        <button className="w-full lg:w-fit group py-4 px-6 btn-hover bg-orange-grad-btn font-bold text-sm rounded-md">
+        <button className="w-full lg:w-fit group py-4 px-6 btn-hover bg-orange-grad-btn  text-sm rounded-md">
           <span>Get Started</span>
           <svg
             width="16"
@@ -72,7 +72,7 @@ export default function APIPic() {
             />
           </svg>
         </button>
-        <button className="w-full lg:w-fit bg-[#0a142f] btn-hover text-sm font-bold py-4 px-6 rounded-md">
+        <button className="w-full lg:w-fit bg-[#0a142f] btn-hover text-sm  py-4 px-6 rounded-md">
           Code Samples
         </button>
       </div>
