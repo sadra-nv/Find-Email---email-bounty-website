@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import React, { ReactNode } from "react";
 import ball from "@/public/images/particle-3d-ball.png";
 import bg from "@/public/vectors/Background 1.png";
-import email from "@/public/images/Email 1.png";
+import email from "@/public/images/Email 2(3).png";
 import chart from "@/public/images/grows.png";
 import list from "@/public/images/list.png";
 import data from "@/public/images/data_management_10 1.png";
@@ -68,7 +68,7 @@ export default function SiteOverview({
                   src={list}
                   width={97}
                   height={97}
-                  className="w-10 sm:w-auto"
+                  className="w-10"
                 />
 
                 <span className="text-sm md:text-xl mt-2">2,028,741,188</span>
@@ -82,7 +82,7 @@ export default function SiteOverview({
                   src={chart}
                   width={97}
                   height={97}
-                  className="w-10 sm:w-auto"
+                  className="w-10"
                 />
 
                 <span className="text-sm md:text-xl mt-2">76,523</span>
@@ -96,7 +96,7 @@ export default function SiteOverview({
                   src={email}
                   width={97}
                   height={97}
-                  className="w-10 sm:w-auto"
+                  className="w-8"
                 />
 
                 <span className="text-sm md:text-xl mt-2">496,580,230</span>
@@ -110,7 +110,7 @@ export default function SiteOverview({
                   src={data}
                   width={97}
                   height={97}
-                  className="w-10 sm:w-auto"
+                  className="w-10"
                 />
 
                 <span className="text-sm md:text-xl mt-2">6,117,822,935</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SearchCircleBtn from "./SearchCircleBtn";
 import {
   Select,
@@ -18,6 +18,7 @@ import database from "@/public/icons/leaked-database.png";
 import wrentch from "@/public/icons/wrentch.png";
 import TopKeyword from "./TopKeyword";
 import Image from "next/image";
+import { setTimeout } from "timers";
 
 // type QueryTag = {
 //   id: number;
@@ -79,27 +80,132 @@ export default function HeroSearch() {
   const [title, setTitle] = useState(btnTitles[0].name);
   const wheelRef = useRef<null | HTMLDivElement>(null);
   const [id, setId] = useState(0);
-  const [deg, setDeg] = useState(0);
+  // const [deg, setDeg] = useState(0);
+  const [angleOffset, setAngleOffset] = useState(0);
+  const pos = [0, 90, 180, 270];
 
-  const rotateWheel = (id: number) => {
-    wheelRef.current!.style.rotate = `${(id + 1) * 90}deg`;
-    setDeg((id + 1) * 90);
+  const [order, setOrder] = useState(
+    btnTitles.map((btn) => (btn.id * 90 + angleOffset) / 90)
+  );
+  const [rotateStyle, setRotateStyle] = useState<
+    { left: string; top: string }[] | null
+  >(null);
+
+  const [spanStyle, setSpanStyle] = useState<
+    { left: string; transform: string }[] | null
+  >(null);
+
+  const handleID = (id: number) => {
+    const newAngleOffset = 360 - pos[id];
+    setAngleOffset(newAngleOffset);
     setId(id);
     setTitle(btnTitles[id].name);
-    formRef.current!.focus();
-    console.log(id);
+
+    const newOrder = btnTitles.map(
+      (btn) => ((btn.id * 90 + newAngleOffset) % 360) / 90
+    );
+
+    setOrder(newOrder);
+  };
+
+  const rotateWheel = (id: number) => {
+    handleID(id);
+    // const newAngleOffset = 360 - pos[id];
+    // setAngleOffset(newAngleOffset);
+    // setId(id);
+    // setTitle(btnTitles[id].name);
+
+    // const newOrder = btnTitles.map(
+    //   (btn) => ((btn.id * 90 + newAngleOffset) % 360) / 90
+    // );
+
+    // setOrder(newOrder);
   };
 
   // SELECT MOBILE
   const selectHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const id = Number(e.target.selectedOptions[0].dataset.id);
-    wheelRef.current!.style.rotate = `${(id + 1) * 90}deg`;
-    setDeg((id + 1) * 90);
-    setId(id);
-    setTitle(btnTitles[id].name);
+    handleID(id);
+    // const newAngleOffset = 360 - pos[id];
+    // setAngleOffset(newAngleOffset);
+    // setId(id);
+    // setTitle(btnTitles[id].name);
 
-    // formRef.current!.focus();
+    // const newOrder = btnTitles.map(
+    //   (btn) => ((btn.id * 90 + newAngleOffset) % 360) / 90
+    // );
+
+    // setOrder(newOrder);
   };
+
+  useEffect(() => {
+    // console.log("location", order);
+    const updatedRotateStyles = order.map((ord) => {
+      switch (ord) {
+        case 0:
+          return { left: "calc(50% - 2.5rem)", top: "calc(50% - 1.3rem)" };
+        case 1:
+          return { left: "calc(50% - 1.2rem)", top: "calc(50% - 2.2rem)" };
+        case 2:
+          return { left: "48%", top: "calc(50% - 1.3rem)" };
+        case 3:
+          return { left: "calc(50% - 1.2rem)", top: "calc(50% - 0.4rem)" };
+        case 4:
+          return { left: "calc(50% - 2.5rem)", top: "calc(50% - 1.3rem)" };
+        default:
+          return { left: "0", top: "0" };
+      }
+    });
+
+    const updatedSpanStyles = order.map((ord) => {
+      switch (ord) {
+        case 0:
+          return {
+            left: "50px",
+            transform: "translateY(2rem)",
+          };
+        case 1:
+          return {
+            left: "50%",
+            transform: "translateY(4rem) translateX(-50%)",
+            textAlign: "center",
+          };
+        case 2:
+          return {
+            top: "50%",
+            transform: "translateY(-50%)",
+            right: "3rem",
+            left: "auto",
+            textAlign: "right",
+          };
+        case 3:
+          return {
+            left: "50%",
+            transform: "translateY(-0.2rem) translateX(-50%)",
+            textAlign: "center",
+          };
+        case 4:
+          return {
+            left: "50px",
+            transform: "translateY(2rem)",
+          };
+        default:
+          return {
+            left: "0px",
+            transform: "translateY(0rem)",
+          };
+      }
+    });
+
+    setSpanStyle(updatedSpanStyles);
+    setRotateStyle(updatedRotateStyles);
+
+    setTimeout(() => {
+      wheelRef.current!.style.opacity = "1";
+      wheelRef.current!.style.transform = "rotate(0deg)";
+    }, 200);
+  }, [order]);
+
   // SEARCH BAR
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState("");
@@ -125,49 +231,121 @@ export default function HeroSearch() {
       <div className="w-full flex-col lg:flex-row  h-fit relative flex items-center justify-center">
         <div
           ref={wheelRef}
-          style={{ transform: `rotate(360deg)` }}
-          className=" relative z-30 min-w-44 min-h-44 rounded-full border-[0.1875rem] border-neutral-50 
-    justify-center items-center tran-fast duration-500 
-    hidden lg:flex "
+          className="opacity-0 rotate-[360deg] relative z-30 min-w-44 min-h-44 rounded-full border-[0.1875rem] border-neutral-50 
+    justify-center items-center tran-fast  hidden lg:flex"
         >
-          <div className="min-w-[calc(100%_+_2rem)] h-fit flex justify-between items-center ">
-            <SearchCircleBtn
-              focusId={id}
-              pic={database}
-              rotateWheel={rotateWheel}
-              id={1}
-              style={{ transform: `rotate(-${deg}deg)` }}
-            />
-
-            <SearchCircleBtn
-              focusId={id}
-              pic={wrentch}
-              rotateWheel={rotateWheel}
-              id={3}
-              className=" "
-              style={{ transform: `rotate(-${deg}deg)` }}
-            />
-          </div>
-
-          <div className="w-fit min-h-[calc(100%_+_2rem)]  absolute left-1/2 -translate-x-1/2 flex flex-col justify-center items-stretch">
-            <SearchCircleBtn
-              pic={email}
-              rotateWheel={rotateWheel}
-              focusId={id}
-              id={0}
-              className=""
-              style={{ transform: `rotate(-${deg}deg)` }}
-            />
-
-            <SearchCircleBtn
-              pic={speaker}
-              focusId={id}
-              rotateWheel={rotateWheel}
-              id={2}
-              className="  mt-auto"
-              style={{ transform: `rotate(-${deg}deg)` }}
-            />
-          </div>
+          <SearchCircleBtn
+            className="tran-fast duration-500 rounded-full  "
+            key={btnTitles[0].id}
+            id={btnTitles[0].id}
+            pic={btnTitles[0].img}
+            focusId={id}
+            style={{
+              ...(rotateStyle && rotateStyle[0]),
+              transform: `rotate(${
+                btnTitles[0].id * 90 + angleOffset
+              }deg) translate(100px) rotate(-${
+                btnTitles[0].id * 90 + angleOffset
+              }deg)`,
+            }}
+            rotateWheel={rotateWheel}
+          >
+            <span
+              style={{
+                ...(spanStyle && spanStyle[0]),
+                ...(id === btnTitles[0].id && {
+                  color: "black",
+                }),
+              }}
+              className="absolute -top-6 -left-8 tran-fast duration-500 w-32 text-left transition-transform "
+            >
+              {btnTitles[0].name}
+            </span>
+          </SearchCircleBtn>
+          <SearchCircleBtn
+            className="tran-fast duration-500 rounded-full "
+            key={btnTitles[1].id}
+            id={btnTitles[1].id}
+            pic={btnTitles[1].img}
+            focusId={id}
+            style={{
+              ...(rotateStyle && rotateStyle[1]),
+              transform: `rotate(${
+                btnTitles[1].id * 90 + angleOffset
+              }deg) translate(100px) rotate(-${
+                btnTitles[1].id * 90 + angleOffset
+              }deg)`,
+            }}
+            rotateWheel={rotateWheel}
+          >
+            <span
+              style={{
+                ...(spanStyle && spanStyle[1]),
+                ...(id === btnTitles[1].id && {
+                  color: "black",
+                }),
+              }}
+              className="absolute -top-6 -left-8 tran-fast duration-500  w-32 text-left transition-transform "
+            >
+              {btnTitles[1].name}
+            </span>
+          </SearchCircleBtn>
+          <SearchCircleBtn
+            className="tran-fast duration-500 rounded-full "
+            key={btnTitles[2].id}
+            id={btnTitles[2].id}
+            pic={btnTitles[2].img}
+            focusId={id}
+            style={{
+              ...(rotateStyle && rotateStyle[2]),
+              transform: `rotate(${
+                btnTitles[2].id * 90 + angleOffset
+              }deg) translate(100px) rotate(-${
+                btnTitles[2].id * 90 + angleOffset
+              }deg)`,
+            }}
+            rotateWheel={rotateWheel}
+          >
+            <span
+              style={{
+                ...(spanStyle && spanStyle[2]),
+                ...(id === btnTitles[2].id && {
+                  color: "black",
+                }),
+              }}
+              className="absolute -top-6 -left-8 tran-fast duration-500 transition-transform  w-32 text-left"
+            >
+              {btnTitles[2].name}
+            </span>
+          </SearchCircleBtn>
+          <SearchCircleBtn
+            className="tran-fast duration-500 rounded-full "
+            key={btnTitles[3].id}
+            id={btnTitles[3].id}
+            pic={btnTitles[3].img}
+            focusId={id}
+            style={{
+              ...(rotateStyle && rotateStyle[3]),
+              transform: `rotate(${
+                btnTitles[3].id * 90 + angleOffset
+              }deg) translate(100px) rotate(-${
+                btnTitles[3].id * 90 + angleOffset
+              }deg)`,
+            }}
+            rotateWheel={rotateWheel}
+          >
+            <span
+              style={{
+                ...(spanStyle && spanStyle[3]),
+                ...(id === btnTitles[3].id && {
+                  color: "black",
+                }),
+              }}
+              className="absolute -top-6 -left-8 tran-fast duration-500 w-32 text-left transition-transform "
+            >
+              {btnTitles[3].name}
+            </span>
+          </SearchCircleBtn>
         </div>
 
         <Field className="bg-orange-grad-btn rounded-full w-full lg:hidden min-h-10  mb-4">
@@ -180,6 +358,7 @@ export default function HeroSearch() {
               className="size-4 absolute left-3 top-3"
             />
             <Select
+              defaultValue={btnTitles[id].name}
               onChange={selectHandler}
               className={cn(
                 " block w-full h-fit appearance-none  border-none bg-transparent  text-sm/5 text-white",
@@ -204,7 +383,7 @@ export default function HeroSearch() {
             <svg
               aria-hidden="true"
               className="group pointer-events-none size-3 fill-white
-              absolute right-3  top-3"
+              absolute right-3  top-[0.875rem]"
               width="7"
               height="4"
               viewBox="0 0 7 4"
@@ -241,14 +420,12 @@ export default function HeroSearch() {
               </svg>
             </button>
             <Label className="cursor-text w-full relative flex justify-start items-center pr-14 pl-3 lg:px-14">
-              <div className="hidden lg:block pointer-events-none min-w-fit mr-3 text-neutral-900">
-                {title}
-              </div>
+              <div className="hidden lg:block pointer-events-none min-w-fit mr-36 text-neutral-900"></div>
               <Combobox
-                immediate
+                // immediate
                 value={selected}
                 onChange={(value: string) => {
-                  console.log(value);
+                  // console.log(value);
                   return setSelected(value);
                 }}
                 onClose={() => setQuery("")}
@@ -263,7 +440,7 @@ export default function HeroSearch() {
                     )}
                     displayValue={() => selected}
                     onChange={(event) => {
-                      console.log(filtredTags);
+                      // console.log(filtredTags);
                       return setQuery(event.target.value);
                     }}
                   />
@@ -282,14 +459,14 @@ export default function HeroSearch() {
                 >
                   {selectedTag && (
                     <div key={selectedTag.id}>
-                      <div className="py-1.5 px-3 cursor-text bg-black/20 font-bold">
+                      <div className="py-1.5 px-3 cursor-text bg-[#ccdffedc] font-bold">
                         {selectedTag.title}
                       </div>
                       {selectedTag.queries.map((query, index) => (
                         <ComboboxOption
                           key={query.name + index}
                           value={query.name}
-                          className="group flex cursor-pointer mx-1 my-1 items-center gap-2 rounded-lg py-1.5 px-5 select-none data-[focus]:bg-black/10"
+                          className="group flex cursor-pointer mx-1 my-1 items-center gap-2 rounded-lg py-1.5 px-5 select-none data-[focus]:bg-[#EDF4FF]"
                         >
                           <div>{query.name}:</div>
                           <div className="text-sm/3 text-neutral-600/80">

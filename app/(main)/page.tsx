@@ -5,6 +5,7 @@ import HeroSection from "../components/templates/home/HeroSection/HeroSection";
 import Features from "../components/templates/home/Features/Features";
 import HowTo from "../components/templates/home/HowTo/HowTo";
 import APIInteg from "../components/templates/home/APIInteg/APIInteg";
+import CircularButtons from "../components/templates/home/HeroSection/CIRCLE";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <SiteOverview className=" relative mb-20 lg:mb-36 lg:mt-20 max-h-[43.75rem]" />
       <Features />
       <APIInteg />
+      <CircularButtons />
       <BlogList />
       <HowTo />
       <FAQ />

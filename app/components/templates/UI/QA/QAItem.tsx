@@ -11,7 +11,7 @@ export default function QAItem({ faq }: { faq: number }) {
   };
 
   // TOdo remove this
-  console.log(faq);
+  // console.log(faq);
 
   return (
     <li
@@ -25,7 +25,7 @@ export default function QAItem({ faq }: { faq: number }) {
       <button
         onClick={clickHandler}
         className={cn(
-          "w-full  font-bold max-h-[3.25rem] flex justify-between text-justify gap-3",
+          "w-full  lg:font-bold max-h-[3.25rem] flex justify-between text-justify gap-3",
           "items-start rounded-lg relative z-10",
 
           {
