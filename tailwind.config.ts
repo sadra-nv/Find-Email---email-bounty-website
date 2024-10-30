@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -64,6 +65,17 @@ const config: Config = {
         "highlight-med": "#7a3da9",
         "highlight-dark": "#2e0e71",
         "highlight-light": "#f5d0fe",
+
+        "fe-c-blue-main": "var(--blue-main)",
+        // "fe-c-blue-light": "var(--blue-light)",
+        // "fe-c-blue-dark": "var(--blue-dark)",
+
+        "fe-c-bg-main": "var(--bg-main)",
+        "fe-c-bg-light": "var(--bg-light)",
+        // "fe-c-bg-dark": "var(--bg-dark)",
+        "fe-c-text-normal": "var( --text-normal-color)",
+        "fe-c-text-title": "var( --text-title-color)",
+        "fe-c-text-sub": "var(  --text-sub-color)",
       },
 
       keyframes: {
@@ -83,6 +95,14 @@ const config: Config = {
           "90%, 100%": {
             transform: "scale(1.5)",
             opacity: "0",
+          },
+        },
+        "fill-x": {
+          "0%": {
+            transform: "scale(0)",
+          },
+          "100%": {
+            transform: "scale(1)",
           },
         },
         "pyramid-glow": {
@@ -110,6 +130,7 @@ const config: Config = {
         },
       },
       animation: {
+        "fill-x": "fill-x 0.5s ease forwards",
         "pyramid-glow": "pyramid-glow 5s ease infinite alternate",
         "logo-spin": "spin ease 5s infinite",
         "how-circle": "how-circle ease 1.8s infinite",

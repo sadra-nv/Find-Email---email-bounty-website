@@ -41,6 +41,34 @@
   }
 }
 
+/* COLOR VARIABLES FOR USER DASHBOARD */
+
+:root {
+  --blue-main: #2e2291;
+  /* --blue-light: #6d78ab;
+  --blue-dark: #2f3451; */
+
+  --bg-main: #f8f9fa;
+  --bg-light: #ffffff;
+  /* --bg-dark: #cdd7e5; */
+  --text-normal-color: #484848;
+  --text-title-color: #1e1e1e;
+  --text-sub-color: #929292;
+}
+
+html.dark {
+  --blue-main: #27005e;
+  /* --blue-light: #7678d5;
+  --blue-dark: #1e1f62; */
+
+  --bg-main: #030015;
+  --bg-light: #ffffff10;
+  /* --bg-dark: #1b2532; */
+  --text-normal-color: #e5e5e5;
+  --text-title-color: #fafafa;
+  --text-sub-color: #aaa1a1;
+}
+
 /* ROTATING PLANETS BLOGS HERO SECTION */
 
 #rotate,
@@ -106,7 +134,7 @@
   transform: rotateX(40deg) translateX(-50%);
 }
 
-/*  ARC GLOW */
+/* ARC GLOW */
 .glowing-circle {
   animation: glowing 1s ease-in-out infinite alternate;
 }
