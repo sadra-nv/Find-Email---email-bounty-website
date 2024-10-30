@@ -2,6 +2,7 @@ import { showTodaysDate } from "@/lib/utils";
 import DarkToggle from "../../UI/DarkToggle/DarkToggle";
 import UserBox from "./UserBox";
 import Search from "./Search";
+import BurgerToggle from "./BurgerToggle";
 
 export default function Header() {
   const todaysDate = showTodaysDate();
@@ -33,7 +34,7 @@ export default function Header() {
           />
         </svg>
       </div>
-      <div className="mr-16 flex gap-2 items-center justify-start">
+      <div className="mr-auto w-fit whitespace-nowrap hidden xl:flex gap-2 items-center justify-start">
         <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
           <path
             d="M11.3047 6.73828C11.6283 6.73828 11.8906 6.47595 11.8906 6.15234C11.8906 5.82874 11.6283 5.56641 11.3047 5.56641C10.9811 5.56641 10.7188 5.82874 10.7188 6.15234C10.7188 6.47595 10.9811 6.73828 11.3047 6.73828Z"
@@ -88,6 +89,7 @@ export default function Header() {
         </span>
       </div>
       <Search />
+      <BurgerToggle />
     </header>
   );
 }

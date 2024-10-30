@@ -2,9 +2,12 @@ import { Button, Field, Input, Label } from "@headlessui/react";
 
 export default function Search() {
   return (
-    <form>
+    <form className="mr-auto w-1/3">
       <Field>
-        <Label className="px-5 py-3 bg-white rounded-full cursor-text border border-neutral-500/5 shadow-sm">
+        <Label
+          className="px-5 py-3 bg-white rounded-full cursor-text border border-neutral-500/5 shadow-sm
+        flex justify-start items-center"
+        >
           <Button className="mr-2">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
               <path
@@ -18,7 +21,7 @@ export default function Search() {
             </svg>
           </Button>
           <Input
-            className="bg-transparent placeholder:text-[#5B5B5B]  outline-none focus:outline-none"
+            className="bg-transparent w-full placeholder:text-[#5B5B5B]  outline-none focus:outline-none"
             placeholder="Search Project..."
             type="text"
           />

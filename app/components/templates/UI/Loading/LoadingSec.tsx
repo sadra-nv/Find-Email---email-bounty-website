@@ -14,6 +14,8 @@ export default function LoadingSec({ className }: { className?: string }) {
         className="animate-logo-spin"
         alt="find email logo"
         src={logo}
+        width={100}
+        height={100}
         placeholder="blur"
       />
       <div

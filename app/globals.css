@@ -30,6 +30,10 @@
      md:before:h-[calc(60%)] before:bg-gradient-to-b
      before:from-[#f80ed94a] before:to-transparent before:pointer-events-none;
   }
+
+  .dashboard-menu-item-active svg path {
+    @apply fill-fe-c-blue-main;
+  }
 }
 
 @layer utilities {

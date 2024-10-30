@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { ThemeProvider } from "next-themes";
 import Header from "../components/templates/dashboard/Header/Header";
+import Nav from "../components/templates/dashboard/Nav/Nav";
 
 export default function UserDashboardLayout({
   children,
@@ -15,9 +16,12 @@ export default function UserDashboardLayout({
         attribute="class"
         disableTransitionOnChange
       >
-        <div className="w-full text-fe-c-text-normal min-h-screen h-full bg-fe-c-bg-main">
-          <Header />
-          <div>{children}</div>
+        <div className="w-full overflow-x-hidden text-fe-c-text-normal min-h-screen h-full bg-fe-c-bg-main">
+          <Nav />
+          <div className="ms-[33%] min-h-screen">
+            <Header />
+            {children}
+          </div>
         </div>
       </ThemeProvider>
 

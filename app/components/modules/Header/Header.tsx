@@ -17,13 +17,18 @@ export default function Header() {
         <div className="flex justify-between items-center py-12 gap-5 ">
           <Link href={"/"} className="flex items-center gap-2.5">
             <Image
-              className="animate-logo-spin"
+              className="animate-logo-spin w-11 h-11"
               alt="find email logo"
               src={logo}
               placeholder="blur"
+              width={44}
+              height={44}
             />
             <Image
-              alt="find email logo text"
+              alt="find email logo description"
+              width={137}
+              className="w-[8.5625rem] h-10"
+              height={41}
               src={logoText}
               placeholder="blur"
             />

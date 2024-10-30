@@ -19,8 +19,8 @@ export default function UserBox() {
             alt="User's Profile Picture "
             className="size-10 object-cover rounded-full"
           />
-          <div className="w-full flex justify-start items-stretch gap-1 flex-col mr-9">
-            <h2 className="text-xs font-bold text-neutral-950">
+          <div className="w-full  flex justify-start items-stretch gap-1 flex-col mr-9">
+            <h2 className="text-xs max-w-24 truncate font-bold text-neutral-950">
               Alireza Rahmani
             </h2>
             <span className="text-xs text-neutral-900 w-fit">Welcome!</span>
