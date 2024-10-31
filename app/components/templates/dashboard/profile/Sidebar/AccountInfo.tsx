@@ -15,10 +15,10 @@ export default function AccountInfo() {
         className="bg-orange-grad-btn p-2 rounded-lg 
       flex justify-between  items-center  mx-auto mt-10 text-sm font-bold"
       >
-        <Tab className="px-4 py-2.5 data-[selected]:bg-white rounded-md data-[selected]:text-neutral-950 text-neutral-50">
+        <Tab className="outline-none px-4 py-2.5 data-[selected]:bg-white rounded-md data-[selected]:text-neutral-950 text-neutral-50">
           <span>Profile Info</span>
         </Tab>
-        <Tab className="px-4 py-2.5 rounded-md data-[selected]:bg-white data-[selected]:text-neutral-950 text-neutral-50">
+        <Tab className="outline-none px-4 py-2.5 rounded-md data-[selected]:bg-white data-[selected]:text-neutral-950 text-neutral-50">
           <span>System Info</span>
         </Tab>
       </TabList>

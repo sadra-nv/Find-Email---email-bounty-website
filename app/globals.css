@@ -66,7 +66,7 @@ html.dark {
   --blue-dark: #1e1f62; */
 
   --bg-main: #030015;
-  --bg-light: #ffffff10;
+  --bg-light: rgb(255 255 255 / 0.15);
   /* --bg-dark: #1b2532; */
   --text-normal-color: #e5e5e5;
   --text-title-color: #fafafa;

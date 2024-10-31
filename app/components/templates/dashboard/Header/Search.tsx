@@ -21,7 +21,7 @@ export default function Search() {
             </svg>
           </Button>
           <Input
-            className="bg-transparent w-full placeholder:text-[#5B5B5B]  outline-none focus:outline-none"
+            className="bg-transparent w-full placeholder:text-[#5B5B5B] text-[#5B5B5B]  outline-none focus:outline-none"
             placeholder="Search Project..."
             type="text"
           />

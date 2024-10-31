@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-      <body className={`${merriweather.className} bg-[#030014] text-white`}>
+      <body
+        className={`${merriweather.className} max-w-[120rem] mx-auto relative bg-[#030014] text-white`}
+      >
         {children}
       </body>
     </html>

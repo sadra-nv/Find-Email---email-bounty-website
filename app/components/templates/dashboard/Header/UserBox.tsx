@@ -45,7 +45,7 @@ export default function UserBox() {
           //   portal={false}
           transition
           anchor="bottom end"
-          className="w-[11.875rem] h-fit rounded-xl origin-top-right  
+          className="w-[11.875rem] shadow-sm z-20 h-fit rounded-xl origin-top-right  
            bg-neutral-50 p-4 text-xs font-bold text-neutral-950
             transition duration-300 ease 
             flex flex-col justify-start items-start gap-4

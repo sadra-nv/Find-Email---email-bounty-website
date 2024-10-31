@@ -2,7 +2,13 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef } from "react";
 
-export default function StarsSection({ className }: { className?: string }) {
+export default function StarsSection({
+  className,
+  isStatic,
+}: {
+  className?: string;
+  isStatic?: boolean;
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -109,7 +115,7 @@ export default function StarsSection({ className }: { className?: string }) {
 
     // Generate static dots
     const staticDots: Point[] = [];
-    const staticDotCount = 35;
+    const staticDotCount = isStatic ? 45 : 35;
     function generateStaticDots(count: number) {
       for (let i = 0; i < count; i++) {
         staticDots.push({
@@ -122,6 +128,9 @@ export default function StarsSection({ className }: { className?: string }) {
     function drawStaticDots() {
       if (!context) return;
       context.fillStyle = "rgba(255, 255, 255, 0.8)";
+      if (isStatic) {
+        context.fillStyle = "rgba(255, 255, 255, 0.5)";
+      }
       context.shadowColor = "purple"; // Shadow color
       context.shadowBlur = 15; // Shadow blur level
       context.shadowOffsetX = 1; // Horizontal shadow offset
@@ -158,8 +167,6 @@ export default function StarsSection({ className }: { className?: string }) {
         shootingStar.isDying = true;
         shootingStarLifeTime = 0;
       }
-      // setTimeout(() => {
-      // }, shootingStarLifeTime);
     }
     // Main update function for rendering and updating shooting stars
     function updateShootingStars(): void {
@@ -214,7 +221,10 @@ export default function StarsSection({ className }: { className?: string }) {
     }
     // Function to handle the main animation loop using requestAnimationFrame
     function animateShootingStars(): void {
-      if (!context) return;
+      if (isStatic) {
+        drawStaticDots();
+      }
+      if (!context || isStatic) return;
 
       // Clear the canvas and redraw the background
       context.clearRect(0, 0, width, height);
@@ -247,7 +257,7 @@ export default function StarsSection({ className }: { className?: string }) {
     window.onblur = function () {
       paused = true;
     };
-  }, []);
+  }, [isStatic]);
   return (
     <canvas
       className={cn("w-full absolute h-full z-30 top-0 left-0", className)}
