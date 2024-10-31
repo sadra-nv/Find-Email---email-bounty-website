@@ -16,10 +16,9 @@ export default function UserDashboardLayout({
         attribute="class"
         disableTransitionOnChange
       >
-        <div className="w-full overflow-x-hidden text-fe-c-text-normal min-h-screen h-full bg-fe-c-bg-main">
+        <div className="w-full relative overflow-x-hidden text-fe-c-text-normal min-h-screen h-full bg-white dark:bg-fe-c-bg-main sm:bg-fe-c-bg-main dark:hero-grad">
           <Nav />
-          <div className="ms-[33%] min-h-screen">
-            <Header />
+          <div className="lg:ms-52 lg:w-[calc(100%_-_13rem)] relative min-h-screen ">
             {children}
           </div>
         </div>

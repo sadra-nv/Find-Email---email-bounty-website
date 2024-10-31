@@ -24,12 +24,17 @@ export default function Error({
   }
 
   return (
-    <section className="bg-ba-c-bg-main flex flex-col w-full h-screen justify-center items-center gap-6 px-[5%]">
-      <h2 className=" text-ba-t-h2 font-bold text-ba-c-text-title">
+    <section className="bg-fe-c-bg-main flex flex-col w-full h-screen justify-center items-center gap-6 px-[5%]">
+      <h2 className=" text-3xl font-bold text-fe-c-text-title">
         Something went wrong!!!
       </h2>
-      <p className=" text-ba-t-h3 font-medium ">{message}</p>
-      <Button onClick={() => reset()}>Retry</Button>
+      <p className=" text-xl font-bold ">{message}</p>
+      <Button
+        className="px-6 rounded-md py-2 text-neutral-50 bg-orange-grad-btn"
+        onClick={() => reset()}
+      >
+        Retry
+      </Button>
     </section>
   );
 }

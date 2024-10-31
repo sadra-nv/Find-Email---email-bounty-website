@@ -12,7 +12,7 @@ export default function BurgerToggle() {
   return (
     <Button
       onClick={handleClick}
-      className="font-bold text-xs shadow-md text-white bg-orange-grad-btn p-3 gap-2 flex rounded-lg lg:hidden"
+      className="font-bold text-xs  sm:mr-auto shadow-md text-white bg-orange-grad-btn p-3 gap-2 flex rounded-lg lg:hidden"
     >
       <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
         <path

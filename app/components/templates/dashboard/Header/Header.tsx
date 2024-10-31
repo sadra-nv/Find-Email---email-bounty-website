@@ -1,18 +1,23 @@
-import { showTodaysDate } from "@/lib/utils";
+import { cn, showTodaysDate } from "@/lib/utils";
 import DarkToggle from "../../UI/DarkToggle/DarkToggle";
 import UserBox from "./UserBox";
 import Search from "./Search";
 import BurgerToggle from "./BurgerToggle";
 
-export default function Header() {
+export default function Header({ className }: { className?: string }) {
   const todaysDate = showTodaysDate();
 
-  // `${day} - ${year} ${dayOfMonth} ${month}`;
   return (
-    <header className="w-full flex justify-start items-center gap-4 flex-row-reverse pr-8 pl-4 py-6">
+    <header
+      className={cn(
+        "sm:w-full flex justify-start items-center gap-4 flex-row-reverse sm:py-8  sm:relative",
+        "absolute top-14  left-1/2 -translate-x-1/2 sm:left-auto sm:top-auto sm:-translate-x-0 w-11/12",
+        className
+      )}
+    >
       <UserBox />
       <DarkToggle />
-      <div className="dark:bg-neutral-50 bg-[#152330] rounded-full p-2 w-8 h-8 overflow-hidden relative">
+      <div className="hidden xl:block dark:bg-neutral-50 bg-[#152330] rounded-full p-2 w-8 h-8 overflow-hidden relative">
         <svg
           className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
           width="12"

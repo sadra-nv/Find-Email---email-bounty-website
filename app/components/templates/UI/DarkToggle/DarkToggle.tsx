@@ -33,7 +33,7 @@ export default function DarkToggle() {
     <>
       <Button
         onClick={handleTheme}
-        className="relative w-[4.375rem] h-8 rounded-full p-1 
+        className="relative w-[4.375rem] h-8 rounded-full p-1 mr-auto sm:mr-0 
           transition-all duration-300 ease-in-out dark:bg-neutral-50 bg-[#152330]"
         aria-label={
           theme !== "dark" ? "Switch to light mode" : "Switch to dark mode"

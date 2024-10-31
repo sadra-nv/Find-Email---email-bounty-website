@@ -66,6 +66,8 @@ const config: Config = {
         "highlight-dark": "#2e0e71",
         "highlight-light": "#f5d0fe",
 
+        "dark-card": " rgb(255 255 255 / 0.15)",
+
         "fe-c-blue-main": "var(--blue-main)",
         // "fe-c-blue-light": "var(--blue-light)",
         // "fe-c-blue-dark": "var(--blue-dark)",
@@ -111,6 +113,11 @@ const config: Config = {
           "65%": { opacity: "0.2" },
           "100%": { opacity: "0.7" },
         },
+        "pop-in": {
+          "0%": { opacity: "0", transform: "translateY(0.7rem) scale(90%)" },
+
+          "100%": { opacity: "1", transform: "translateY(0rem) scale(100%)" },
+        },
         "3d-qa": {
           "0%": {
             transform: "translateY(0rem)  translateX(0%)",
@@ -130,6 +137,7 @@ const config: Config = {
         },
       },
       animation: {
+        "pop-in": "pop-in 0.5s ease forwards",
         "fill-x": "fill-x 0.5s ease forwards",
         "pyramid-glow": "pyramid-glow 5s ease infinite alternate",
         "logo-spin": "spin ease 5s infinite",

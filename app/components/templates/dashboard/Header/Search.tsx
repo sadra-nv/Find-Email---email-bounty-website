@@ -2,7 +2,7 @@ import { Button, Field, Input, Label } from "@headlessui/react";
 
 export default function Search() {
   return (
-    <form className="mr-auto w-1/3">
+    <form className="mr-auto w-1/3 hidden lg:block">
       <Field>
         <Label
           className="px-5 py-3 bg-white rounded-full cursor-text border border-neutral-500/5 shadow-sm
