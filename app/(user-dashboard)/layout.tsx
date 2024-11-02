@@ -22,10 +22,7 @@ export default function UserDashboardLayout({
             isStatic
             className="z-0 pointer-events-none dark:block hidden h-[31.25rem] sm:max-h-[calc(100vh_+_3rem)] sm:h-full"
           />
-          <div
-            className="sm:ms-[17.3125rem] sm:w-[calc(100%_-_17.3125rem)]
-           lg:ms-52 lg:w-[calc(100%_-_13rem)] relative h-full min-h-screen  "
-          >
+          <div className="w-full relative h-full min-h-screen  ">
             {children}
           </div>
         </div>

@@ -36,13 +36,13 @@ export default function Account() {
           icon={historyBook}
         />
         <NavItem
-          url=""
+          url="/dashboard/orders"
           currentPath={currentPath}
           title="Orders"
           icon={orders}
         />
         <NavItem
-          url=""
+          url="/dashboard/security"
           currentPath={currentPath}
           title="Security"
           icon={shield}

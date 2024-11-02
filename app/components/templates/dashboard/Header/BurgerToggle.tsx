@@ -2,13 +2,24 @@
 
 import { useMenuStore } from "@/lib/store/dashboardMenuStore";
 import { Button } from "@headlessui/react";
+import { useEffect } from "react";
 
 export default function BurgerToggle() {
-  const { openMenu } = useMenuStore();
+  const { openMenu, isOpen } = useMenuStore();
 
   const handleClick = () => {
     openMenu();
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("burger-open");
+      document.documentElement.classList.add("burger-open");
+    } else {
+      document.body.classList.remove("burger-open");
+      document.documentElement.classList.remove("burger-open");
+    }
+  }, [isOpen]);
   return (
     <Button
       onClick={handleClick}

@@ -34,6 +34,10 @@
   .dashboard-menu-item-active svg path {
     @apply fill-fe-c-blue-main;
   }
+
+  .burger-open {
+    @apply overflow-y-hidden lg:overflow-y-auto;
+  }
 }
 
 @layer utilities {

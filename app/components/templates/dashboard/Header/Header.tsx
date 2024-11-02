@@ -10,8 +10,8 @@ export default function Header({ className }: { className?: string }) {
   return (
     <header
       className={cn(
-        "sm:w-full flex justify-start items-center gap-4 flex-row-reverse sm:py-8  sm:relative",
-        "absolute top-14  left-1/2 -translate-x-1/2 sm:left-auto sm:top-auto sm:-translate-x-0 w-11/12",
+        "lg:w-full flex justify-start items-center gap-4 flex-row-reverse sm:py-8  sm:relative",
+        "absolute top-14  left-1/2 -translate-x-1/2 sm:left-auto sm:top-auto sm:-translate-x-0 mx-auto w-11/12",
         className
       )}
     >
