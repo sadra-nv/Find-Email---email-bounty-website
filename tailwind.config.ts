@@ -19,8 +19,9 @@ const config: Config = {
       },
     },
     extend: {
-      screens: { xs: "25rem" },
+      screens: { xs: "400px" },
       backgroundImage: {
+        "gold-grad": "linear-gradient(180deg, #FFF280 0%, #CFBA00 64.44%)",
         "blue-grad-btn": "linear-gradient(180deg, #8F5CE1 0%, #2E2291 64.44%)",
         "orange-grad-btn-op":
           "linear-gradient(90deg, rgba(194, 75, 118, 0.20) 0%, rgba(253, 131, 48, 0.20) 100%)",

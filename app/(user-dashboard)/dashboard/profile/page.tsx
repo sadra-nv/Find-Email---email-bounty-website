@@ -1,5 +1,5 @@
 import Header from "@/app/components/templates/dashboard/Header/Header";
-import SearchSec from "@/app/components/templates/dashboard/profile/PaymentSec/SearchSec";
+import SearchSec from "@/app/components/templates/dashboard/profile/SearchSec/SearchSec";
 import ProfileSidebar from "@/app/components/templates/dashboard/profile/Sidebar/ProfileSidebar";
 
 export default function DashboardProfilePage() {

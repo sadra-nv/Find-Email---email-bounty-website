@@ -1,8 +1,15 @@
+import { cn } from "@/lib/utils";
 import { Button, Field, Input, Label } from "@headlessui/react";
 
-export default function Search() {
+export default function Search({
+  className,
+  placeHolder,
+}: {
+  className?: string;
+  placeHolder: string;
+}) {
   return (
-    <form className="mr-auto w-1/3 hidden lg:block">
+    <form className={cn("mr-auto w-1/3 hidden lg:block", className)}>
       <Field>
         <Label
           className="px-5 py-3 bg-white rounded-full cursor-text border border-neutral-500/5 shadow-sm
@@ -21,8 +28,8 @@ export default function Search() {
             </svg>
           </Button>
           <Input
-            className="bg-transparent w-full placeholder:text-[#5B5B5B] text-[#5B5B5B]  outline-none focus:outline-none"
-            placeholder="Search Project..."
+            className="bg-transparent text-xs  w-full placeholder:text-[#5B5B5B] text-[#5B5B5B]  outline-none focus:outline-none"
+            placeholder={placeHolder}
             type="text"
           />
         </Label>

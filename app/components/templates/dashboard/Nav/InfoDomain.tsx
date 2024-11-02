@@ -28,7 +28,7 @@ export default function InfoDomain() {
 
       <div className="space-y-2">
         <NavItem
-          url=""
+          url="/dashboard/logs-search"
           currentPath={currentPath}
           title="Logs Search"
           icon={spyGlass}

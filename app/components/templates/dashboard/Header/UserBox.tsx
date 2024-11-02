@@ -19,11 +19,14 @@ export default function UserBox() {
             alt="User's Profile Picture "
             className="size-10 object-cover rounded-full"
           />
-          <div className="w-full  flex justify-start items-stretch gap-1 flex-col mr-7 sm:mr-7 md:mr-9">
-            <h2 className="xs:text-xs text-[0.625rem] max-w-8 xs:max-w-14 md:max-w-24 truncate font-bold text-neutral-950">
+          <div className="w-full t flex justify-start items-stretch gap-1 flex-col mr-7 sm:mr-7 md:mr-9">
+            <h2
+              className="xs:text-xs text-[0.625rem]  max-w-8 xs:max-w-14
+             md:max-w-24 lg:max-w-36 truncate font-bold text-neutral-950"
+            >
               Alireza Rahmani
             </h2>
-            <span className="xs:text-xs text-[0.5rem] max-w-8  xs:max-w-14 truncate text-neutral-900 w-fit">
+            <span className="xs:text-xs text-[0.5rem] max-w-8 lg:max-w-20  xs:max-w-14 truncate text-neutral-900 w-fit">
               Welcome!
             </span>
           </div>
