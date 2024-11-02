@@ -28,7 +28,7 @@ export default function NavItem({
       onClick={handleClick}
       href={url}
       className={cn(
-        "flex  ps-4 mr-4 ml-7 rounded-r-md group hover:bg-neutral-300/20 tran-fast py-3",
+        "flex  ps-4 mr-4 ml-7 text-xs rounded-r-md group hover:bg-neutral-300/20 tran-fast py-3",
         className,
         {
           "bg-white text-fe-c-blue-main  dashboard-menu-item-active hover:bg-white":

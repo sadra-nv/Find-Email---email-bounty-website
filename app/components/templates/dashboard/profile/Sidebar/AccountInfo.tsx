@@ -15,10 +15,10 @@ export default function AccountInfo() {
         className="bg-orange-grad-btn p-2 rounded-lg 
       flex justify-between  items-center  mx-auto mt-10 text-sm font-bold"
       >
-        <Tab className="outline-none px-4 py-2.5 data-[selected]:bg-white rounded-md data-[selected]:text-neutral-950 text-neutral-50">
+        <Tab className="outline-none text-xs px-4 py-2.5 data-[selected]:bg-white rounded-md data-[selected]:text-neutral-950 text-neutral-50">
           <span>Profile Info</span>
         </Tab>
-        <Tab className="outline-none px-4 py-2.5 rounded-md data-[selected]:bg-white data-[selected]:text-neutral-950 text-neutral-50">
+        <Tab className="outline-none text-xs px-4 py-2.5 rounded-md data-[selected]:bg-white data-[selected]:text-neutral-950 text-neutral-50">
           <span>System Info</span>
         </Tab>
       </TabList>
@@ -62,12 +62,12 @@ export default function AccountInfo() {
                 onChange={setEnabled}
                 className="group inline-block min-w-4 size-4 rounded-md 
           mr-2 translate-y-1
-          data-[checked]:border border-black p-1 bg-neutral-600/30 data-[checked]:bg-white"
+           p-1 bg-neutral-600/30 data-[checked]:bg-orange-grad-btn"
               >
                 <svg
                   width="16"
                   height="16"
-                  className="fill-black -translate-x-1 -translate-y-1 scale-75 hidden group-data-[checked]:block"
+                  className="fill-white -translate-x-1 -translate-y-1 scale-75 hidden group-data-[checked]:block"
                   viewBox="0 0 16 16"
                 >
                   <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />

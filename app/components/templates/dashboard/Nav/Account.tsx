@@ -1,4 +1,4 @@
-import { book, historyBook, orders, shield } from "@/lib/svg-dump";
+import { book, historyBook, orders, shield, user } from "@/lib/svg-dump";
 import NavItem from "./NavItem";
 import { usePathname } from "next/navigation";
 
@@ -18,13 +18,19 @@ export default function Account() {
 
       <div className="space-y-2">
         <NavItem
+          url="/dashboard/profile"
+          currentPath={currentPath}
+          title="Profile"
+          icon={user}
+        />
+        <NavItem
           url=""
           currentPath={currentPath}
           title="Sessions"
           icon={book}
         />
         <NavItem
-          url=""
+          url="/dashboard/payment-history"
           currentPath={currentPath}
           title="Payment History"
           icon={historyBook}

@@ -232,7 +232,7 @@ export default function HeroSearch() {
         <div
           ref={wheelRef}
           className="opacity-0 rotate-[360deg] relative z-30 min-w-44 min-h-44 rounded-full border-[0.1875rem] border-neutral-50 
-    justify-center items-center tran-fast  hidden lg:flex"
+    justify-center items-center tran-fast text-sm hidden lg:flex"
         >
           <SearchCircleBtn
             className="tran-fast duration-500 rounded-full  "

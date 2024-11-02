@@ -24,7 +24,7 @@ export default function UserDashboardLayout({
           />
           <div
             className="sm:ms-[17.3125rem] sm:w-[calc(100%_-_17.3125rem)]
-           lg:ms-52 lg:w-[calc(100%_-_13rem)] relative h-full min-h-screen "
+           lg:ms-52 lg:w-[calc(100%_-_13rem)] relative h-full min-h-screen  "
           >
             {children}
           </div>

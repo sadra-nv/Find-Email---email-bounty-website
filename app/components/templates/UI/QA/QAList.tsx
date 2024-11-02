@@ -9,6 +9,10 @@ export default function QAList({ faq }: { faq: number }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const handleOpen = (index: number) => {
+    if (activeIndex === index) {
+      setActiveIndex(-20);
+      return;
+    }
     setActiveIndex(index);
   };
   return (
