@@ -43,7 +43,7 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
               </Link>
             </li>
             <li>
-              <Link href={"/"} className="flex items-center gap-1">
+              <Link href={"/pricing"} className="flex items-center gap-1">
                 <Image alt="price icon" src={price} width={16} height={16} />
                 Pricing
               </Link>
