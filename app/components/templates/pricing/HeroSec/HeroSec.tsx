@@ -7,7 +7,7 @@ export default function HeroSec() {
       className="bg-gradient-to-b from-[#030014] via-[#030014] to-[#030014] 
         relative hero-grad overflow-x-hidden"
     >
-      <StarsSection className="z-0 xl:h-screen  max-h-screen" />
+      <StarsSection className="z-0 xl:h-screen max-h-[31.25rem] sm:max-h-[43.75rem] lg:max-h-screen" />
       <div
         className="w-full absolute h-full xl:h-0 after:z-10 after:bottom-0 after:right-0 after:w-full after:h-28 after:bg-gradient-to-b 
         after:to-[#030014] after:via-[#030014] after:from-transparent after:absolute"

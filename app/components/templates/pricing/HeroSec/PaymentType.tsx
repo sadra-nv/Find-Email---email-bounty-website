@@ -85,7 +85,7 @@ export default function PaymentType() {
       </video>
 
       <form
-        className="backdrop-blur rounded-3xl bg-[#0a081ec0] relative z-30 
+        className="backdrop-blur rounded-xl lg:rounded-3xl bg-[#0a081ec0] relative z-30 
       flex-col flex justify-start items-center border border-neutral-700/30 
       px-5 sm:px-auto"
       >
