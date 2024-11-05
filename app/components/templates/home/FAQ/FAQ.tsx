@@ -4,15 +4,21 @@ import box from "@/public/images/home/m011t0438_g_interrogation_box_07sep22 1.pn
 import Image from "next/image";
 import Halo from "../../UI/Halo/Halo";
 import BGGlow from "../../UI/BGGlow/BGGlow";
+import { cn } from "@/lib/utils";
+import CodeVideo from "../../UI/CodeVideo/CodeVideo";
 
-export default function FAQ() {
+export default function FAQ({ className }: { className?: string }) {
   return (
-    <section className="lg:mt-36 mb-20 lg:mb-32">
+    <section
+      className={cn("lg:mt-36 mb-20 lg:mb-32 lg:overflow-hidden", className)}
+    >
       <div className="container">
         <div className="">
-          <div className="flex justify-center mb-32 w-full relative">
-            <BGGlow className="top-0 left-0 w-full h-full" />
+          <div className="flex justify-center mb-32 w-full relative ">
+            {/* <BGGlow className="top-0 left-0 w-full h-full" /> */}
             <Halo className="size-80" />
+            <CodeVideo className="-left-[18.75rem] scale-125 opacity-20 mix-blend-lighten" />
+            <CodeVideo className="-right-[18.75rem] scale-125 opacity-20 mix-blend-lighten" />
           </div>
           <div className="flex gap-2 items-center mb-8">
             <span className="grow bg-gradient-to-l from-white via-transparent to-transparent h-0.5"></span>
