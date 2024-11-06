@@ -31,6 +31,7 @@ export default function HeroSec() {
           <Image
             width={390}
             height={290}
+            placeholder="blur"
             className="mt-auto lg:ml-14 w-[16.625rem] h-[12.5rem] lg:w-[24.375rem] lg:h-[18.125rem] lg:translate-y-6 "
             src={woman}
             alt="Illustration of a girl"
@@ -47,6 +48,7 @@ export default function HeroSec() {
             className="lg:size-[10rem] size-24 mx-auto -translate-y-28 absolute left-1/2 -translate-x-1/2 "
             width={160}
             height={166}
+            placeholder="blur"
             src={post}
             alt="icon"
           />
@@ -75,6 +77,7 @@ export default function HeroSec() {
               className="sm:size-[10rem] size-24 mx-auto -translate-y-20 sm:-translate-y-28 absolute left-1/2 -translate-x-1/2 "
               width={160}
               height={166}
+              placeholder="blur"
               src={post}
               alt="icon"
             />

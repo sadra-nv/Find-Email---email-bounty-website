@@ -25,6 +25,8 @@ const config: Config = {
           "linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, #311B92 55.17%, #84FFFF 157.53%)",
         "faq-card-grad":
           "linear-gradient(180deg, #311B92 55.17%, #84FFFF 157.53%)",
+        "blue-grad":
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, #311B92 55.17%, #84FFFF 157.53%)",
         "gold-grad": "linear-gradient(180deg, #FFF280 0%, #CFBA00 64.44%)",
         "blue-grad-btn": "linear-gradient(180deg, #8F5CE1 0%, #2E2291 64.44%)",
         "orange-grad-btn-op":
