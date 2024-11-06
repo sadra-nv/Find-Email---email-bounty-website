@@ -19,7 +19,7 @@ export default function MainInput({
         {label}
       </Label>
       <Input
-        className="w-full rounded-lg bg-white/10 py-5 px-5 text-neutral-100 text-xs/3 lg:text-sm/3"
+        className="w-full rounded-lg bg-white/10 py-4 px-4 lg:py-5 lg:px-5 text-neutral-100 text-xs/3 lg:text-sm/3"
         type={type ? type : "text"}
         placeholder={placeholder}
       />

@@ -21,6 +21,10 @@ const config: Config = {
     extend: {
       screens: { xs: "400px" },
       backgroundImage: {
+        "faq-card-grad-2":
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, #311B92 55.17%, #84FFFF 157.53%)",
+        "faq-card-grad":
+          "linear-gradient(180deg, #311B92 55.17%, #84FFFF 157.53%)",
         "gold-grad": "linear-gradient(180deg, #FFF280 0%, #CFBA00 64.44%)",
         "blue-grad-btn": "linear-gradient(180deg, #8F5CE1 0%, #2E2291 64.44%)",
         "orange-grad-btn-op":
@@ -153,6 +157,7 @@ const config: Config = {
         "ping-normal": "ping-lg 2s cubic-bezier(0, 0, 0.2, 1) infinite;",
       },
       boxShadow: {
+        "faq-card": "0px 0px 150px 0px #311B92",
         "api-code": "0px 2px 250px 0px rgba(55, 14, 44, 0.78)",
       },
     },

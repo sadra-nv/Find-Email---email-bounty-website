@@ -56,7 +56,7 @@ export default function Header() {
                   Pricing
                 </Link>
               </li>
-              <li className="relative group">
+              <li className="relative group  ">
                 <span className="flex items-center gap-1 py-5">
                   <Image
                     alt="pc icon"
@@ -76,7 +76,7 @@ export default function Header() {
                 </span>
                 <div
                   className="absolute -bottom-24 duration-300 transition-opacity left-0 w-28 bg-white/15 opacity-0 overflow-hidden
-                group-hover:opacity-100 group-hover:translate-y-0 tran-fast rounded-lg text-xs divide-y  divide-neutral-400/50"
+                group-hover:opacity-100   tran-fast rounded-lg text-xs divide-y  divide-neutral-400/50"
                 >
                   <Link
                     href="/cracker"
@@ -93,13 +93,16 @@ export default function Header() {
                 </div>
               </li>
               <li>
-                <Link href={"/"} className="flex items-center gap-1 py-5">
+                <Link href={"/faq"} className="flex items-center gap-1 py-5">
                   <Image alt="faq icon" src={faq} width={16} height={16} />
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="flex items-center gap-1 py-5">
+                <Link
+                  href={"/contact-us"}
+                  className="flex items-center gap-1 py-5"
+                >
                   <Image
                     alt="support icon"
                     src={support}

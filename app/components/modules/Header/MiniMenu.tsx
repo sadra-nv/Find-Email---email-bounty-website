@@ -122,7 +122,7 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
             <li>
               <Link
                 onClick={() => setIsShowMenu((e) => !e)}
-                href={"/"}
+                href={"/faq"}
                 className="flex items-center gap-2"
               >
                 <Image alt="faq icon" src={faq} width={16} height={16} />
@@ -132,7 +132,7 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
             <li>
               <Link
                 onClick={() => setIsShowMenu((e) => !e)}
-                href={"/"}
+                href={"/contact-us"}
                 className="flex items-center gap-2"
               >
                 <Image
