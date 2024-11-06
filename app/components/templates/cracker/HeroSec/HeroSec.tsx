@@ -69,7 +69,7 @@ export default function HeroSec() {
 
           <Button
             className="mx-auto flex gap-1 justify-center items-center py-3 lg:py-4 
-          w-full rounded-lg bg-orange-grad-btn xs:w-40"
+          w-full rounded-lg bg-orange-grad-btn xs:w-40 btn-hover"
           >
             <Image src={search} width={21} height={23} alt="icon" />
             <span className="text-xs font-bold lg:text-base text-white">
