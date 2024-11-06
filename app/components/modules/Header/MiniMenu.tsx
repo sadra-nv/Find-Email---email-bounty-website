@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import home from "@/public/icons/header-home.png";
 import blog from "@/public/icons/header-blog.png";
 import price from "@/public/icons/header-price.png";
@@ -8,12 +8,20 @@ import faq from "@/public/icons/header-faq.png";
 import support from "@/public/icons/header-support.png";
 import Image from "next/image";
 import close from "@/public/icons/header-close.png";
+import { Button } from "@headlessui/react";
+import { cn } from "@/lib/utils";
 
 type MiniMenuProps = {
   isShowMenu: boolean;
   setIsShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
 };
 const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
+  const [openTools, setOpenTools] = useState(false);
+
+  const toolsClickHandler = () => {
+    setOpenTools((prevState) => !prevState);
+  };
+
   return (
     <>
       <div
@@ -31,37 +39,102 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
             </span>
 
             <li className="mt-10">
-              <Link href={"/"} className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsShowMenu((e) => !e)}
+                href={"/"}
+                className="flex items-center gap-2"
+              >
                 <Image alt="home icon" src={home} width={16} height={16} />
                 Home
               </Link>
             </li>
             <li>
-              <Link href={"/blog"} className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsShowMenu((e) => !e)}
+                href={"/blog"}
+                className="flex items-center gap-2"
+              >
                 <Image alt="blog icon" src={blog} width={16} height={16} />
                 Blog
               </Link>
             </li>
             <li>
-              <Link href={"/pricing"} className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsShowMenu((e) => !e)}
+                href={"/pricing"}
+                className="flex items-center gap-2"
+              >
                 <Image alt="price icon" src={price} width={16} height={16} />
                 Pricing
               </Link>
             </li>
-            <li>
-              <Link href={"/"} className="flex items-center gap-1">
-                <Image alt="pc icon" src={pc} width={16} height={16} />
-                Online Tools
-              </Link>
+            <li className="relative group">
+              <Button
+                onClick={toolsClickHandler}
+                className="flex items-center gap-2 "
+              >
+                <Image
+                  alt="pc icon"
+                  className="scale-150"
+                  src={pc}
+                  width={16}
+                  height={16}
+                />
+
+                <span>Online Tools</span>
+                <svg
+                  className="size-2 "
+                  width="6"
+                  height="3"
+                  viewBox="0 0 6 3"
+                  fill="none"
+                >
+                  <path
+                    d="M3.00001 3C2.86676 3 2.7335 2.95823 2.6283 2.86872L0.152542 0.7623C-0.0508472 0.589252 -0.0508472 0.302826 0.152542 0.129778C0.355931 -0.0432592 0.692574 -0.0432592 0.895963 0.129778L3.00001 1.91994L5.10404 0.129778C5.30743 -0.0432592 5.64407 -0.0432592 5.84746 0.129778C6.05085 0.302826 6.05085 0.589252 5.84746 0.7623L3.37172 2.86872C3.26652 2.95823 3.13327 3 3.00001 3Z"
+                    fill="white"
+                  />
+                </svg>
+              </Button>
+              <div
+                className={cn(
+                  "  duration-300 ",
+                  "transition-opacity  w-28 h-0 opacity-0 overflow-hidden",
+                  "tran-fast rounded-lg  ml-2 text-sm",
+                  { "translate-y-0 opacity-100 h-fit": openTools }
+                )}
+              >
+                <Link
+                  onClick={() => setIsShowMenu((e) => !e)}
+                  href="/cracker"
+                  className="p-1 py-2 pt-3 hover:bg-white/10 tran-fast block"
+                >
+                  Hash Cracker
+                </Link>
+                <Link
+                  onClick={() => setIsShowMenu((e) => !e)}
+                  href="/checker"
+                  className="p-1 py-2 pb-0 hover:bg-white/10 tran-fast block"
+                >
+                  Smtp Checker
+                </Link>
+              </div>
             </li>
             <li>
-              <Link href={"/"} className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsShowMenu((e) => !e)}
+                href={"/"}
+                className="flex items-center gap-2"
+              >
                 <Image alt="faq icon" src={faq} width={16} height={16} />
                 FAQ
               </Link>
             </li>
             <li>
-              <Link href={"/"} className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsShowMenu((e) => !e)}
+                href={"/"}
+                className="flex items-center gap-2"
+              >
                 <Image
                   alt="support icon"
                   src={support}

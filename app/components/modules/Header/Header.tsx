@@ -34,28 +34,37 @@ export default function Header() {
             />
           </Link>
           <nav>
-            <ul className="flex items-center gap-6 bg-white/15 rounded-xl text-white text-xs xl:text-sm text-center xl:px-6 px-2 py-5">
+            <ul className="flex items-center gap-6 bg-white/15 rounded-xl text-white text-xs xl:text-sm text-center xl:px-6 px-2 ">
               <li>
-                <Link href={"/"} className="flex items-center gap-1">
+                <Link href={"/"} className="flex items-center gap-1 py-5">
                   <Image alt="home icon" src={home} width={16} height={16} />
                   Home
                 </Link>
               </li>
               <li>
-                <Link href={"/blog"} className="flex items-center gap-1">
+                <Link href={"/blog"} className="flex items-center gap-1 py-5">
                   <Image alt="blog icon" src={blog} width={16} height={16} />
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href={"/pricing"} className="flex items-center gap-1">
+                <Link
+                  href={"/pricing"}
+                  className="flex items-center gap-1 py-5"
+                >
                   <Image alt="price icon" src={price} width={16} height={16} />
                   Pricing
                 </Link>
               </li>
-              <li>
-                <Link href={"/"} className="flex items-center gap-1">
-                  <Image alt="pc icon" src={pc} width={16} height={16} />
+              <li className="relative group">
+                <span className="flex items-center gap-1 py-5">
+                  <Image
+                    alt="pc icon"
+                    className="scale-150"
+                    src={pc}
+                    width={16}
+                    height={16}
+                  />
 
                   <span>Online Tools</span>
                   <svg width="6" height="3" viewBox="0 0 6 3" fill="none">
@@ -64,16 +73,33 @@ export default function Header() {
                       fill="white"
                     />
                   </svg>
-                </Link>
+                </span>
+                <div
+                  className="absolute -bottom-24 duration-300 transition-opacity left-0 w-28 bg-white/15 opacity-0 overflow-hidden
+                group-hover:opacity-100 group-hover:translate-y-0 tran-fast rounded-lg text-xs divide-y  divide-neutral-400/50"
+                >
+                  <Link
+                    href="/cracker"
+                    className="p-1 py-3 hover:bg-white/10 tran-fast block"
+                  >
+                    Hash Cracker
+                  </Link>
+                  <Link
+                    href="/checker"
+                    className="p-1 py-3 hover:bg-white/10 tran-fast block"
+                  >
+                    Smtp Checker
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link href={"/"} className="flex items-center gap-1">
+                <Link href={"/"} className="flex items-center gap-1 py-5">
                   <Image alt="faq icon" src={faq} width={16} height={16} />
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href={"/"} className="flex items-center gap-1">
+                <Link href={"/"} className="flex items-center gap-1 py-5">
                   <Image
                     alt="support icon"
                     src={support}
@@ -85,7 +111,7 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-          <button className="hover-btn rounded-lg flex items-center justify-center text-xs px-5 py-4 gap-1">
+          <button className="hover-btn rounded-lg flex items-center justify-center text-xs px-5 py-4 gap-1 ">
             Login/Register
             <svg width="18" height="17" viewBox="0 0 18 17" fill="none">
               <path
