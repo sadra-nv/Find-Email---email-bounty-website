@@ -36,9 +36,11 @@ export default function SearchCircleBtn({
       className={cn(
         "p-2 min-w-10 max-w-10  rounded-full bg-highlight-dark ",
         "border-2 border-neutral-50 flex justify-center items-center",
-        "absolute left-1/2 top-1/2 origin-top-left",
+        "absolute left-1/2 top-1/2 origin-top-left ",
         className,
-        { "bg-orange-grad-btn": id === focusId }
+        {
+          "bg-orange-grad-btn border-transparent ": id === focusId,
+        }
       )}
     >
       {children}

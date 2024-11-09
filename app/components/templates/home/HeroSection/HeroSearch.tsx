@@ -253,9 +253,10 @@ export default function HeroSearch() {
             <span
               style={{
                 ...(spanStyle && spanStyle[0]),
-                ...(id === btnTitles[0].id && {
-                  color: "black",
-                }),
+                ...(id === btnTitles[0].id &&
+                  {
+                    // color: "black",
+                  }),
               }}
               className="absolute -top-6 -left-8 tran-fast duration-500 w-32 text-left transition-transform "
             >
@@ -281,9 +282,10 @@ export default function HeroSearch() {
             <span
               style={{
                 ...(spanStyle && spanStyle[1]),
-                ...(id === btnTitles[1].id && {
-                  color: "black",
-                }),
+                ...(id === btnTitles[1].id &&
+                  {
+                    // color: "black",
+                  }),
               }}
               className="absolute -top-6 -left-8 tran-fast duration-500  w-32 text-left transition-transform "
             >
@@ -309,9 +311,10 @@ export default function HeroSearch() {
             <span
               style={{
                 ...(spanStyle && spanStyle[2]),
-                ...(id === btnTitles[2].id && {
-                  color: "black",
-                }),
+                ...(id === btnTitles[2].id &&
+                  {
+                    // color: "black",
+                  }),
               }}
               className="absolute -top-6 -left-8 tran-fast duration-500 transition-transform  w-32 text-left"
             >
@@ -337,9 +340,10 @@ export default function HeroSearch() {
             <span
               style={{
                 ...(spanStyle && spanStyle[3]),
-                ...(id === btnTitles[3].id && {
-                  color: "black",
-                }),
+                ...(id === btnTitles[3].id &&
+                  {
+                    // color: "black",
+                  }),
               }}
               className="absolute -top-6 -left-8 tran-fast duration-500 w-32 text-left transition-transform "
             >
@@ -398,7 +402,7 @@ export default function HeroSearch() {
         </Field>
 
         <form
-          className="lg:-translate-x-9 relative z-10 bg-neutral-50 rounded-full block lg:w-3/5
+          className="lg:-translate-x-9 relative z-10 bg-white/10 rounded-full block lg:w-3/5
         w-full"
         >
           <Field className="w-full relative ">
@@ -435,7 +439,7 @@ export default function HeroSearch() {
                     ref={formRef}
                     placeholder="try to search meta tag with to following filter examples below."
                     className={cn(
-                      "w-full rounded-lg py-2 lg:py-4  border-none bg-transparent block  text-neutral-800",
+                      "w-full rounded-lg py-2 lg:py-4  border-none bg-transparent block  text-neutral-400",
                       "focus:outline-none "
                     )}
                     displayValue={() => selected}
@@ -451,25 +455,30 @@ export default function HeroSearch() {
                   portal={false}
                   transition
                   className={cn(
-                    "text-neutral-800 rounded-lg border border-white/5 bg-white  [--anchor-gap:var(--spacing-1)] empty:invisible",
+                    "text-neutral-800 rounded-lg border border-white/5 bg-[#152945]  [--anchor-gap:var(--spacing-1)] empty:invisible",
                     "  translate-y-5 w-11/12 absolute left-1/2 -translate-x-1/2 top-full",
-                    "max-h-72 overflow-y-auto thin-bar",
+                    "  thin-bar",
                     "origin-top border transition duration-300 ease-out empty:invisible data-[closed]:scale-95 data-[closed]:opacity-0"
                   )}
                 >
                   {selectedTag && (
-                    <div key={selectedTag.id}>
-                      <div className="py-1.5 px-3 cursor-text bg-[#ccdffedc] font-bold">
+                    <div
+                      key={selectedTag.id}
+                      className="bg-transparent text-white"
+                    >
+                      <div className="py-4 px-3 cursor-text bg-white/10 font-bold">
                         {selectedTag.title}
                       </div>
                       {selectedTag.queries.map((query, index) => (
                         <ComboboxOption
                           key={query.name + index}
                           value={query.name}
-                          className="group flex cursor-pointer mx-1 my-1 items-center gap-2 rounded-lg py-1.5 px-5 select-none data-[focus]:bg-[#EDF4FF]"
+                          className="group flex cursor-pointer mx-1 my-2 py-5 items-center gap-2 
+                          hover:bg-white/25 
+                          rounded-lg px-5 select-none data-[focus]:bg-white/20"
                         >
                           <div>{query.name}:</div>
-                          <div className="text-sm/3 text-neutral-600/80">
+                          <div className="text-sm/3 text-neutral-300/80">
                             {query.desc}
                           </div>
                         </ComboboxOption>

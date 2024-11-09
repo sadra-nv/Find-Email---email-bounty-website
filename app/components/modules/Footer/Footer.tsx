@@ -91,7 +91,7 @@ export default function Footer() {
                     name=""
                     id=""
                   />
-                  <button className="w-14 bg-gradient-to-b from-[#8F5CE1] group to-[#2E2291]">
+                  <button className="w-14 bg-neutral-900 group">
                     <svg
                       width="16"
                       height="16"

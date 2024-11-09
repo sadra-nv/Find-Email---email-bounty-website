@@ -13,10 +13,6 @@ export default function HeroSec() {
         isStatic
         className="z-0 xl:h-screen max-h-[31.25rem] sm:max-h-[43.75rem] lg:max-h-screen"
       />
-      <div
-        className="w-full absolute h-full xl:h-0 after:z-10 after:bottom-0 after:right-0 after:w-full after:h-28 after:bg-gradient-to-b 
-        after:to-[#030014] after:via-[#030014] after:from-transparent after:absolute"
-      ></div>
 
       <div className="container h-full pt-36 lg:pt-64 relative z-30">
         <h2
@@ -60,7 +56,7 @@ export default function HeroSec() {
           <div className="w-full lg:w-2/3 mx-auto">
             <Textarea
               placeholder="Enter MD5 hashes here"
-              className="bg-white p-4 lg:px-6 lg:py-5 w-full   inline-block rounded-lg lg:mb-9 mb-4
+              className="bg-white/10 p-4 lg:px-6 lg:py-5 w-full   inline-block rounded-lg lg:mb-9 mb-4
             lg:rounded-xl text-neutral-600 text-xs lg:text-sm outline-none
              focus:border-violet-800 border-2 border-transparent"
               rows={7}

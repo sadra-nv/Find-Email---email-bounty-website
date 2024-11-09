@@ -22,7 +22,7 @@ export default function PaymentBtn({
       data-id={id}
       onClick={clickHandler}
       className={cn(
-        "flex items-center btn-hover justify-center gap-2 w-32 lg:w-40 py-3 bg-purple-400/20 backdrop-blur-lg rounded-md relative",
+        "flex items-center  justify-center gap-2 w-32 lg:w-40 py-3 bg-purple-400/20 backdrop-blur-lg rounded-md relative",
         "border border-transparent max-h-12 lg:max-h-max text-xs lg:text-base",
         { " border-green-700 bg-green-700/20": active },
         className

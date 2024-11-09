@@ -28,7 +28,7 @@ export default function FilterableCardGallery() {
           </div>
           <div className="xl:col-span-2 flex flex-col gap-6">
             <div className="flex flex-col rounded-lg overflow-hidden bg-[#0B0B25]">
-              <div className="text-sm py-4 bg-gradient-to-t from-[#07255B] to-[#061742] text-center">
+              <div className="text-sm py-4 bg-gradient-to-t from-[#2E2291] to-[#8F5CE1] text-center">
                 Categories
               </div>
               <ul className="flex flex-col gap-4 p-4">
@@ -53,7 +53,7 @@ export default function FilterableCardGallery() {
               </ul>
             </div>
             <div className="flex flex-col rounded-lg overflow-hidden bg-[#0B0B25]">
-              <div className="text-sm py-4 bg-gradient-to-t from-[#07255B] to-[#061742] text-center">
+              <div className="text-sm py-4 bg-gradient-to-t from-[#2E2291] to-[#8F5CE1] text-center">
                 Post
               </div>
               <ul className="flex flex-col gap-4 p-4">
@@ -79,7 +79,7 @@ export default function FilterableCardGallery() {
               </ul>
             </div>
             <div className="flex flex-col rounded-lg overflow-hidden bg-[#0B0B25]">
-              <div className="text-sm py-4 bg-gradient-to-t from-[#07255B] to-[#061742] text-center">
+              <div className="text-sm py-4 bg-gradient-to-t from-[#2E2291] to-[#8F5CE1] text-center">
                 Tags
               </div>
               <ul className="flex flex-col gap-4 p-4">

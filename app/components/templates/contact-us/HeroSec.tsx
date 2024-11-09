@@ -1,8 +1,8 @@
 import Image from "next/image";
 import StarsSection from "../UI/StarsSection/StarsSection";
 import pic from "@/public/images/particle-bg.jpg";
-import guy from "@/public/images/guy.png";
-import phone from "@/public/icons/phone-gold.png";
+// import guy from "@/public/images/guy.png";
+// import phone from "@/public/icons/phone-gold.png";
 import email from "@/public/icons/email-blue.png";
 
 export default function HeroSec() {
@@ -43,7 +43,7 @@ export default function HeroSec() {
           w-full space-y-4 sm:space-y-0 mt-4 mb-6 sm:mt-0 sm:mb-0
           sm:flex justify-between gap-8 items-center"
           >
-            <div className="bg-blue-grad flex gap-3 p-4 w-full sm:w-1/2 rounded-lg lg:rounded-xl truncate">
+            <div className="bg-blue-grad mx-auto flex gap-3 p-4 w-full sm:w-1/2 rounded-lg lg:rounded-xl truncate">
               <div className="bg-white rounded-lg p-1 min-w-fit">
                 <Image width={30} height={30} src={email} alt="icon" />
               </div>
@@ -54,7 +54,7 @@ export default function HeroSec() {
                 </div>
               </div>
             </div>
-            <div className="bg-blue-grad flex gap-3 p-4 w-full sm:w-1/2 rounded-lg lg:rounded-xl truncate">
+            {/* <div className="bg-blue-grad flex gap-3 p-4 w-full sm:w-1/2 rounded-lg lg:rounded-xl truncate">
               <div className="bg-white rounded-lg p-1 min-w-fit">
                 <Image width={30} height={30} src={phone} alt="icon" />
               </div>
@@ -64,10 +64,10 @@ export default function HeroSec() {
                   +1234567812345
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          <div
+          {/* <div
             className="p-5 bg-black/45 backdrop-blur lg:rounded-3xl rounded-2xl
             w-full sm:w-fit
            sm:absolute left-0 top-11 z-20 sm:-translate-x-6 lg:-translate-x-1/4  xl:-translate-x-1/2"
@@ -87,7 +87,7 @@ export default function HeroSec() {
               “ This team is really the best in its field,I don`&apos;t regret
               working with them, and will come back again thanks “
             </p>
-          </div>
+          </div> */}
 
           <svg
             className="hidden lg:block absolute bottom-0 right-0 translate-x-1/2 -translate-y-3/4 z-0"

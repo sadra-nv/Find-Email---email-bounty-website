@@ -11,7 +11,6 @@ export default function LoadingSec({ className }: { className?: string }) {
       )}
     >
       <Image
-        className="animate-logo-spin"
         alt="find email logo"
         src={logo}
         width={100}

@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
-import { Merriweather } from "next/font/google";
+// import { Merriweather, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const merriweather = Merriweather({
+// const merriweather = Merriweather({
+//   subsets: ["latin"],
+//   weight: ["400", "700"],
+//   display: "swap",
+// });
+
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
@@ -27,7 +34,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${merriweather.className} max-w-[120rem] mx-auto relative bg-[#030014] text-white`}
+        className={`${poppins.className} max-w-[120rem] mx-auto relative bg-[#030014] text-white`}
       >
         {children}
       </body>
