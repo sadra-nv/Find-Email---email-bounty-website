@@ -114,7 +114,10 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-          <button className="hover-btn rounded-lg flex items-center justify-center text-xs px-5 py-4 gap-1 ">
+          <Link
+            href="/auth"
+            className=" hover-btn rounded-lg flex items-center justify-center text-xs px-5 py-4 gap-1 "
+          >
             Login/Register
             <svg width="18" height="17" viewBox="0 0 18 17" fill="none">
               <path
@@ -142,7 +145,7 @@ export default function Header() {
                 fill="#579ED6"
               />
             </svg>
-          </button>
+          </Link>
           {/* <button>
             <Link
               href={"/"}
