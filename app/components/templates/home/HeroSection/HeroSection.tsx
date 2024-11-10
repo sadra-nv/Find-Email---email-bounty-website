@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       className="bg-gradient-to-b from-[#030014] via-[#030014] to-[#030014] 
-      relative hero-grad  h-[25rem] sm:h-[400px] lg:h-[550px]  "
+      relative hero-grad  h-[25rem] sm:h-[25rem] lg:h-[34.375rem]  "
     >
       <StarsSection className="z-0 xl:h-screen " />
       <div

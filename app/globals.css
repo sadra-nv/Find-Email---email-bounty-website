@@ -14,7 +14,7 @@
     @apply duration-200 ease-in transition-all;
   }
   .hover-btn {
-    @apply bg-gradient-to-r border border-[#c50c1883]
+    @apply bg-gradient-to-r 
      from-[#C24B76] to-[#FD8330] shadow-2xl transition-all 
      relative overflow-hidden before:absolute before:right-0 before:top-0 before:h-full before:w-6 before:translate-x-12
       before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40;

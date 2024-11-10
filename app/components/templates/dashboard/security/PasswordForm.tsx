@@ -1,5 +1,5 @@
 import { Button } from "@headlessui/react";
-import PasswordInput from "./PasswordInput";
+import MainInput from "../../UI/Inputs/MainInput";
 
 export default function PassWordForm() {
   return (
@@ -9,8 +9,16 @@ export default function PassWordForm() {
       </h2>
       <form className="w-full mx-auto md:w-4/5 lg:w-11/12 xl:w-4/5 ">
         <div className="w-full flex sm:flex-row flex-col justify-start items-center gap-10 sm:gap-8">
-          <PasswordInput title="New Password" />
-          <PasswordInput title="Confirm New Password" />
+          <MainInput
+            className="w-full"
+            label="New Password"
+            placeholder="**********"
+          />
+          <MainInput
+            className="w-full"
+            label="Confirm New Password"
+            placeholder="**********"
+          />
         </div>
 
         <div className="w-full max-w-80 sm:w-fit mx-auto">
