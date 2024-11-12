@@ -53,7 +53,7 @@ export default function InfoDomain() {
         />
         <NavItem
           currentPath={currentPath}
-          url=""
+          url="/dashboard/bulk-search"
           title="Bulk Search"
           icon={spyGlass}
         />
