@@ -21,7 +21,7 @@ export default function LogsSearchSec() {
         </p>
       </div>
 
-      <h2 className="flex text-center sm:justify-center flex-col gap-2 sm:gap-0 sm:flex-row  text-lg font-bold mt-36 sm:mt-12 mb-7">
+      <h2 className="flex text-center sm:justify-center flex-col gap-2 sm:gap-0 sm:flex-row  text-lg font-semibold mt-36 sm:mt-12 mb-7">
         <span className=" inline-block text-fe-c-text-title ">
           Search in Logs Database.
         </span>

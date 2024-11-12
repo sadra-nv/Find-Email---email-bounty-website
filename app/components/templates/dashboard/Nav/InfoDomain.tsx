@@ -34,7 +34,7 @@ export default function InfoDomain() {
           icon={spyGlass}
         />
         <NavItem
-          url=""
+          url="/dashboard/leaked-databases"
           currentPath={currentPath}
           title="Leak Database"
           icon={dataBase}
