@@ -47,7 +47,7 @@ export default function InfoDomain() {
         />
         <NavItem
           currentPath={currentPath}
-          url=""
+          url="/dashboard/domain-search"
           title="Domain Search"
           icon={domain}
         />
