@@ -41,7 +41,7 @@ export default function InfoDomain() {
         />
         <NavItem
           currentPath={currentPath}
-          url=""
+          url="/dashboard/web-technology"
           title="Web Technology"
           icon={web}
         />
