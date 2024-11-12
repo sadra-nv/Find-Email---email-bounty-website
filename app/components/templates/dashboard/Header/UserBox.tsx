@@ -8,7 +8,7 @@ export default function UserBox() {
     <div className="relative">
       <Menu>
         <MenuButton
-          className="rounded-full p-1 relative border-neutral-500/5 shadow-sm
+          className="rounded-full p-1 relative dark:bg-white/15 border-neutral-500/5 shadow-sm
         bg-white flex justify-center items-center gap-2
         focus:outline-none data-[hover]:bg-neutral-50/95 data-[open]:bg-neutral-50/95 data-[focus]:bg-neutral-50/95"
         >
@@ -22,11 +22,11 @@ export default function UserBox() {
           <div className="w-full t flex justify-start items-stretch gap-1 flex-col mr-7 sm:mr-7 md:mr-9">
             <h2
               className="xs:text-xs text-[0.625rem]  max-w-8 xs:max-w-14
-             md:max-w-24 lg:max-w-36 truncate font-bold text-neutral-950"
+             md:max-w-24 lg:max-w-36 truncate font-bold  text-fe-c-text-title"
             >
               Alireza Rahmani
             </h2>
-            <span className="xs:text-xs text-[0.5rem] max-w-8 lg:max-w-20  xs:max-w-14 truncate text-neutral-900 w-fit">
+            <span className="xs:text-xs text-[0.5rem] max-w-8 lg:max-w-20  xs:max-w-14 truncate text-fe-c-text-normal w-fit">
               Welcome!
             </span>
           </div>
@@ -54,6 +54,9 @@ export default function UserBox() {
             flex flex-col justify-start items-start gap-4
            [--anchor-gap:1rem] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
         >
+          <div className="rounded-lg text-neutral-50  bg-[#006568] px-4 py-2  font-bold">
+            Buyer
+          </div>
           <div>
             <span className="">Daily Search </span>
             <span className="mr-1 font-sans">:</span>
@@ -92,27 +95,6 @@ export default function UserBox() {
             </svg>
             <Link href="">Profile</Link>
           </div>
-          {/* <MenuItem>
-            <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
-              Edit
-            </button>
-          </MenuItem>
-          <MenuItem>
-            <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
-              Duplicate
-            </button>
-          </MenuItem>
-          <div className="my-1 h-px bg-white/5" />
-          <MenuItem>
-            <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
-              Archive
-            </button>
-          </MenuItem>
-          <MenuItem>
-            <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
-              Delete
-            </button>
-          </MenuItem> */}
         </MenuItems>
       </Menu>
     </div>
