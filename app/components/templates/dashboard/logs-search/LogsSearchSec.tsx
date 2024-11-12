@@ -1,4 +1,4 @@
-import Search from "../Header/Search";
+import Search from "../../UI/Search/Search";
 
 export default function LogsSearchSec() {
   return (
