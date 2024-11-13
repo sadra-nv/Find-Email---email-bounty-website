@@ -6,7 +6,7 @@ export type Option = {
   label: string;
 };
 
-const CustomSelect = ({
+export default function PaymentSelect({
   options,
   placeholder,
   onChange,
@@ -14,7 +14,7 @@ const CustomSelect = ({
   options: Option[];
   placeholder: StaticImageData;
   onChange: (option: Option) => void;
-}) => {
+}) {
   const [isOpen, setIsOpen] = useState(false);
   // const [selectedOption, setSelectedOption] = useState<Option | null>(null);
 
@@ -53,7 +53,7 @@ const CustomSelect = ({
             <li
               key={option.value}
               onClick={() => handleSelect(option)}
-              className="px-4 py-2 text-nowrap text-center text-sm hover:bg-white/10 cursor-pointer"
+              className="px-4 py-2 text-nowrap text-center text-white text-sm hover:bg-white/10 cursor-pointer"
             >
               {option.label}
             </li>
@@ -62,6 +62,4 @@ const CustomSelect = ({
       )}
     </div>
   );
-};
-
-export default CustomSelect;
+}

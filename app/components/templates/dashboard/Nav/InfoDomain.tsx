@@ -65,11 +65,16 @@ export default function InfoDomain() {
         />
         <NavItem
           currentPath={currentPath}
-          url=""
+          url="/dashboard/pricing"
           title="Pricing"
           icon={price}
         />
-        <NavItem currentPath={currentPath} url="" title="Shop" icon={shop} />
+        <NavItem
+          currentPath={currentPath}
+          url="/dashboard/shop"
+          title="Shop"
+          icon={shop}
+        />
       </div>
     </div>
   );

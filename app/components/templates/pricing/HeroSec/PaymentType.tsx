@@ -10,7 +10,7 @@ import bascket from "@/public/images/pricing/bascket.png";
 import Image from "next/image";
 import { useState } from "react";
 import { Button, Field, Input, Label } from "@headlessui/react";
-import CustomSelect, { Option } from "../../UI/Select/CustomSelect";
+import PaymeentSelect, { Option } from "./PaymentSelect";
 
 const paymentMethods = [
   { name: "Credit Card", pic: card },
@@ -108,7 +108,7 @@ export default function PaymentType() {
           </Label>
           <div className="absolute bg-white right-3 top-1/2 -translate-y-1/2 z-10 flex gap-2 justify-end items-center">
             <div className=" flex gap-2 relative">
-              <CustomSelect
+              <PaymeentSelect
                 options={options}
                 placeholder={selectedPic}
                 onChange={handleSelectChange}
