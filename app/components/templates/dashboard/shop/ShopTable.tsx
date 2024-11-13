@@ -11,50 +11,49 @@ import {
 } from "@/app/components/templates/UI/ShadTable/ShadTable";
 import { Button } from "@headlessui/react";
 
-interface DataItem {
-  data: string;
-  type: string;
-  record: string;
-  download: string;
-}
-
-export default function OrdersTable() {
-  const data: DataItem[] = [
+export default function ShopTable() {
+  const data = [
     {
-      data: "Test.com",
-      type: "Leak Database",
-      record: "60546",
-      download: "No",
+      info: "3.8 billion unique password",
+      credit: "6200",
+      date: "2024-06-04",
+      type: "Other",
     },
     {
-      data: "Digikala.ir",
-      type: "Leak Database",
-      record: "50000",
-      download: "No",
+      info: "3.8 billion unique password",
+      credit: "6200",
+      date: "2024-06-04",
+      type: "Other",
     },
     {
-      data: "Test.com",
-      type: "Leak Database",
-      record: "60546",
-      download: "No",
+      info: "3.8 billion unique password",
+      credit: "6200",
+      date: "2024-06-04",
+      type: "Other",
     },
     {
-      data: "Digikala.ir",
-      type: "Leak Database",
-      record: "50000",
-      download: "No",
+      info: "3.8 billion unique password",
+      credit: "6200",
+      date: "2024-06-04",
+      type: "Other",
     },
     {
-      data: "Test.com",
-      type: "Leak Database",
-      record: "60546",
-      download: "No",
+      info: "3.8 billion unique password",
+      credit: "6200",
+      date: "2024-06-04",
+      type: "Other",
     },
     {
-      data: "Digikala.ir",
-      type: "Leak Database",
-      record: "50000",
-      download: "No",
+      info: "3.8 billion unique password",
+      credit: "6200",
+      date: "2024-06-04",
+      type: "Other",
+    },
+    {
+      info: "3.8 billion unique password",
+      credit: "6200",
+      date: "2024-06-04",
+      type: "Other",
     },
   ];
 
@@ -64,16 +63,19 @@ export default function OrdersTable() {
         <TableHeader>
           <TableRow className="border-b border-fe-c-text-sub hover:bg-transparent">
             <TableHead className="text-sm font-bold text-fe-c-text-title">
-              METHOD
+              Info
             </TableHead>
             <TableHead className="text-sm font-bold text-fe-c-text-title">
-              CREDIT
+              Credit
             </TableHead>
             <TableHead className="text-sm font-bold text-fe-c-text-title">
-              STATUS
+              Date
             </TableHead>
             <TableHead className="text-sm font-bold text-fe-c-text-title">
-              TIME
+              Type
+            </TableHead>
+            <TableHead className="text-sm font-bold text-fe-c-text-title">
+              Buy
             </TableHead>
           </TableRow>
         </TableHeader>
@@ -84,22 +86,24 @@ export default function OrdersTable() {
               className=" hover:bg-neutral-400/20  dark:hover:bg-white/10"
             >
               <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
-                {item.data}
+                {item.info}
               </TableCell>
               <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
-                {item.type}
+                {item.credit}
               </TableCell>
-              <TableCell
-                className={
-                  Number(item.record) > 60000
-                    ? "text-green-500 font-sans py-5"
-                    : "text-red-500 font-sans py-5"
-                }
-              >
-                {item.record}
+              <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
+                {item.date}
               </TableCell>
               <TableCell className="text-fe-c-text-title py-5">
-                {item.download}
+                {item.type}
+              </TableCell>
+              <TableCell className="text-fe-c-text-title py-5">
+                <Button
+                  className="bg-green-700 dark:bg-green-600 font-bold text-sm
+                text-white py-2 px-4 rounded-lg btn-hover"
+                >
+                  Buy
+                </Button>
               </TableCell>
             </TableRow>
           ))}

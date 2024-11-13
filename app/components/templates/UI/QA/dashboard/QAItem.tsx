@@ -32,13 +32,13 @@ export default function QAItem({
           "w-full font-medium bg-[#1A1B31] flex justify-between text-justify gap-3",
           "items-start rounded-lg relative z-10 p-4 text-sm overflow-hidden transition-all duration-300",
           {
-            " p-4 bg-back-dark": activeIndex === index,
+            " p-4 bg-back-dark w-fit max-w-full": activeIndex === index,
           }
         )}
       >
         <h4
           className={cn("truncate xl:w-11/12 w-4/5", {
-            "overflow-auto": activeIndex === index,
+            "overflow-auto w-fit max-w-full text-wrap": activeIndex === index,
           })}
         >
           dwdawj iwdwad jidw wjidjiw jidjwijiwdj?

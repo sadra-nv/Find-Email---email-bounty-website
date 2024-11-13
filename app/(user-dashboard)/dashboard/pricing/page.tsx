@@ -39,7 +39,7 @@ export default function PricingPage() {
           </section>
           <PricingCredit />
 
-          <section className="my-12 lg:my-24 ">
+          <section className="mb-12 my-40 sm:my-12 lg:my-24 container">
             <div className="w-full h-fit flex justify-center items-center gap-2 sm:mb-12 mb-5">
               <div className="w-full bg-gradient-to-l from-black dark:from-white h-0.5 "></div>
               <h2 className="text-center text-fe-c-text-title text-lg font-bold  lg:text-3xl">
