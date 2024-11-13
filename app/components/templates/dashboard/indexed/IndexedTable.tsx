@@ -11,49 +11,50 @@ import {
 } from "@/app/components/templates/UI/ShadTable/ShadTable";
 import { Button } from "@headlessui/react";
 
-export default function ShopTable() {
-  const data = [
+interface DataItem {
+  data: string;
+  type: string;
+  record: string;
+  download: string;
+}
+
+export default function IndexedTable() {
+  const data: DataItem[] = [
     {
-      info: "3.8 billion unique password",
-      credit: "6200",
-      date: "2024-06-04",
-      type: "Other",
+      data: "Test.com",
+      type: "Leak Database",
+      record: "60546",
+      download: "No",
     },
     {
-      info: "3.8 billion unique password",
-      credit: "6200",
-      date: "2024-06-04",
-      type: "Other",
+      data: "Digikala.ir",
+      type: "Leak Database",
+      record: "50000",
+      download: "No",
     },
     {
-      info: "3.8 billion unique password",
-      credit: "6200",
-      date: "2024-06-04",
-      type: "Other",
+      data: "Test.com",
+      type: "Leak Database",
+      record: "60546",
+      download: "No",
     },
     {
-      info: "3.8 billion unique password",
-      credit: "6200",
-      date: "2024-06-04",
-      type: "Other",
+      data: "Digikala.ir",
+      type: "Leak Database",
+      record: "50000",
+      download: "No",
     },
     {
-      info: "3.8 billion unique password",
-      credit: "6200",
-      date: "2024-06-04",
-      type: "Other",
+      data: "Test.com",
+      type: "Leak Database",
+      record: "60546",
+      download: "No",
     },
     {
-      info: "3.8 billion unique password",
-      credit: "6200",
-      date: "2024-06-04",
-      type: "Other",
-    },
-    {
-      info: "3.8 billion unique password",
-      credit: "6200",
-      date: "2024-06-04",
-      type: "Other",
+      data: "Digikala.ir",
+      type: "Leak Database",
+      record: "50000",
+      download: "No",
     },
   ];
 
@@ -61,21 +62,18 @@ export default function ShopTable() {
     <div className="w-full  text-sm  bg-transparent text-fe-c-text-title">
       <Table className="w-full">
         <TableHeader>
-          <TableRow className="border-b border-fe-c-text-sub hover:bg-transparent">
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
-              Info
+          <TableRow className="border-b border-fe-c-text-sub bg-blue-500/10">
+            <TableHead className="text-sm font-bold text-fe-c-text-title h-16">
+              DATABASE NAME
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
-              Credit
+            <TableHead className="text-sm font-bold text-fe-c-text-title h-16">
+              RECORD
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
-              Date
+            <TableHead className="text-sm font-bold text-fe-c-text-title h-16">
+              TYPE
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
-              Type
-            </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
-              Buy
+            <TableHead className="text-sm font-bold text-fe-c-text-title h-16">
+              DATE
             </TableHead>
           </TableRow>
         </TableHeader>
@@ -86,24 +84,22 @@ export default function ShopTable() {
               className=" hover:bg-neutral-400/20  dark:hover:bg-white/10"
             >
               <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
-                {item.info}
+                {item.data}
               </TableCell>
               <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
-                {item.credit}
-              </TableCell>
-              <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
-                {item.date}
-              </TableCell>
-              <TableCell className="text-fe-c-text-title py-5">
                 {item.type}
               </TableCell>
+              <TableCell
+                className={
+                  Number(item.record) > 60000
+                    ? "text-green-500 font-sans py-5"
+                    : "text-red-500 font-sans py-5"
+                }
+              >
+                {item.record}
+              </TableCell>
               <TableCell className="text-fe-c-text-title py-5">
-                <Button
-                  className="bg-green-700 dark:bg-green-600 font-bold text-sm
-                text-white py-2 px-4 rounded-lg btn-hover"
-                >
-                  Buy
-                </Button>
+                {item.download}
               </TableCell>
             </TableRow>
           ))}
