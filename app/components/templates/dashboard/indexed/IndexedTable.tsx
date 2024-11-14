@@ -59,11 +59,25 @@ export default function IndexedTable() {
   ];
 
   return (
-    <div className="w-full  text-sm  bg-transparent text-fe-c-text-title">
-      <Table className="w-full">
-        <TableHeader>
-          <TableRow className="border-b border-fe-c-text-sub bg-blue-500/10">
-            <TableHead className="text-sm font-bold text-fe-c-text-title h-16">
+    <div
+      className="w-full  text-sm  bg-transparent text-fe-c-text-title
+        pb-8 sm:pb-4 lg:pb-11
+    "
+    >
+      <Table
+        className="w-full  text-nowrap
+      "
+      >
+        <TableHeader
+          className="
+         pl-4 lg:pl-11
+        "
+        >
+          <TableRow className="  bg-[#F3F3F3] dark:bg-white/10">
+            <TableHead
+              className="text-sm font-bold text-fe-c-text-title h-16
+         pl-4 lg:pl-11"
+            >
               DATABASE NAME
             </TableHead>
             <TableHead className="text-sm font-bold text-fe-c-text-title h-16">
@@ -77,16 +91,19 @@ export default function IndexedTable() {
             </TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody className="divide-y divide-fe-c-text-sub">
+        <TableBody className="divide-y divide-fe-c-text-sub text-nowrap">
           {data.map((item, index) => (
             <TableRow
               key={index}
               className=" hover:bg-neutral-400/20  dark:hover:bg-white/10"
             >
-              <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
+              <TableCell
+                className="text-fe-c-text-title py-5 
+               pl-4 lg:pl-11   "
+              >
                 {item.data}
               </TableCell>
-              <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
+              <TableCell className="text-fe-c-text-title py-5   ">
                 {item.type}
               </TableCell>
               <TableCell
@@ -129,7 +146,10 @@ export default function IndexedTable() {
             {page}
           </Button>
         ))}
-        <Button className="h-8 w-8 text-fe-c-text-title rounded-md hover:bg-gray-300/40 flex justify-center items-center">
+        <Button
+          className="h-8 w-8 text-fe-c-text-title rounded-md
+        hover:bg-gray-300/40 flex justify-center items-center"
+        >
           <svg width="6" height="9" viewBox="0 0 6 9" fill="none">
             <path
               d="M5.77051 4.49998C5.77051 4.69986 5.703 4.89974 5.55833 5.05755L2.15391 8.77119C1.87423 9.07627 1.41131 9.07627 1.13162 8.77119C0.851959 8.4661 0.851959 7.96114 1.13162 7.65606L4.0249 4.49998L1.13162 1.34394C0.851959 1.03886 0.851959 0.533896 1.13162 0.228813C1.41131 -0.0762701 1.87423 -0.0762701 2.15391 0.228813L5.55833 3.94241C5.703 4.10021 5.77051 4.3001 5.77051 4.49998Z"

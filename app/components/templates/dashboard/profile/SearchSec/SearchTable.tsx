@@ -61,20 +61,20 @@ export default function SearchTable() {
   ];
 
   return (
-    <div className="w-full  text-sm  bg-transparent text-fe-c-text-title">
-      <Table className="w-full">
+    <div className="w-full  text-sm  bg-transparent text-fe-c-text-title pb-8 sm:pb-4 lg:pb-11">
+      <Table className="w-full text-nowrap">
         <TableHeader>
-          <TableRow className="border-b border-fe-c-text-sub hover:bg-transparent">
-            <TableHead className="text-sm font-bold text-fe-c-text-title">
+          <TableRow className="border-b border-fe-c-text-sub bg-[#F3F3F3] dark:bg-white/10">
+            <TableHead className="text-sm font-bold text-fe-c-text-title h-16  pl-4 lg:pl-11">
               DATA
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title">
+            <TableHead className="text-sm font-bold text-fe-c-text-title h-16">
               TYPE
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title">
+            <TableHead className="text-sm font-bold text-fe-c-text-title h-16">
               RECORD
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title">
+            <TableHead className="text-sm font-bold text-fe-c-text-title h-16">
               DOWNLOAD
             </TableHead>
           </TableRow>
@@ -85,10 +85,13 @@ export default function SearchTable() {
               key={index}
               className=" hover:bg-neutral-400/20  dark:hover:bg-white/10"
             >
-              <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
+              <TableCell
+                className="text-fe-c-text-title py-5 
+               pl-4 lg:pl-11"
+              >
                 {item.data}
               </TableCell>
-              <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
+              <TableCell className="text-fe-c-text-title py-5 ">
                 {item.type}
               </TableCell>
               <TableCell

@@ -5,23 +5,29 @@ import Search from "../../../UI/Search/Search";
 
 export default function PaymentSec() {
   return (
-    <section className="w-11/12 mx-auto lg:w-full h-full min-h-full mt-4 sm:mt-0 py-8 p-3 sm:p-4 lg:p-11 rounded-2xl lg:rounded-3xl bg-fe-c-bg-light shadow-sm mb-16 lg:mb-28">
+    <section
+      className="w-11/12 mx-auto lg:w-full h-full min-h-full mt-4 sm:mt-0
+    pt-8 sm:pt-4 lg:pt-11 rounded-2xl lg:rounded-3xl bg-fe-c-bg-light shadow-sm mb-16 lg:mb-28"
+    >
       <h2 className="w-fit bg-blue-grad-btn text-white mx-auto rounded-lg text-sm  px-6 py-3 mb-12">
         User Payment History
       </h2>
 
-      <div className="flex-col-reverse md:flex-row flex justify-between items-start w-full">
+      <div
+        className="flex-col-reverse md:flex-row flex justify-between items-start w-full
+       px-4 lg:px-11"
+      >
         <Field>
-          <div className="relative mb-12 w-fit px-4 flex gap-4 justify-center items-center">
+          <div className="relative mb-12 w-fit pr-4 flex gap-4 justify-center items-center">
             <Label className="text-sm/6 font-bold text-fe-c-text-title">
               Show
             </Label>
             <Select
               className={cn(
-                "  block w-full  appearance-none rounded-lg border-none  py-2.5 px-5 pr-10 text-sm/6 text-white",
+                "  block w-full  appearance-none rounded-lg border-none  py-2 px-5 pr-10 text-sm/6 text-white",
                 "dark:bg-dark-card bg-[#152330] space-y-1 font-sans",
                 "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white",
-                "*:text-neutral-100 *:rounded-none"
+                "*:text-neutral-100 dark:*:text-neutral-950 *:rounded-none"
               )}
             >
               <option value="10">10</option>

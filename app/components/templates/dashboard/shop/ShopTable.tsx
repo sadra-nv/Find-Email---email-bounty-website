@@ -58,40 +58,49 @@ export default function ShopTable() {
   ];
 
   return (
-    <div className="w-full  text-sm  bg-transparent text-fe-c-text-title">
-      <Table className="w-full">
+    <div
+      className="w-full  text-sm  bg-transparent text-fe-c-text-title
+    pb-8 sm:pb-4 lg:pb-11"
+    >
+      <Table className="w-full text-nowrap">
         <TableHeader>
-          <TableRow className="border-b border-fe-c-text-sub hover:bg-transparent">
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
+          <TableRow className="border-b border-fe-c-text-sub bg-[#F3F3F3] dark:bg-white/10">
+            <TableHead
+              className="text-sm font-bold text-fe-c-text-title  h-16
+             pl-4 lg:pl-11"
+            >
               Info
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
+            <TableHead className="text-sm font-bold text-fe-c-text-title  h-16">
               Credit
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
+            <TableHead className="text-sm font-bold text-fe-c-text-title  h-16">
               Date
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
+            <TableHead className="text-sm font-bold text-fe-c-text-title  h-16">
               Type
             </TableHead>
-            <TableHead className="text-sm font-bold text-fe-c-text-title bg-neutral-500/20 h-16">
+            <TableHead className="text-sm font-bold text-fe-c-text-title  h-16">
               Buy
             </TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody className="divide-y divide-fe-c-text-sub">
+        <TableBody className="divide-y divide-fe-c-text-sub text-nowrap">
           {data.map((item, index) => (
             <TableRow
               key={index}
               className=" hover:bg-neutral-400/20  dark:hover:bg-white/10"
             >
-              <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
+              <TableCell
+                className="text-fe-c-text-title py-5 
+               pl-4 lg:pl-11"
+              >
                 {item.info}
               </TableCell>
-              <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
+              <TableCell className="text-fe-c-text-title py-5 ">
                 {item.credit}
               </TableCell>
-              <TableCell className="text-fe-c-text-title py-5 max-w-16 truncate xl:max-w-full">
+              <TableCell className="text-fe-c-text-title py-5 ">
                 {item.date}
               </TableCell>
               <TableCell className="text-fe-c-text-title py-5">
