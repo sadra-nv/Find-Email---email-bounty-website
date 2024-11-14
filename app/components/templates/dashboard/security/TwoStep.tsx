@@ -10,6 +10,7 @@ import { useTwoFactorFormSlice } from "@/lib/store/dashSecurityTwoFactoreStore";
 import CodeForm from "./TwoStepForm/CodeForm";
 import SuccessFrom from "./TwoStepForm/SuccessForm";
 import TripleShields from "./TwoStepForm/TripleShields";
+import FinalForm from "./FinalForm";
 
 export default function TwoStep() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,6 +56,7 @@ export default function TwoStep() {
       >
         {formStep === "init" && <InitForm />}
         {forms}
+        {formStep === "final" && <FinalForm />}
         {/* {forms} */}
         {/* {formStep === "code" ||
           (formStep === "success" && (
