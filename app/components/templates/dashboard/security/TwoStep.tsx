@@ -1,11 +1,15 @@
 "use client";
 
+import logo from "@/public/images/shield-logo.png";
+import Image from "next/image";
 import { Button } from "@headlessui/react";
 import { useState } from "react";
 import SecurityModal from "../../UI/Modal/SecurityModal";
 import InitForm from "./TwoStepForm/InitForm";
 import { useTwoFactorFormSlice } from "@/lib/store/dashSecurityTwoFactoreStore";
 import CodeForm from "./TwoStepForm/CodeForm";
+import SuccessFrom from "./TwoStepForm/SuccessForm";
+import TripleShields from "./TwoStepForm/TripleShields";
 
 export default function TwoStep() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +23,28 @@ export default function TwoStep() {
   };
 
   const { formStep, setStep } = useTwoFactorFormSlice();
+
+  let forms;
+  if (formStep === "code" || formStep === "success") {
+    forms = (
+      <>
+        <div className="sm:px-20">
+          <Image
+            width={52}
+            height={62}
+            placeholder="blur"
+            className="mx-auto "
+            src={logo}
+            alt="logo"
+          />
+
+          <TripleShields />
+        </div>
+        {formStep === "code" && <CodeForm />}
+        {formStep === "success" && <SuccessFrom />}
+      </>
+    );
+  }
   return (
     <>
       <SecurityModal
@@ -28,7 +54,46 @@ export default function TwoStep() {
         className="min-w-fit lg:w-5/12"
       >
         {formStep === "init" && <InitForm />}
-        {formStep === "code" && <CodeForm />}
+        {forms}
+        {/* {forms} */}
+        {/* {formStep === "code" ||
+          (formStep === "success" && (
+            <>
+              <div className="sm:px-20">
+                <Image
+                  width={52}
+                  height={62}
+                  placeholder="blur"
+                  className="mx-auto "
+                  src={logo}
+                  alt="logo"
+                />
+
+                <TripleShields />
+              </div>
+              {formStep === "code" && <CodeForm />}
+              {formStep === "success" && <SuccessFrom />}
+            </>
+          ))}
+        {formStep === "success" && (
+          <>
+            <div>
+              <div className="sm:px-20">
+                <Image
+                  width={52}
+                  height={62}
+                  placeholder="blur"
+                  className="mx-auto "
+                  src={logo}
+                  alt="logo"
+                />
+
+                <TripleShields />
+              </div>
+            </div>
+            <SuccessFrom />
+          </>
+        )} */}
       </SecurityModal>
       <h2 className="text-fe-c-text-title mb-2 sm:mb-3 font-semibold text-sm sm:text-base">
         Two-step authentication
