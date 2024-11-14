@@ -6,7 +6,7 @@ export default function DashboardSecurityPage() {
     <div className="w-full lg:ms-52 lg:w-[calc(100%_-_13rem)]">
       <div className="w-full lg:w-[80.5%] mx-auto h-full  sm:pt-0 pt-40">
         <Header className="" />
-        <main className=" h-full  w-full">
+        <main className=" h-full relative w-full">
           <PassWordForm />
         </main>
       </div>

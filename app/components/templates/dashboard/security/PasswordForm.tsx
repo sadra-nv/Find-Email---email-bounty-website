@@ -1,3 +1,5 @@
+import ChangePass from "./ChangePass";
+import DeleteAcc from "./DeleteAcc";
 import TwoStep from "./TwoStep";
 
 export default function PassWordForm() {
@@ -7,6 +9,8 @@ export default function PassWordForm() {
         Security
       </h2>
       <TwoStep />
+      <ChangePass />
+      <DeleteAcc />
       {/* <form className="w-full mx-auto md:w-4/5 lg:w-11/12 xl:w-4/5 ">
         <div className="w-full flex sm:flex-row flex-col justify-start items-center gap-10 sm:gap-8">
           <MainInput
