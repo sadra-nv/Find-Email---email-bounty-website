@@ -5,7 +5,7 @@ import { useState } from "react";
 import SecurityModal from "../../UI/Modal/SecurityModal";
 import InitForm from "./TwoStepForm/InitForm";
 import { useTwoFactorFormSlice } from "@/lib/store/dashSecurityTwoFactoreStore";
-import CodeForm from "./TwoStepForm/codeForm";
+import CodeForm from "./TwoStepForm/CodeForm";
 
 export default function TwoStep() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +15,7 @@ export default function TwoStep() {
   };
   const closeHandler = () => {
     setIsOpen(false);
-    setStep("init");
+    setTimeout(() => setStep("init"), 300);
   };
 
   const { formStep, setStep } = useTwoFactorFormSlice();

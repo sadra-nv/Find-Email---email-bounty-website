@@ -126,6 +126,10 @@ const config: Config = {
 
           "100%": { opacity: "1", transform: "translateY(0rem) scale(100%)" },
         },
+        "caret-blink": {
+          "0%,70%,100%": { opacity: "1" },
+          "20%,50%": { opacity: "0" },
+        },
         "3d-qa": {
           "0%": {
             transform: "translateY(0rem)  translateX(0%)",
@@ -145,6 +149,7 @@ const config: Config = {
         },
       },
       animation: {
+        "caret-blink": "caret-blink 1.25s ease-out infinite",
         "pop-in": "pop-in 0.5s ease forwards",
         "fill-x": "fill-x 0.5s ease forwards",
         "pyramid-glow": "pyramid-glow 5s ease infinite alternate",
