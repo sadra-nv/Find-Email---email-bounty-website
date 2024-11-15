@@ -5,9 +5,15 @@ import { Button } from "@headlessui/react";
 import { useTwoFactorFormSlice } from "@/lib/store/dashSecurityTwoFactoreStore";
 
 export default function InitForm() {
-  const { setStep } = useTwoFactorFormSlice();
+  const { setStep, setIsApp } = useTwoFactorFormSlice();
   const clickHandler = () => {
     setStep("code");
+    setIsApp(false);
+  };
+
+  const authClickHandler = () => {
+    setStep("code");
+    setIsApp(true);
   };
 
   return (
@@ -50,6 +56,7 @@ export default function InitForm() {
         <span>Send verification code to email</span>
       </Button>
       <Button
+        onClick={authClickHandler}
         className="w-full p-4 py-3 rounded-lg btn-hover  mt-4 sm:mt-5 sm:h-11 items-center
       text-fe-c-text-title text-xs sm:text-sm shadow-sm font-semibold sm:w-[21.875rem]
       flex gap-2 bg-neutral-400/30 dark:bg-white/15 "

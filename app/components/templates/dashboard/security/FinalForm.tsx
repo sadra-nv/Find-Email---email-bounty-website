@@ -1,9 +1,9 @@
 export default function FinalForm() {
   return (
-    <form className="sm:px-16">
+    <form className="xs:px-16">
       <div className=" font-semibold  mx-auto">
         <svg
-          className="mx-auto"
+          className="mx-auto scale-75 translate-y-3 xs:translate-y-0 xs:scale-100"
           width="89"
           height="104"
           viewBox="0 0 89 104"

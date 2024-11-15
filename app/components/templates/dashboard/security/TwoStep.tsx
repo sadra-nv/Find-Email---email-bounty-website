@@ -11,6 +11,7 @@ import CodeForm from "./TwoStepForm/CodeForm";
 import SuccessFrom from "./TwoStepForm/SuccessForm";
 import TripleShields from "./TwoStepForm/TripleShields";
 import FinalForm from "./FinalForm";
+import AppCodeForm from "./AppAuthForm/AppCodeForm";
 
 export default function TwoStep() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,29 +24,53 @@ export default function TwoStep() {
     setTimeout(() => setStep("init"), 300);
   };
 
-  const { formStep, setStep } = useTwoFactorFormSlice();
+  const { formStep, setStep, isApp } = useTwoFactorFormSlice();
 
   let forms;
-  if (formStep === "code" || formStep === "success") {
-    forms = (
-      <>
-        <div className="sm:px-20">
-          <Image
-            width={52}
-            height={62}
-            placeholder="blur"
-            className="mx-auto "
-            src={logo}
-            alt="logo"
-          />
+  if (!isApp) {
+    if (formStep === "code" || formStep === "success") {
+      forms = (
+        <>
+          <div className="sm:px-20">
+            <Image
+              width={52}
+              height={62}
+              placeholder="blur"
+              className="mx-auto "
+              src={logo}
+              alt="logo"
+            />
 
-          <TripleShields />
-        </div>
-        {formStep === "code" && <CodeForm />}
-        {formStep === "success" && <SuccessFrom />}
-      </>
-    );
+            <TripleShields />
+          </div>
+          {formStep === "code" && <CodeForm />}
+          {formStep === "success" && <SuccessFrom />}
+        </>
+      );
+    }
+  } else if (isApp) {
+    if (formStep === "code" || formStep === "success") {
+      forms = (
+        <>
+          <div className="sm:px-20">
+            <Image
+              width={52}
+              height={62}
+              placeholder="blur"
+              className="mx-auto "
+              src={logo}
+              alt="logo"
+            />
+
+            <TripleShields />
+          </div>
+          {formStep === "code" && <AppCodeForm />}
+          {formStep === "success" && <SuccessFrom />}
+        </>
+      );
+    }
   }
+
   return (
     <>
       <SecurityModal
@@ -57,45 +82,6 @@ export default function TwoStep() {
         {formStep === "init" && <InitForm />}
         {forms}
         {formStep === "final" && <FinalForm />}
-        {/* {forms} */}
-        {/* {formStep === "code" ||
-          (formStep === "success" && (
-            <>
-              <div className="sm:px-20">
-                <Image
-                  width={52}
-                  height={62}
-                  placeholder="blur"
-                  className="mx-auto "
-                  src={logo}
-                  alt="logo"
-                />
-
-                <TripleShields />
-              </div>
-              {formStep === "code" && <CodeForm />}
-              {formStep === "success" && <SuccessFrom />}
-            </>
-          ))}
-        {formStep === "success" && (
-          <>
-            <div>
-              <div className="sm:px-20">
-                <Image
-                  width={52}
-                  height={62}
-                  placeholder="blur"
-                  className="mx-auto "
-                  src={logo}
-                  alt="logo"
-                />
-
-                <TripleShields />
-              </div>
-            </div>
-            <SuccessFrom />
-          </>
-        )} */}
       </SecurityModal>
       <h2 className="text-fe-c-text-title mb-2 sm:mb-3 font-semibold text-sm sm:text-base">
         Two-step authentication
