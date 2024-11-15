@@ -11,8 +11,8 @@ export default function Search({
   return (
     <form
       className={cn(
-        " w-full rounded-full bg-neutral-200 dark:bg-dark-card block",
-        "border border-neutral-500/5 shadow-sm",
+        " w-full rounded-full bg-neutral-300 dark:bg-dark-card block",
+        // "border border-neutral-500/5 shadow-sm",
         className
       )}
     >
