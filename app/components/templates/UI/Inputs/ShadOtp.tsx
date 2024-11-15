@@ -48,7 +48,7 @@ const InputOTPSlot = React.forwardRef<
         "items-center justify-center text-sm transition-all ",
         "bg-neutral-400/25 dark:bg-white/15",
         isActive &&
-          "z-10 ring-2 ring-ring ring-fe-c-blue-main dark:ring-blue-400/60 ",
+          "z-10 ring-1 ring-ring ring-fe-c-blue-main dark:ring-blue-400/60 ",
         className
       )}
       {...props}

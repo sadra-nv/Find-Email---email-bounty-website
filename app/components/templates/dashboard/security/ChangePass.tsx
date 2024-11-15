@@ -1,8 +1,37 @@
+"use client";
+
 import { Button } from "@headlessui/react";
+import SecurityModal from "../../UI/Modal/SecurityModal";
+import { useState } from "react";
+import { useChangePassFormSlice } from "@/lib/store/dashSecurityChangePassStore";
+import ChangeInitForm from "./ChangePass/ChangeInitForm";
+import ChangeForgotForm from "./ChangePass/ChangeForgotForm";
+import ChangeNewForm from "./ChangePass/ChangeNewForm";
 
 export default function ChangePass() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { setStep, formStep } = useChangePassFormSlice();
+
+  const openHandler = () => {
+    setIsOpen(true);
+  };
+  const closeHandler = () => {
+    setIsOpen(false);
+    setTimeout(() => setStep("init"), 300);
+  };
+
   return (
     <>
+      <SecurityModal
+        isOpen={isOpen}
+        tapClose={false}
+        closeHandler={closeHandler}
+        className="w-full xs:w-fit "
+      >
+        {formStep === "init" && <ChangeInitForm />}
+        {formStep === "forgot" && <ChangeForgotForm />}
+        {formStep === "new" && <ChangeNewForm />}
+      </SecurityModal>
       <h2
         className="text-fe-c-text-title mb-2 sm:mb-3 font-semibold text-sm sm:text-base
       sm:mt-9 mt-6"
@@ -14,6 +43,7 @@ export default function ChangePass() {
       pb-6 border-b border-neutral-600/30 dark:border-neutral-200/30 sm:pb-9"
       >
         <Button
+          onClick={openHandler}
           className="w-full p-4 py-3 rounded-lg btn-hover h-11
         text-fe-c-text-title text-xs sm:text-sm shadow-sm font-semibold sm:w-[21.875rem]
         flex gap-2 bg-neutral-400/30 dark:bg-white/15"
