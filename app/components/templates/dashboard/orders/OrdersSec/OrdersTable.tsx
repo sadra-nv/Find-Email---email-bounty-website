@@ -94,7 +94,7 @@ export default function OrdersTable() {
               </TableCell>
               <TableCell
                 className="text-fe-c-text-title py-5
-              pl-4 lg:pl-11"
+              "
               >
                 {item.type}
               </TableCell>

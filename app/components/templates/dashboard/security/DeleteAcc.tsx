@@ -1,8 +1,30 @@
+"use client";
+
 import { Button } from "@headlessui/react";
+import SecurityModal from "../../UI/Modal/SecurityModal";
+import { useState } from "react";
+import DeleteAccForm from "./DeleteAccForm";
 
 export default function DeleteAcc() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const clickHandler = () => {
+    setIsOpen(true);
+  };
+
+  const closeHandler = () => {
+    setIsOpen(false);
+  };
   return (
     <>
+      <SecurityModal
+        isOpen={isOpen}
+        tapClose={true}
+        closeHandler={closeHandler}
+        className="min-w-fit lg:w-5/12"
+      >
+        <DeleteAccForm closeHandler={closeHandler} />
+      </SecurityModal>
       <h2
         className="text-fe-c-text-title mb-2 sm:mb-3 font-semibold text-sm sm:text-base
       sm:mt-9 mt-6"
@@ -33,6 +55,7 @@ export default function DeleteAcc() {
       "
       >
         <Button
+          onClick={clickHandler}
           className="w-full p-4 py-3 rounded-lg btn-hover h-11
         text-fe-c-text-title text-xs sm:text-sm shadow-sm font-semibold sm:w-[21.875rem]
         flex gap-2 border border-red-600/50 bg-red-600/20 dark:bg-red-900/40"
