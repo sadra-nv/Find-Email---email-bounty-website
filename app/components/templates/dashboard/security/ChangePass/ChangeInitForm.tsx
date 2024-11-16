@@ -3,6 +3,7 @@ import logo from "@/public/images/shield-logo.png";
 import { Button } from "@headlessui/react";
 import DashInput from "../../../UI/Inputs/DashInput";
 import { useChangePassFormSlice } from "@/lib/store/dashSecurityChangePassStore";
+import NewPassInput from "./NewPassInput";
 
 export default function ChangeInitForm() {
   const { setStep } = useChangePassFormSlice();
@@ -42,12 +43,17 @@ export default function ChangeInitForm() {
             Forgot password?
           </Button>
         </div>
-        <DashInput
+        <NewPassInput
+          label="New password"
+          placeholder="+8 characters"
+          className="w-full xs:w-64 sm:w-96  pt-5 sm:pt-8"
+        />
+        {/* <DashInput
           label="New password"
           type="password"
           placeholder="+8 characters"
           className="w-full xs:w-64 sm:w-96  pt-5 sm:pt-8"
-        />
+        /> */}
 
         <DashInput
           label="Repeat new password"
