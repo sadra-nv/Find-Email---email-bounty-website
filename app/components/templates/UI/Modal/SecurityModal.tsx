@@ -22,7 +22,11 @@ export default function SecurityModal({
       className="relative z-10 focus:outline-none"
       onClose={tapClose ? closeHandler : () => {}}
     >
-      <DialogBackdrop className="fixed inset-0 lg:w-[calc(100%_-_13rem)] ml-auto bg-black/80 backdrop-blur-sm" />
+      <DialogBackdrop
+        className="fixed inset-0
+      lg:left-[13rem]
+      lg:w-[calc(100%_-_13rem)] ml-auto bg-black/80 backdrop-blur-sm"
+      />
 
       <div className="fixed inset-0 z-10 w-full lg:w-[calc(100%_-_13rem)] ml-auto  overflow-y-auto">
         <div className="flex min-h-full items-center justify-center px-6 py-20">
