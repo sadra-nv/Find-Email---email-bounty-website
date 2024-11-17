@@ -4,6 +4,7 @@ import { Checkbox } from "@headlessui/react";
 import { useState } from "react";
 import MainInput from "../UI/Inputs/MainInput";
 import Link from "next/link";
+import NewPassInput from "./NewPassInput";
 
 export default function SignupForm() {
   const [enabled, setEnabled] = useState(false);
@@ -23,15 +24,20 @@ export default function SignupForm() {
           placeholder="Enter Your Username"
           className="w-full"
         />
-        <MainInput
+        {/* <MainInput
           type="password"
+          label="Password"
+          placeholder="Enter Your Password"
+          className="w-full"
+        /> */}
+        <NewPassInput
           label="Password"
           placeholder="Enter Your Password"
           className="w-full"
         />
         <MainInput
           type="password"
-          label="Password"
+          label="Repeat Password"
           placeholder="Repeat Your Password"
           className="w-full "
         />

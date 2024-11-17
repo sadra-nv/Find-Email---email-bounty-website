@@ -1,10 +1,11 @@
 import MainInput from "../UI/Inputs/MainInput";
 import Link from "next/link";
+import NewPassInput from "./NewPassInput";
 
 export default function NewPasswordForm() {
   return (
     <div className="relative z-10 w-full h-full min-h-screen flex justify-center items-center pt-36 lg:pt-56">
-      <div className="relative mb-24">
+      <div className="relative w-11/12 sm:w-fit mb-24">
         <video
           className="mix-blend-lighten  absolute  -z-10
       -top-[6.6875rem] left-1/2 -translate-x-1/2 w-[28.75rem] h-[13.4375rem] overflow-hidden"
@@ -15,14 +16,25 @@ export default function NewPasswordForm() {
           <source src="/videos/q-c3d7becf.webm" type="video/webm" />
           Your browser does not support the video playback.
         </video>
-        <div className="bg-[#0A081E80] p-6 sm:py-8 sm:px-10 w-full max-w-sm backdrop-blur rounded-xl  sm:rounded-2xl">
+        <div
+          className="bg-[#0A081E80] p-6 sm:py-8 sm:px-10 w-full 
+         sm:min-w-[28.4375rem]
+         backdrop-blur rounded-xl  sm:rounded-2xl"
+        >
           <form>
-            <MainInput
+            {/* <MainInput
               type="password"
               label="New Password"
               placeholder="Enter New Password"
               className="w-full"
+            /> */}
+
+            <NewPassInput
+              label="Password"
+              placeholder="Enter Your Password"
+              className="w-full"
             />
+
             <MainInput
               type="password"
               label="Repeat New Password"

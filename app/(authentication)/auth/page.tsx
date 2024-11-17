@@ -18,7 +18,11 @@ export default function AuthPage() {
           <source src="/videos/q-c3d7becf.webm" type="video/webm" />
           Your browser does not support the video playback.
         </video>
-        <div className="bg-[#0A081E80] p-6 sm:py-8 sm:px-10 w-full max-w-sm backdrop-blur rounded-xl  sm:rounded-2xl">
+        <div
+          className="bg-[#0A081E80] 
+                 sm:min-w-[28.4375rem]
+        p-6 sm:py-8 sm:px-10 w-full  backdrop-blur rounded-xl  sm:rounded-2xl"
+        >
           <TabGroup defaultIndex={1}>
             <TabList
               className="bg-orange-grad-btn-op backdrop-blur-md p-2 w-full rounded-lg
