@@ -10,8 +10,8 @@ import {
   TableRow,
 } from "@/app/components/templates/UI/ShadTable/ShadTable";
 import { Button } from "@headlessui/react";
-import { Select } from "@headlessui/react";
-import { cn } from "@/lib/utils";
+// import { Select } from "@headlessui/react";
+// import { cn } from "@/lib/utils";
 
 interface DataItem {
   data: string;
@@ -145,7 +145,7 @@ export default function PaymentTable() {
             />
           </svg>
         </Button>
-        <div className="relative hidden md:flex  w-fit px-4 gap-4 justify-center items-center">
+        {/* <div className="relative hidden md:flex  w-fit px-4 gap-4 justify-center items-center">
           <Select
             className={cn(
               "  block w-full  appearance-none rounded-lg border-none  py-2.5 px-5 pr-10 text-sm/6 text-white",
@@ -171,7 +171,7 @@ export default function PaymentTable() {
               fill="white"
             />
           </svg>
-        </div>
+        </div> */}
       </div>
     </div>
   );

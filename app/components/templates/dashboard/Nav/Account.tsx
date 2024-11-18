@@ -24,7 +24,7 @@ export default function Account() {
           icon={user}
         />
         <NavItem
-          url=""
+          url="/dashboard/sessions"
           currentPath={currentPath}
           title="Sessions"
           icon={book}

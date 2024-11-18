@@ -14,8 +14,8 @@ export default function NotifTab() {
           </h3>
           <Link
             href="/dashboard/security"
-            className="flex gap-2 px-4 rounded-lg bg-fe-c-bg-light
-          dark:backdrop-blur-3xl py-3 w-full xs:max-w-[21.875rem]
+            className="flex gap-2 px-4 rounded-lg bg-fe-c-bg-light btn-hover
+          dark:backdrop-blur-3xl py-3 w-full xs:max-w-[21.875rem] text-fe-c-text-title
           items-center justify-start text-xs sm:text-sm font-semibold shadow-md"
           >
             <svg width="16" height="18" viewBox="0 0 16 18" fill="none">
