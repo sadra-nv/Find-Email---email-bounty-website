@@ -21,7 +21,7 @@ export default function TicketNavBtn({
   const router = useRouter();
 
   const clickHandler = () => {
-    router.push(`?tag=${tag}`);
+    router.replace(`/dashboard/tickets?tag=${tag}`);
   };
   return (
     <Button

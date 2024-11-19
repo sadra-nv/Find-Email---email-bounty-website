@@ -13,7 +13,7 @@ export default function TicketSideNavItem({
   tag,
 }: {
   tag: "all" | "open" | "close";
-  activeTag: "all" | "open" | "close" | "null";
+  activeTag: "all" | "open" | "close" | null;
   children: ReactNode;
   className?: string;
   count: number;
@@ -21,7 +21,7 @@ export default function TicketSideNavItem({
   const router = useRouter();
 
   const clickHandler = () => {
-    router.push(`?tag=${tag}`);
+    router.replace(`/dashboard/tickets?tag=${tag}`);
   };
   return (
     <Button
