@@ -73,7 +73,7 @@ export default function NotifToggleBtn() {
                 "my-14 sm:my-0 sm:w-[30rem] bg-fe-c-bg-light",
                 "relative rounded-xl sm:rounded-none pb-9",
                 "px-2.5 sm:px-8 pt-20",
-                "ease-out duration-300 transition-all data-[closed]:translate-x-full overflow-y-auto thin-bar"
+                "ease-out duration-300 transition-all data-[closed]:opacity-0 sm:data-[closed]:translate-x-full overflow-y-auto thin-bar"
               )}
             >
               <TabGroup>

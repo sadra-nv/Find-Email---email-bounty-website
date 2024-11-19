@@ -18,7 +18,7 @@ export default function DataBytes() {
 
       <div className="space-y-2">
         <NavItem
-          url="/dashboard/ticket"
+          url="/dashboard/tickets"
           currentPath={currentPath}
           title="Ticket"
           icon={ticket}
