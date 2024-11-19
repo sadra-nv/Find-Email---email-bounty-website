@@ -190,3 +190,10 @@ html.dark {
   transform-origin: center;
   transform-box: fill-box;
 }
+
+.epr-emoji-category-label {
+  position: relative !important;
+}
+.epr-body {
+  scrollbar-width: thin;
+}

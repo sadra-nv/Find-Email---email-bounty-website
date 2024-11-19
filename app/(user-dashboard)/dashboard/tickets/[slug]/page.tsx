@@ -12,7 +12,7 @@ export default function TicketChatPage() {
       <ul className="pt-6 pb-11 space-y-9 sm:space-y-14 overflow-y-auto h-[calc(100%_-_7rem)] sm:h-[calc(100%_-_10rem)] no-bar">
         <div
           className="h-10 px-8 rounded-full  mx-auto
-        top-24 shadow-sm bg-fe-c-bg-light text-fe-c-text-title text-sm font-semibold w-fit py-2"
+        top-24 shadow-sm bg-fe-c-bg-light text-fe-c-text-title text-xs sm:text-sm font-semibold w-fit py-3"
         >
           Tody , Jun20
         </div>
