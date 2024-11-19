@@ -1,9 +1,13 @@
 import TicketsSec from "@/app/components/templates/dashboard/tickets/TicketsSec";
 
-export default function DashboardTicketPage() {
+export default function DashboardTicketPage({
+  searchParams,
+}: {
+  searchParams: { tag: "all" | "open" | "close" };
+}) {
   return (
     <>
-      <TicketsSec />
+      <TicketsSec activeTag={searchParams.tag} />
     </>
   );
 }
