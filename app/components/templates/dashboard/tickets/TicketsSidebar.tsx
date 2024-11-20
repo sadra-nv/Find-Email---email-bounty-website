@@ -6,11 +6,7 @@ import { useSearchParams } from "next/navigation";
 export default function TicketsSidebar() {
   const searchParams = useSearchParams();
 
-  const activeTag = searchParams.get("tag") as
-    | "all"
-    | "open"
-    | "close"
-    | "null";
+  const activeTag = searchParams.get("tag") as "all" | "open" | "close" | null;
   return (
     <aside
       className="md:w-[17.3125rem] hidden md:block max-w-80 mx-auto lg:ms-52  pt-28 pl-6 pr-4 no-bar space-y-4

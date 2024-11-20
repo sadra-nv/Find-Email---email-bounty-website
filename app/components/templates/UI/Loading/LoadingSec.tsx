@@ -10,13 +10,15 @@ export default function LoadingSec({ className }: { className?: string }) {
         className
       )}
     >
-      <Image
-        alt="find email logo"
-        src={logo}
-        width={100}
-        height={100}
-        placeholder="blur"
-      />
+      <div className="bg-fe-c-blue-main rounded-full p-6">
+        <Image
+          alt="find email logo"
+          src={logo}
+          width={100}
+          height={100}
+          placeholder="blur"
+        />
+      </div>
       <div
         role="status"
         className="mt-8 inline-block h-10 w-10 animate-spin rounded-full border-[0.1875rem] border-solid border-fe-c-blue-main border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"

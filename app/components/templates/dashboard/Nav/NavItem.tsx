@@ -1,6 +1,6 @@
 "use client";
 
-import { useMenuStore } from "@/lib/store/dashboardMenuStore";
+// import { useMenuStore } from "@/lib/store/dashboardMenuStore";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -18,14 +18,14 @@ export default function NavItem({
   currentPath: string;
   url: string;
 }) {
-  const { closeMenu } = useMenuStore();
+  // const { closeMenu } = useMenuStore();
 
-  const handleClick = () => {
-    closeMenu();
-  };
+  // const handleClick = () => {
+  //   closeMenu();
+  // };
   return (
     <Link
-      onClick={handleClick}
+      // onClick={handleClick}
       href={url}
       className={cn(
         "flex  ps-4 mr-4 ml-7 text-xs rounded-r-md group hover:bg-neutral-300/20 tran-fast py-3",

@@ -1,7 +1,14 @@
-import pic from "@/public/images/Email 1.png";
-import Image from "next/image";
+import { ReactNode } from "react";
 
-export default function FeaturesItems() {
+export default function FeaturesItems({
+  children,
+  title,
+  text,
+}: {
+  children: ReactNode;
+  title: string;
+  text: string;
+}) {
   return (
     <li
       className="h-[250px] relative before:bg-[#3300FF] before:blur-3xl before:rounded-full 
@@ -9,13 +16,12 @@ export default function FeaturesItems() {
     before:top-1/2 before:-translate-y-1/2 before:h-28 before:opacity-100  "
     >
       <div className="w-full h-full z-20 absolute px-20 flex justify-center items-start flex-col">
-        <Image alt="icon" src={pic} width={35} height={30} />
+        {children}
         <h2 className="font-bold lg:text-base text-sm mb-1 lg:mb-4 mt-3">
-          Collect Email
+          {title}
         </h2>
         <p className="text-justify lg:text-base leading-10 text-xs h-fit">
-          Collect email leads from anywhere online, from company websites to
-          Google search results to LinkedIn.
+          {text}
         </p>
       </div>
 

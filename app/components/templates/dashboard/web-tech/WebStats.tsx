@@ -1,7 +1,7 @@
 export default function WebStats() {
   return (
     <section className="w-11/12 mx-auto lg:w-full h-full min-h-full mb-16 lg:mb-28">
-      <h2 className="w-fit bg-blue-grad-btn text-white mx-auto rounded-lg text-sm  px-6 py-3 mb-12">
+      <h2 className="w-fit font-semibold bg-blue-grad-btn text-white mx-auto rounded-lg text-sm  px-6 py-3 mb-12">
         Statistics (Logs database)
       </h2>
       <div

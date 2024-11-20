@@ -12,10 +12,10 @@ import {
   Label,
 } from "@headlessui/react";
 import { cn } from "@/lib/utils";
-import email from "@/public/icons/Email 2(2) 1.png";
-import speaker from "@/public/images/speaker 1.png";
-import database from "@/public/icons/leaked-database.png";
-import wrentch from "@/public/icons/wrentch.png";
+import email from "@/public/icons/email-icon.png";
+import speaker from "@/public/icons/speaker-icon.png";
+import database from "@/public/icons/data-icon.png";
+import wrentch from "@/public/icons/wrentch-icon.png";
 import TopKeyword from "./TopKeyword";
 import Image from "next/image";
 import { setTimeout } from "timers";
@@ -439,7 +439,7 @@ export default function HeroSearch() {
                     ref={formRef}
                     placeholder="try to search meta tag with to following filter examples below."
                     className={cn(
-                      "w-full rounded-lg py-2 lg:py-4  border-none bg-transparent block  text-neutral-400",
+                      "w-full rounded-lg text-xs min-h-10 py-2 lg:py-4  border-none bg-transparent block  text-neutral-400",
                       "focus:outline-none "
                     )}
                     displayValue={() => selected}

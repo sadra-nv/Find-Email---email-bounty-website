@@ -26,7 +26,7 @@ export default function AuthPage() {
           <TabGroup defaultIndex={1}>
             <TabList
               className="bg-orange-grad-btn-op backdrop-blur-md p-2 w-full rounded-lg
-      flex justify-between  items-center  mx-auto  text-sm font-bold"
+      flex justify-between  items-center  mx-auto xs:max-w-[280px]  text-sm font-bold"
             >
               <Tab
                 className="outline-none text-xs px-10 py-2.5 data-[selected]:bg-orange-grad-btn 

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import pic from "@/public/images/home/grad-bulp.png";
 import star from "@/public/icons/star.png";
+import { Button } from "@headlessui/react";
 
 export default function APIPic() {
   return (
@@ -57,8 +58,8 @@ export default function APIPic() {
         </div>
       </div>
 
-      <div className="flex flex-col xs:flex-row justify-between lg:justify-center items-center gap-4 w-full mt-6 lg:mt-8">
-        <button className="w-full lg:w-fit group py-4 px-6 btn-hover bg-orange-grad-btn  text-sm rounded-md">
+      <div className="flex flex-col xs:flex-row justify-between lg:justify-start items-center gap-4 w-full mt-6 lg:mt-8">
+        <Button className="w-full lg:w-fit group py-4 px-6 btn-hover bg-orange-grad-btn  text-sm rounded-md">
           <span>Get Started</span>
           <svg
             width="16"
@@ -71,10 +72,10 @@ export default function APIPic() {
               d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
             />
           </svg>
-        </button>
-        <button className="w-full lg:w-fit bg-[#0a142f] btn-hover text-sm  py-4 px-6 rounded-md">
+        </Button>
+        <Button className="w-full lg:w-fit bg-[#0a142f] btn-hover text-sm  py-4 px-6 rounded-md">
           Code Samples
-        </button>
+        </Button>
       </div>
     </div>
   );

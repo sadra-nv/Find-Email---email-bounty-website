@@ -7,14 +7,22 @@ import InfoDomain from "./InfoDomain";
 import { cn } from "@/lib/utils";
 import { useMenuStore } from "@/lib/store/dashboardMenuStore";
 import { Button } from "@headlessui/react";
+import { usePathname } from "next/navigation";
 import DataBytes from "./DataBytes";
+import { useEffect } from "react";
 import Account from "./Account";
 
 export default function Nav() {
+  const path = usePathname();
+
   const { isOpen, closeMenu } = useMenuStore();
   const handleClose = () => {
     closeMenu();
   };
+
+  useEffect(() => {
+    closeMenu();
+  }, [path, closeMenu]);
 
   return (
     <>

@@ -2,12 +2,12 @@ import Link from "next/link";
 import React from "react";
 import logo from "@/public/images/logo.png";
 import logoText from "@/public/images/logo-text.png";
-import home from "@/public/icons/header-home.png";
-import blog from "@/public/icons/header-blog.png";
-import price from "@/public/icons/header-price.png";
-import pc from "@/public/icons/header-pc.png";
-import faq from "@/public/icons/header-faq.png";
-import support from "@/public/icons/header-support.png";
+import home from "@/public/icons/home-icon.png";
+import blog from "@/public/icons/blog-icon.png";
+import price from "@/public/icons/price-icon.png";
+import pc from "@/public/icons/pcicon.png";
+import faq from "@/public/icons/faw-icon.png";
+import support from "@/public/icons/customer-icon.png";
 import Image from "next/image";
 
 export default function Header() {
@@ -57,7 +57,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className="relative group  ">
-                <span className="flex items-center gap-1 py-5">
+                <span className="flex items-center gap-1.5 py-5">
                   <Image
                     alt="pc icon"
                     className="scale-150"

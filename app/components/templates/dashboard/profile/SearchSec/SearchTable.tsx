@@ -10,8 +10,8 @@ import {
   TableRow,
 } from "@/app/components/templates/UI/ShadTable/ShadTable";
 import { Button } from "@headlessui/react";
-import { Select } from "@headlessui/react";
-import { cn } from "@/lib/utils";
+// import { Select } from "@headlessui/react";
+// import { cn } from "@/lib/utils";
 
 interface DataItem {
   data: string;
@@ -64,7 +64,7 @@ export default function SearchTable() {
     <div className="w-full  text-sm  bg-transparent text-fe-c-text-title pb-8 sm:pb-4 lg:pb-11">
       <Table className="w-full text-nowrap">
         <TableHeader>
-          <TableRow className="border-b border-fe-c-text-sub bg-[#F3F3F3] dark:bg-white/10">
+          <TableRow className=" border-none  bg-[#F3F3F3] dark:bg-white/10">
             <TableHead className="text-sm font-bold text-fe-c-text-title h-16  pl-4 lg:pl-11">
               DATA
             </TableHead>
@@ -79,11 +79,11 @@ export default function SearchTable() {
             </TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody className="divide-y divide-fe-c-text-sub">
+        <TableBody className=" ">
           {data.map((item, index) => (
             <TableRow
               key={index}
-              className=" hover:bg-neutral-400/20  dark:hover:bg-white/10"
+              className=" hover:bg-neutral-400/20  border-b border-[#CDCDCD]/50 last:border-b-0 dark:hover:bg-white/10"
             >
               <TableCell
                 className="text-fe-c-text-title py-5 
@@ -142,7 +142,7 @@ export default function SearchTable() {
             />
           </svg>
         </Button>
-        <div className="relative hidden md:flex  w-fit px-4 gap-4 justify-center items-center">
+        {/* <div className="relative hidden md:flex  w-fit px-4 gap-4 justify-center items-center">
           <Select
             className={cn(
               "  block w-full  appearance-none rounded-lg border-none  py-2.5 px-5 pr-10 text-sm/6 text-white",
@@ -168,7 +168,7 @@ export default function SearchTable() {
               fill="white"
             />
           </svg>
-        </div>
+        </div> */}
       </div>
     </div>
   );

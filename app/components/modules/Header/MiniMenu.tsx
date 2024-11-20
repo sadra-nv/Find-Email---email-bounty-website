@@ -1,13 +1,13 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import home from "@/public/icons/header-home.png";
-import blog from "@/public/icons/header-blog.png";
-import price from "@/public/icons/header-price.png";
-import pc from "@/public/icons/header-pc.png";
-import faq from "@/public/icons/header-faq.png";
-import support from "@/public/icons/header-support.png";
+import home from "@/public/icons/home-icon.png";
+import blog from "@/public/icons/blog-icon.png";
+import price from "@/public/icons/price-icon.png";
+import pc from "@/public/icons/pcicon.png";
+import faq from "@/public/icons/faw-icon.png";
+import support from "@/public/icons/customer-icon.png";
 import Image from "next/image";
-import close from "@/public/icons/header-close.png";
+import close from "@/public/icons/close-icon.png";
 import { Button } from "@headlessui/react";
 import { cn } from "@/lib/utils";
 
@@ -32,38 +32,26 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
         <nav>
           <ul className="flex flex-col gap-6  text-sm px-6 py-5">
             <span
+              onClick={() => setIsShowMenu(false)}
               className="cursor-pointer w-fit"
-              onClick={() => setIsShowMenu((e) => !e)}
             >
               <Image alt="close menu icon" src={close} width={20} height={20} />
             </span>
 
             <li className="mt-10">
-              <Link
-                onClick={() => setIsShowMenu((e) => !e)}
-                href={"/"}
-                className="flex items-center gap-2"
-              >
+              <Link href={"/"} className="flex items-center gap-2">
                 <Image alt="home icon" src={home} width={16} height={16} />
                 Home
               </Link>
             </li>
             <li>
-              <Link
-                onClick={() => setIsShowMenu((e) => !e)}
-                href={"/blog"}
-                className="flex items-center gap-2"
-              >
+              <Link href={"/blog"} className="flex items-center gap-2">
                 <Image alt="blog icon" src={blog} width={16} height={16} />
                 Blog
               </Link>
             </li>
             <li>
-              <Link
-                onClick={() => setIsShowMenu((e) => !e)}
-                href={"/pricing"}
-                className="flex items-center gap-2"
-              >
+              <Link href={"/pricing"} className="flex items-center gap-2">
                 <Image alt="price icon" src={price} width={16} height={16} />
                 Pricing
               </Link>
@@ -104,14 +92,12 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
                 )}
               >
                 <Link
-                  onClick={() => setIsShowMenu((e) => !e)}
                   href="/cracker"
                   className="p-1 py-2 pt-3 hover:bg-white/10 tran-fast block"
                 >
                   Hash Cracker
                 </Link>
                 <Link
-                  onClick={() => setIsShowMenu((e) => !e)}
                   href="/checker"
                   className="p-1 py-2 pb-0 hover:bg-white/10 tran-fast block"
                 >
@@ -120,21 +106,13 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
               </div>
             </li>
             <li>
-              <Link
-                onClick={() => setIsShowMenu((e) => !e)}
-                href={"/faq"}
-                className="flex items-center gap-2"
-              >
+              <Link href={"/faq"} className="flex items-center gap-2">
                 <Image alt="faq icon" src={faq} width={16} height={16} />
                 FAQ
               </Link>
             </li>
             <li>
-              <Link
-                onClick={() => setIsShowMenu((e) => !e)}
-                href={"/contact-us"}
-                className="flex items-center gap-2"
-              >
+              <Link href={"/contact-us"} className="flex items-center gap-2">
                 <Image
                   alt="support icon"
                   src={support}
@@ -146,7 +124,7 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
             </li>
             <button className="w-fit h-fit">
               <Link
-                href={"/"}
+                href={"/auth"}
                 className="flex items-center gap-1 px-5 py-3 rounded-lg text-xs text-white hover-btn"
               >
                 Login/Register
@@ -182,10 +160,12 @@ const MiniMenu: React.FC<MiniMenuProps> = ({ isShowMenu, setIsShowMenu }) => {
         </nav>
       </div>
       <div
-        onClick={() => setIsShowMenu((e) => !e)}
-        className={`z-[49]  duration-500 blur-md pointer-events-none ${
-          !isShowMenu ? "opacity-0" : "opacity-70"
-        } fixed top-0 w-dvw right-0 h-dvh bg-background  flex flex-col py-16`}
+        onClick={() => setIsShowMenu(false)}
+        className={`z-[49] transition-opacity  duration-500 blur-md  ${
+          !isShowMenu
+            ? "opacity-0 translate-x-full"
+            : "opacity-70 translate-x-0"
+        } fixed top-0 w-dvw right-0 h-dvh bg-background flex flex-col py-16`}
       ></div>
     </>
   );

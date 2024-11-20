@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 import ball from "@/public/images/particle-3d-ball.png";
 import bg from "@/public/vectors/Background 1.png";
 import email from "@/public/images/Email 2(3).png";
-import chart from "@/public/images/grows.png";
+import chart from "@/public/images/grow.png";
 import list from "@/public/images/list.png";
 import data from "@/public/images/data_management_10 1.png";
 import Image from "next/image";
@@ -56,7 +56,7 @@ export default function SiteOverview({
               width={97}
               height={97}
               placeholder="blur"
-              className="absolute animate-pulse mix-blend-color-dodge"
+              className="absolute animate-pulse  "
             />
             <CodeVideo className="-right-1/2 xl:-right-1/3 mix-blend-lighten" />
             <CodeVideo className="-left-1/2 xl:-left-1/3 mix-blend-lighten" />

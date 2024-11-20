@@ -3,7 +3,7 @@
 import {
   dataBase,
   domain,
-  folder,
+  // folder,
   price,
   shop,
   spyGlass,
@@ -57,12 +57,12 @@ export default function InfoDomain() {
           title="Bulk Search"
           icon={spyGlass}
         />
-        <NavItem
+        {/* <NavItem
           currentPath={currentPath}
           url=""
           title="Reservation"
           icon={folder}
-        />
+        /> */}
         <NavItem
           currentPath={currentPath}
           url="/dashboard/pricing"

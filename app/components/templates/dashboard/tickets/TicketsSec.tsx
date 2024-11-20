@@ -59,7 +59,7 @@ export default function TicketsSec({
         <span className="">Add new ticked</span>
       </Link>
 
-      <div className="divide-y divide-fe-c-text-sub">
+      <div className="divide-y divide-[#CDCDCD]/50 ">
         <TicketsItem className="bg-[#F3F3F3] dark:bg-white/10" />
         <TicketsItem />
         <TicketsItem className="bg-[#F3F3F3] dark:bg-white/10" />

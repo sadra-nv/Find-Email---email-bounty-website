@@ -6,7 +6,7 @@ import Search from "../../../UI/Search/Search";
 export default function OrdersSec() {
   return (
     <section className="w-11/12 mx-auto lg:w-full h-full min-h-full mt-4 sm:mt-0 pt-8 sm:pt-4 lg:pt-11 rounded-2xl lg:rounded-3xl bg-fe-c-bg-light shadow-sm mb-16 lg:mb-28">
-      <h2 className="w-fit bg-blue-grad-btn text-white mx-auto rounded-lg text-sm  px-6 py-3 mb-12">
+      <h2 className="w-fit font-semibold bg-blue-grad-btn text-white mx-auto rounded-lg text-sm  px-6 py-3 mb-12">
         User Order List
       </h2>
 
@@ -15,7 +15,7 @@ export default function OrdersSec() {
        px-4 lg:px-11"
       >
         <Field>
-          <div className="relative mb-12 w-fit px-4 flex gap-4 justify-center items-center">
+          <div className="relative mb-12 w-fit flex gap-4 justify-center items-center">
             <Label className="text-sm/6 font-bold text-fe-c-text-title">
               Show
             </Label>
@@ -33,7 +33,7 @@ export default function OrdersSec() {
               <option value="50">50</option>
             </Select>
             <svg
-              className="group pointer-events-none absolute top-1/2 -translate-y-1/2 right-9"
+              className="group pointer-events-none absolute top-1/2 -translate-y-1/2 right-5"
               width="7"
               height="4"
               viewBox="0 0 7 4"

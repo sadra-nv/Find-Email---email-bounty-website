@@ -64,7 +64,7 @@ export default function ShopTable() {
     >
       <Table className="w-full text-nowrap">
         <TableHeader>
-          <TableRow className="border-b border-fe-c-text-sub bg-[#F3F3F3] dark:bg-white/10">
+          <TableRow className="border-none bg-[#F3F3F3] dark:bg-white/10">
             <TableHead
               className="text-sm font-bold text-fe-c-text-title  h-16
              pl-4 lg:pl-11"
@@ -85,11 +85,11 @@ export default function ShopTable() {
             </TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody className="divide-y divide-fe-c-text-sub text-nowrap">
+        <TableBody className="  text-nowrap">
           {data.map((item, index) => (
             <TableRow
               key={index}
-              className=" hover:bg-neutral-400/20  dark:hover:bg-white/10"
+              className=" hover:bg-neutral-400/20  dark:hover:bg-white/10 border-b border-[#CDCDCD]/50 last:border-b-0"
             >
               <TableCell
                 className="text-fe-c-text-title py-5 

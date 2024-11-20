@@ -1,13 +1,13 @@
 import Image from "next/image";
 import FilterableCard from "../../blog/FilterableCardGallery/FiltrableCard";
 import Halo from "../../UI/Halo/Halo";
-import pic from "@/public/images/Email 1.png";
+import pic from "@/public/icons/email-icon.png";
 import Link from "next/link";
 
 export default function BlogList() {
   return (
     <section className="container mb-24">
-      <div className="w-full flex gap-2 sm:gap-4 justify-center relative items-center mb-6 sm:mb-9">
+      <div className="w-full flex gap-2  justify-center relative items-center mb-6 sm:mb-9">
         <Link
           className="hidden sm:block text-base group lg:text-sm w-fit mx-auto px-5 py-3
            bg-back-dark btn-hover overflow-hidden rounded-md absolute left-0"
@@ -33,9 +33,9 @@ export default function BlogList() {
           alt="email icon"
           width={30}
           height={30}
-          className="size-7 sm:size-14"
+          className="size-4 sm:size-7 "
         />
-        <h2 className="text-center text-lg sm:text-3xl ">Blog</h2>
+        <h2 className="text-center font-semibold text-lg sm:text-3xl ">Blog</h2>
       </div>
       <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 grid gap-4">
         <FilterableCard />
