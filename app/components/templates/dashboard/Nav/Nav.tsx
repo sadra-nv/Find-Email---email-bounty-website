@@ -29,7 +29,7 @@ export default function Nav() {
       <aside
         className={cn(
           "fixed no-bar overflow-y-scroll left-0 z-50 top-0 h-full min-h-screen  bg-fe-c-blue-main min-w-52  ",
-          "-translate-x-full lg:-translate-x-0 tran-fast duration-300",
+          "-translate-x-full lg:-translate-x-0 tran-fast transition-transform duration-300",
           {
             "-translate-x-0": isOpen,
           }

@@ -466,3 +466,90 @@ html.dark {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+/* DASHBOARD SEARCH BOX */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+@property --gradient-border {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: conic-gradient(
+    from var(--border-angle),
+    transparent 25%,
+    #2e0e71,
+    #7a3da9 99%,
+    transparent
+  );
+}
+
+.dark .animated-search {
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #4a4a60,
+    #4a4a60 5%,
+    #4a4a60 60%,
+    #4a4a60 95%
+  );
+}
+
+.animated-search {
+  --border-angle: 0turn;
+  /* --main-bg: conic-gradient(
+    from var(--border-angle),
+    #213,
+    #112 5%,
+    #112 60%,
+    #213 95%
+  ); */
+  --main-bg: conic-gradient(
+    from var(--border-angle),
+    #f3f3f3,
+    #f3f3f3 5%,
+    #f3f3f3 60%,
+    #f3f3f3 95%
+  );
+  border: solid 3px transparent;
+  --gradient-border: conic-gradient(
+    from var(--border-angle),
+    transparent 25%,
+    #2e0e71,
+    #f80ed9 99%,
+    transparent
+  );
+
+  /* #08f,
+  #f03 99%, */
+
+  background: var(--main-bg) padding-box, var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  background-position: center center;
+  -webkit-animation: bg-spin 5s linear infinite;
+  animation: bg-spin 5s linear infinite;
+}
+
+/* .animated-search:focus,
+.animated-search:hover {
+
+} */
+
+@-webkit-keyframes bg-spin {
+  0% {
+    --border-angle: 0turn;
+  }
+
+  100% {
+    --border-angle: 0turn;
+  }
+}
+@keyframes bg-spin {
+  0% {
+    --border-angle: 0turn;
+  }
+
+  100% {
+    --border-angle: 1turn;
+  }
+}

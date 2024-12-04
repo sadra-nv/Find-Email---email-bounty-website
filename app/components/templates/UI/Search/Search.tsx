@@ -11,7 +11,7 @@ export default function Search({
   return (
     <form
       className={cn(
-        " w-full rounded-full bg-[#F3F3F3] dark:bg-white/10 block",
+        "animated-search w-full rounded-full bg-[#F3F3F3] dark:bg-white/10 block",
         // "border border-neutral-500/5 shadow-sm",
         className
       )}

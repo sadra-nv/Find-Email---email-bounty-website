@@ -31,7 +31,7 @@ export default function NavItem({
         "flex  ps-4 mr-4 ml-7 text-xs rounded-r-md group hover:bg-neutral-300/20 tran-fast py-3",
         className,
         {
-          "bg-white text-fe-c-blue-main  dashboard-menu-item-active hover:bg-white":
+          "bg-white text-fe-c-blue-main transition-none  dashboard-menu-item-active hover:bg-white":
             url.includes(currentPath),
         }
       )}

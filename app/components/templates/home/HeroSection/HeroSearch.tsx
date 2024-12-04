@@ -426,7 +426,7 @@ export default function HeroSearch() {
             <Label className="cursor-text w-full relative flex justify-start items-center pr-14 pl-3 lg:px-14">
               <div className="hidden lg:block pointer-events-none min-w-fit mr-36 text-neutral-900"></div>
               <Combobox
-                // immediate
+                immediate
                 value={selected}
                 onChange={(value: string) => {
                   // console.log(value);
