@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function page() {
   return (
     <div
-      className="relative z-10 w-full h-full min-h-screen 
+      className="relative z-10 w-full h-full min-h-screen max-h-[56.25rem]
     flex flex-col justify-start items-center pt-36 lg:pt-64"
     >
       <video
         className="mix-blend-lighten  absolute  -z-10 opacity-15
-      top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[860px] h-[615px] overflow-hidden"
+      top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[53.75rem] h-[38.4375rem] overflow-hidden"
         autoPlay
         muted
         loop

@@ -9,7 +9,7 @@ export default function HeroSec() {
   return (
     <section
       className="bg-gradient-to-b from-[#030014] via-[#030014] to-[#030014] 
-        relative hero-grad "
+        relative   "
     >
       <StarsSection
         isStatic

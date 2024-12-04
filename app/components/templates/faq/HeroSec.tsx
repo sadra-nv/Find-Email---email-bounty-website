@@ -8,7 +8,7 @@ export default function HeroSec() {
   return (
     <section
       className="bg-gradient-to-b from-[#030014] via-[#030014] to-[#030014] 
-              relative hero-grad overflow-hidden min-h-[1100px]"
+              relative   overflow-hidden min-h-[1100px]"
     >
       <StarsSection
         isStatic

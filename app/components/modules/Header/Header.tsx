@@ -37,7 +37,7 @@ export default function Header() {
             <ul className="flex items-center gap-6 bg-white/15 rounded-xl text-white text-xs xl:text-sm text-center xl:px-6 px-2 ">
               <li>
                 <Link href={"/"} className="flex items-center gap-1 py-5">
-                  <Image alt="home icon" src={home} width={16} height={16} />
+                  <Image alt="home icon" src={home} width={17} height={15} />
                   Home
                 </Link>
               </li>
@@ -57,17 +57,23 @@ export default function Header() {
                 </Link>
               </li>
               <li className="relative group  ">
-                <span className="flex items-center gap-1.5 py-5">
+                <span className="flex items-center gap-.5 py-5">
                   <Image
                     alt="pc icon"
-                    className="scale-150"
+                    // className="scale-150"
                     src={pc}
-                    width={16}
-                    height={16}
+                    width={33}
+                    height={27}
                   />
 
                   <span>Online Tools</span>
-                  <svg width="6" height="3" viewBox="0 0 6 3" fill="none">
+                  <svg
+                    width="6"
+                    height="3"
+                    className="ml-1"
+                    viewBox="0 0 6 3"
+                    fill="none"
+                  >
                     <path
                       d="M3.00001 3C2.86676 3 2.7335 2.95823 2.6283 2.86872L0.152542 0.7623C-0.0508472 0.589252 -0.0508472 0.302826 0.152542 0.129778C0.355931 -0.0432592 0.692574 -0.0432592 0.895963 0.129778L3.00001 1.91994L5.10404 0.129778C5.30743 -0.0432592 5.64407 -0.0432592 5.84746 0.129778C6.05085 0.302826 6.05085 0.589252 5.84746 0.7623L3.37172 2.86872C3.26652 2.95823 3.13327 3 3.00001 3Z"
                       fill="white"

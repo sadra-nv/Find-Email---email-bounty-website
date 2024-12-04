@@ -35,7 +35,7 @@ export default function BlogList() {
           height={30}
           className="size-4 sm:size-7 "
         />
-        <h2 className="text-center font-semibold text-lg sm:text-3xl ">Blog</h2>
+        <h2 className="text-center font-bold text-lg sm:text-3xl ">Blog</h2>
       </div>
       <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 grid gap-4">
         <FilterableCard />

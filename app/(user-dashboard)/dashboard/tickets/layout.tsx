@@ -12,7 +12,7 @@ export default function TicketsLayout({ children }: { children: ReactNode }) {
         fallback={
           <aside
             className="md:w-[17.3125rem] hidden md:block max-w-80 mx-auto lg:ms-52  pt-28 pl-6 pr-4 no-bar space-y-4
-       bg-white dark:bg-transparent md:shadow-sm  md:fixed left-0 top-0 h-full min-h-screen overflow-y-auto"
+       bg-white dark:bg-transparent md:shadow-sm  md:fixed left-0 top-0 h-full min-h-screen max-h-[56.25rem] overflow-y-auto"
           ></aside>
         }
       >

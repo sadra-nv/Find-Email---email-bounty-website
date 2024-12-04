@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ForgotPasswordForm() {
   return (
-    <div className="relative z-10 w-full h-full min-h-screen flex justify-center items-center pt-36 lg:pt-56">
+    <div className="relative z-10 w-full h-full min-h-screen max-h-[56.25rem] flex justify-center items-center pt-36 lg:pt-56">
       <div className="relative w-11/12 sm:w-fit mb-24">
         <video
           className="mix-blend-lighten  absolute  -z-10

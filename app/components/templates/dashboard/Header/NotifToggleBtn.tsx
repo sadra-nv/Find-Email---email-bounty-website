@@ -52,7 +52,7 @@ export default function NotifToggleBtn() {
       <Dialog
         open={isOpen}
         as="div"
-        className="relative z-10 focus:outline-none"
+        className="relative z-50 focus:outline-none"
         onClose={clickHandler}
       >
         <DialogBackdrop

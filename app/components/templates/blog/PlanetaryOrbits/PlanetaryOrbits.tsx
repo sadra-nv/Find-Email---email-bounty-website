@@ -3,7 +3,7 @@ import React from "react";
 export default function PlanetaryOrbits() {
   return (
     <svg
-      className="w-full absolute top-40 lg:top-52"
+      className="w-full absolute top-40 z-10 lg:top-52"
       preserveAspectRatio="xMidYMax meet"
       viewBox="0 0 1318 500"
       fill="none"

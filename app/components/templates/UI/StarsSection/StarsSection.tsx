@@ -91,10 +91,26 @@ export default function StarsSection({
     // Canvas and settings
     const context = canvasRef.current?.getContext("2d");
     if (!context) return;
-    const scaleFactor = window.devicePixelRatio || 1;
-    const width = (context.canvas.width = window.innerWidth * scaleFactor);
-    const height = (context.canvas.height = window.innerHeight * scaleFactor);
-    context.scale(scaleFactor, scaleFactor);
+    // const scaleFactor = window.devicePixelRatio || 1;
+    // const width = (context.canvas.width = window.innerWidth * scaleFactor);
+    // let height = (context.canvas.height = window.innerHeight * scaleFactor);
+    // if (height > 900) {
+    //   height = 900;
+    //   context.canvas.height = 900;
+    // }
+    let width = (context.canvas.width = window.innerWidth);
+    let height = (context.canvas.height = window.innerHeight);
+    if (height > 900) {
+      height = 900;
+      context.canvas.height = 900;
+    }
+
+    if (width > 1920) {
+      width = 1920;
+      context.canvas.width = 1920;
+    }
+
+    // context.scale(scaleFactor, scaleFactor);
 
     let shootingStars: Particle[] = [];
 
@@ -201,6 +217,11 @@ export default function StarsSection({
       shootingStars = shootingStars.filter(
         (shootingStar) => !shootingStar.isDead
       );
+
+      // Stoping the shooting stars array from overflowing
+      if (shootingStars.length > 8) {
+        shootingStars.splice(0, 1);
+      }
     }
 
     // Function to draw a shooting star and its trail
@@ -235,7 +256,7 @@ export default function StarsSection({
 
       // Generate a new shooting star if enough time has passed
       if (shootingStarEmittingInterval > 20) {
-        if (!paused) createShootingStar();
+        if (!paused && shootingStars.length < 8) createShootingStar();
         shootingStarEmittingInterval = 0;
       }
       // if (time - lastShootingStarTime > shootingStarEmittingInterval) {
@@ -245,6 +266,7 @@ export default function StarsSection({
       //  Update and render the stars and shooting stars
 
       updateShootingStars();
+
       // Request the next frame for smooth animation
       requestAnimationFrame(animateShootingStars);
     }
@@ -260,7 +282,10 @@ export default function StarsSection({
   }, [isStatic]);
   return (
     <canvas
-      className={cn("w-full absolute h-full z-30 top-0 left-0", className)}
+      className={cn(
+        "w-full absolute h-full overflow-hidden max-h-[56.25rem] z-30 top-0 left-0",
+        className
+      )}
       ref={canvasRef}
     ></canvas>
   );

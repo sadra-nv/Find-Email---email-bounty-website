@@ -6,10 +6,10 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 
 export default function AuthPage() {
   return (
-    <div className="relative z-10 w-full h-full min-h-screen flex justify-center items-center pt-36 lg:pt-56">
-      <div className="relative mb-24">
+    <div className="relative z-10 w-full h-full min-h-screen   flex justify-center items-center pt-36 lg:pt-56">
+      <div className="relative pb-24 ">
         <video
-          className="mix-blend-lighten  absolute  -z-10
+          className="mix-blend-lighten absolute  -z-10
           -top-[6.6875rem] left-1/2 -translate-x-1/2 w-[28.75rem] h-[13.4375rem] overflow-hidden"
           autoPlay
           muted
@@ -20,7 +20,7 @@ export default function AuthPage() {
         </video>
         <div
           className="bg-[#0A081E80] 
-                 sm:min-w-[28.4375rem]
+                 sm:min-w-[28.4375rem] 
         p-6 sm:py-8 sm:px-10 w-full  backdrop-blur rounded-xl  sm:rounded-2xl"
         >
           <TabGroup defaultIndex={1}>

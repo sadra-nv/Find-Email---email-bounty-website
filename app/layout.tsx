@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${poppins.className} max-w-[120rem] mx-auto relative bg-[#030014] text-white`}
+        className={`${poppins.className}  relative bg-[#030014] text-white`}
       >
         {children}
       </body>
