@@ -161,10 +161,26 @@ export default function LogsSearchSec() {
       </div>
       <Button
         onClick={openHandler}
-        className="bg-[#FFFAED] shadow-sm block dark:bg-white/10 rounded-lg w-full md:w-2/3 mx-auto 
-      font-bold text-xs lg:text-sm py-2.5 px-4 text-start lg:p-5 btn-hover mt-5"
+        className="bg-orange-grad-btn text-center btn-hover shadow-sm 
+         text-white rounded-lg w-full md:w-2/3 mx-auto flex gap-2 justify-center items-center
+      font-bold text-xs lg:text-sm py-2.5 px-4 lg:p-5 lg:py-4 btn-hover mt-5"
       >
-        Download
+        <span>Download</span>
+        <svg
+          className="size-3 lg:size-4"
+          width="19"
+          height="17"
+          viewBox="0 0 19 17"
+          fill="none"
+        >
+          <path
+            d="M6.11328 11.6534H3.73214C2.22322 11.6534 1 10.632 1 9.13452C1 7.637 2.22322 6.42301 3.73214 6.42301C3.83475 6.42301 3.93604 6.42863 4.03571 6.43957V6.42301H4.07329C4.04849 6.22562 4.03571 6.02452 4.03571 5.82046C4.03571 3.15819 6.21033 1 8.89286 1C10.7094 1 12.293 1.98966 13.1262 3.45535C13.3298 3.42562 13.5381 3.41023 13.75 3.41023C16.0972 3.41023 18 5.29865 18 7.62813C18 9.75303 16.4167 11.3183 14.3571 11.6107H12.1562M9.19643 6.72429V16M9.19643 16L7.04297 13.9173M9.19643 16L11.293 13.9173"
+            stroke="white"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </Button>
       <SecurityModal
         isOpen={isOpen}
