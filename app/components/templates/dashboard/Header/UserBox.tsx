@@ -2,6 +2,7 @@ import { Menu, MenuButton, MenuItems } from "@headlessui/react";
 import guy from "@/public/images/guy.png";
 import Image from "next/image";
 import Link from "next/link";
+import LogoutBtn from "./LogoutBtn";
 
 export default function UserBox() {
   return (
@@ -95,6 +96,7 @@ export default function UserBox() {
             </svg>
             <Link href="">Profile</Link>
           </div>
+          <LogoutBtn />
         </MenuItems>
       </Menu>
     </div>
