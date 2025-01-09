@@ -1,10 +1,10 @@
 import Link from "next/link";
-import bitcoin from "@/public/images/bitcoincore.png";
 import Image from "next/image";
 import speaker from "@/public/images/speaker 1.png";
 import calender from "@/public/images/calender.png";
+import { SinglePostCard } from "@/lib/services/blogs/getBlogPosts";
 
-export default function FilterableCard() {
+export default function FilterableCard({ data }: { data: SinglePostCard }) {
   return (
     <div className="filter-card group w-fit">
       <div className="relative flex justify-center items-center ">
@@ -68,12 +68,13 @@ export default function FilterableCard() {
           </ul>
         </div>
         <Image
-          alt="bitcoin"
-          src={bitcoin}
+          blurDataURL={data.placeholderIMG}
+          alt={data.title}
+          src={data.image_url}
           placeholder="blur"
           width={140}
           height={140}
-          className="absolute top-2 group-hover:translate-y-4
+          className="absolute top-2 group-hover:translate-y-4 size-[8.75rem]
                   group-hover:scale-[115%] duration-300 ease-in transition-all"
         />
       </div>
@@ -81,20 +82,27 @@ export default function FilterableCard() {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1">
             <Image alt="speaker" src={speaker} />
-            <span className="text-xs">New</span>
+            <span className="text-xs"> {data.tags[0]}</span>
           </div>
           <div className="w-2 h-2 rounded-full bg-gradient-to-tr from-highlight-dark to-highlight-light"></div>
           <div className="flex items-center gap-1">
             <Image alt="calender" src={calender} />
-            <span className="text-xs">September 13, 2024</span>
+            <span className="text-xs">
+              {new Date(Number(data.published_at) * 1000).toLocaleDateString(
+                "en-US",
+                {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }
+              )}
+            </span>
           </div>
         </div>
-        <h2 className="text-sm/8">
-          What is Data Leakage and How to Prevent It? What is Data Leakage
-        </h2>
+        <h2 className="text-sm/8">{data.title}</h2>
         <button className="w-fit mb-8 group">
           <Link
-            href={"/"}
+            href={`/blog/${data.slug}`}
             className="flex items-center gap-1 py-3 px-4 rounded-lg text-xs text-white hover-btn"
           >
             Read More

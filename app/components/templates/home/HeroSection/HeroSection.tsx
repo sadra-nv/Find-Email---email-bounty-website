@@ -9,7 +9,8 @@ export default function HeroSection() {
     >
       <StarsSection className="z-0 xl:h-screen " />
       <div
-        className="w-full absolute h-full xl:h-0 after:z-10 after:bottom-0 after:right-0 after:w-full after:h-28 after:bg-gradient-to-b 
+        className="w-full absolute h-full xl:h-0 after:z-10 after:bottom-0 
+        after:right-0 after:w-full after:h-28 after:bg-gradient-to-b sm:after:hidden lg:after:block
       after:to-[#030014] after:via-[#030014] after:from-transparent after:absolute"
       ></div>
       {/* <div

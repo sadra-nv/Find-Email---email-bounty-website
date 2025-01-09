@@ -1,168 +1,80 @@
 // import HeroSection from "@/app/components/templates/home/HeroSection/HeroSection";
-import FilterableCard from "@/app/components/templates/blog/FilterableCardGallery/FiltrableCard";
+// import FilterableCard from "@/app/components/templates/blog/FilterableCardGallery/FiltrableCard";
+import CategoriesSec from "@/app/components/templates/blog/FilterableCardGallery/CategoriesSec";
+import PostsSide from "@/app/components/templates/blog/FilterableCardGallery/PostsSide";
+import StarsSection from "@/app/components/templates/UI/StarsSection/StarsSection";
+import { getBlogSingle } from "@/lib/services/blogs/getBlogSingle";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function page() {
+export default async function page({ params }: { params: { blogId: string } }) {
+  const data = await getBlogSingle(params.blogId);
+  // console.log(data, params);
+  if (!data) return;
+
   return (
     <div className="z-20 relative">
+      <StarsSection isStatic />
       <div className="">
         <div className="container">
           <div className="md:pt-52 pt-32">
             <div className="mb-8">
               <h1 className="text-xl xl:text-4xl font-bold mb-5">
-                Multi Thread SMTP Cracker
+                {data.data.title}
               </h1>
-              <p className="text-sm/8 xl:text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua
-                Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae
-                congue mauris rhoncus aenean vel elit scelerisque
-              </p>
+              <p className="text-sm/8 xl:text-lg">{data.data.description}</p>
             </div>
             <div className="grid xl:grid-cols-7 gap-6 pb-8">
               <div className="xl:col-span-5">
                 <div className="w- mb-6">
-                  <img src="/images/445.png" className="w-full" alt="" />
+                  <Image
+                    src={data.data.image_url}
+                    placeholder="blur"
+                    blurDataURL={data.data.placeholderIMG}
+                    className="w-full h-[18.75rem] object-cover rounded-lg"
+                    width={900}
+                    height={300}
+                    alt={data.data.title}
+                  />
                 </div>
-                <div className="">
-                  <button>
-                    <Link
-                      href={"/"}
-                      className="flex items-center gap-1 px-[18px] py-3 rounded-lg text-xs text-black bg-gradient-to-t from-[#B1A110] to-[#FFF280]"
-                    >
-                      New Database
-                    </Link>
-                  </button>
-                  <p className="text-sm/8 xl:text-base/8 mt-8">
-                    We have updated <br />
-                    We have updated our database, and it now contains a large
-                    number of records and valuable information. <br />
-                    Currently, our database includes over <br />
-                  </p>
-                  <p className="text-sm/8 xl:text-base/8 mt-8">
-                    Company Email Record :{" "}
-                    <span className="text-[#4DE649]">449,295,742</span>
-                    <br />
-                    Leak database Record :{" "}
-                    <span className="text-[#4DE649]">6,022,484,191</span>
-                    <br />
-                    Logs [ url:login:pass ] Record :{" "}
-                    <span className="text-[#4DE649]">1,786,664,764</span>
-                  </p>
-                  <p className="text-sm/8 xl:text-base/8 mt-8">
-                    and this number is increasing daily.
-                  </p>
-                  <p className="text-sm/8 xl:text-base/8 mt-8">
-                    This database is constantly being updated every day, every
-                    moment. <br />
-                    We strive to keep our database up-to-date and comprehensive
-                    every day so that we can provide you with the best and most
-                    accurate information. Our goal is to help you access the
-                    data you need with the help of this continuously improving
-                    database.
-                  </p>
-                </div>
+                <button>
+                  <Link
+                    href={"/"}
+                    className="flex items-center mb-4 gap-1 px-[18px] py-3 rounded-lg text-xs text-black bg-gradient-to-t from-[#B1A110] to-[#FFF280]"
+                  >
+                    {data.data.category}
+                  </Link>
+                </button>
+
+                <div
+                  className=""
+                  dangerouslySetInnerHTML={{ __html: data.data.content }}
+                ></div>
+
                 <div className="flex flex-wrap items-center gap-4 mt-6">
-                  <button>
+                  {data.data.tags.map((tag, i) => (
                     <Link
+                      key={i}
                       href={"/"}
-                      className="flex items-center gap-1 px-[18px] py-3 rounded-lg text-xs text-black bg-gradient-to-t from-[#B1A110] to-[#FFF280]"
+                      className={cn(
+                        "flex items-center gap-1 px-[18px] py-3 rounded-lg text-xs text-black ",
+                        "bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]",
+                        {
+                          "bg-gradient-to-t from-[#B1A110] to-[#FFF280]":
+                            i === 0,
+                        }
+                      )}
                     >
-                      New Database
+                      {tag}
                     </Link>
-                  </button>
-                  <button>
-                    <Link
-                      href={"/"}
-                      className="flex items-center gap-1 px-[18px] py-3 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
-                    >
-                      database
-                    </Link>
-                  </button>
-                  <button>
-                    <Link
-                      href={"/"}
-                      className="flex items-center gap-1 px-[18px] py-3 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
-                    >
-                      database
-                    </Link>
-                  </button>
-                  <button>
-                    <Link
-                      href={"/"}
-                      className="flex items-center gap-1 px-[18px] py-3 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
-                    >
-                      database
-                    </Link>
-                  </button>
-                  <button>
-                    <Link
-                      href={"/"}
-                      className="flex items-center gap-1 px-[18px] py-3 rounded-lg text-xs text-white bg-gradient-to-t from-[#2E2291] to-[#8F5CE1]"
-                    >
-                      database
-                    </Link>
-                  </button>
+                  ))}
                 </div>
               </div>
               <div className="xl:col-span-2 flex flex-col gap-6">
-                <div className="flex flex-col rounded-lg overflow-hidden bg-[#0B0B25]">
-                  <div className="text-sm py-4 bg-gradient-to-t from-[#2E2291] to-[#8F5CE1] text-center">
-                    Categories
-                  </div>
-                  <ul className="flex flex-col gap-4 p-4">
-                    <li>
-                      <Link
-                        href={"/"}
-                        className="flex justify-between items-center p-4 bg-[#131332] rounded-lg"
-                      >
-                        <span className="text-xs">url : login : pass</span>
-                        <span className="text-[10px]">(3)</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={"/"}
-                        className="flex justify-between items-center p-4 bg-[#131332] rounded-lg"
-                      >
-                        <span className="text-xs">url : login : pass</span>
-                        <span className="text-[10px]">(3)</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-                <div className="flex flex-col rounded-lg overflow-hidden bg-[#0B0B25]">
-                  <div className="text-sm py-4 bg-gradient-to-t from-[#2E2291] to-[#8F5CE1] text-center">
-                    Post
-                  </div>
-                  <ul className="flex flex-col gap-4 p-4">
-                    <li>
-                      <Link
-                        href={"/"}
-                        className="flex gap-3 items-center p-4 bg-[#131332] rounded-lg"
-                      >
-                        <img src="/images/546 4.png" alt="" />
-                        <div className="flex flex-col text-xs gap-1">
-                          <p>FindEmail.io:</p>
-                          <span>Secret Weapon for</span>
-                        </div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={"/"}
-                        className="flex gap-3 items-center p-4 bg-[#131332] rounded-lg"
-                      >
-                        <img src="/images/546 4.png" alt="" />
-                        <div className="flex flex-col text-xs gap-1">
-                          <p>FindEmail.io:</p>
-                          <span>Secret Weapon for</span>
-                        </div>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                <CategoriesSec />
+                <PostsSide />
               </div>
             </div>
           </div>
@@ -177,7 +89,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
+      {/* <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
         <FilterableCard />
         <div className="justify-center items-center hidden xl:flex">
           <img src="/images/home/mon.png" alt="" />
@@ -187,7 +99,7 @@ export default function page() {
           <img src="/images/home/mon.png" alt="" />
         </div>
         <FilterableCard />
-      </div>
+      </div> */}
     </div>
   );
 }
