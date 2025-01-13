@@ -22,9 +22,12 @@ export default async function PostsGridSec({
         (data, i) =>
           i === 0 && <FilterableCard className="mx-auto" data={data} key={i} />
       )} */}
-      <div className="justify-center items-center hidden xl:flex">
-        <Halo className="size-40" />
-      </div>
+
+      {data.data.posts[1] && (
+        <div className="justify-center items-center hidden xl:flex">
+          <Halo className="size-40" />
+        </div>
+      )}
       <FilterableCard className="mx-auto" data={data.data.posts[1]} />
 
       {/* {data.data.posts.map(
@@ -38,9 +41,12 @@ export default async function PostsGridSec({
           i === 2 && <FilterableCard className="mx-auto" data={data} key={i} />
       )} */}
 
-      <div className="justify-center items-center hidden xl:flex">
-        <Halo className="size-40" />
-      </div>
+      {data.data.posts[3] && (
+        <div className="justify-center items-center hidden xl:flex">
+          <Halo className="size-40" />
+        </div>
+      )}
+
       <FilterableCard className="mx-auto" data={data.data.posts[3]} />
 
       {/* {data.data.posts.map(

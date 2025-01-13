@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { Button } from "@headlessui/react";
+import { Fragment } from "react";
 
 export default function CatItems({
   data,
@@ -29,16 +30,20 @@ export default function CatItems({
   return (
     <>
       {data.map((data, i) => (
-        <li key={i} className="w-full">
-          <Button
-            data-cat={data.name}
-            onClick={handleClick}
-            className="flex w-full justify-between items-center p-4 bg-[#131332] rounded-lg"
-          >
-            <span className="text-xs">{data.name}</span>
-            <span className="text-[10px]">({data.count})</span>
-          </Button>
-        </li>
+        <Fragment key={i}>
+          {i < 4 && (
+            <li key={i} className="w-full">
+              <Button
+                data-cat={data.name}
+                onClick={handleClick}
+                className="flex w-full justify-between items-center p-4 bg-[#131332] rounded-lg"
+              >
+                <span className="text-xs">{data.name}</span>
+                <span className="text-[10px]">({data.count})</span>
+              </Button>
+            </li>
+          )}
+        </Fragment>
       ))}
     </>
   );

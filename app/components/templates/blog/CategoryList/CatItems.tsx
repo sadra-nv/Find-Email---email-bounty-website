@@ -2,6 +2,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "@headlessui/react";
 import { cn } from "@/lib/utils";
+import { Fragment } from "react";
 
 export default function CatItems({
   data,
@@ -43,17 +44,21 @@ export default function CatItems({
         All Tags
       </Button>
       {data.map((item, i) => (
-        <Button
-          key={i}
-          data-cat={item.name}
-          onClick={handleClick}
-          className={cn("px-10 py-2 rounded-lg text-xs ml-6  shrink-0", {
-            "btn-hover bg-orange-grad-btn":
-              item.name === searchParams.get("query"),
-          })}
-        >
-          {item.name}
-        </Button>
+        <Fragment key={i}>
+          {i < 4 && (
+            <Button
+              key={i}
+              data-cat={item.name}
+              onClick={handleClick}
+              className={cn("px-10 py-2 rounded-lg text-xs ml-6  shrink-0", {
+                "btn-hover bg-orange-grad-btn":
+                  item.name === searchParams.get("query"),
+              })}
+            >
+              {item.name}
+            </Button>
+          )}
+        </Fragment>
       ))}
     </>
   );

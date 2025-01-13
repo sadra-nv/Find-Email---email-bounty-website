@@ -16,7 +16,7 @@ export default async function CategoryList() {
   return (
     <section className="mb-6 md:mb-12">
       <div className="">
-        <div className="flex sm:justify-center gap-6 md:gap-10 w-full overflow-auto">
+        <div className="flex sm:justify-center gap-0 md:gap-0 w-full overflow-auto">
           <CatItems data={data.data.categories.top} />
           {/* <Button className="px-10 py-2 rounded-lg text-xs ml-6 hover-btn shrink-0">
             All Tags

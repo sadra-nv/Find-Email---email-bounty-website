@@ -4,14 +4,19 @@ import speaker from "@/public/images/speaker 1.png";
 import calender from "@/public/images/calender.png";
 import { SinglePostCard } from "@/lib/services/blogs/getBlogPosts";
 import { cn } from "@/lib/utils";
+import { RelatedArticleSingle } from "@/lib/services/blogs/getBlogRelated";
 
 export default function FilterableCard({
   data,
   className,
 }: {
-  data: SinglePostCard;
+  data: SinglePostCard | RelatedArticleSingle;
   className?: string;
 }) {
+  // console.log(data);
+  const placeholder = !data ? "" : data.placeholderIMG;
+
+  if (!data) return;
   return (
     <div className={cn("filter-card group w-fit", className)}>
       <div className="relative flex justify-center items-center ">
@@ -75,10 +80,10 @@ export default function FilterableCard({
           </ul>
         </div>
         <Image
-          blurDataURL={data.placeholderIMG}
+          blurDataURL={placeholder}
           alt={data.title}
           src={data.image_url}
-          placeholder="blur"
+          placeholder={data.placeholderIMG ? "blur" : "empty"}
           width={140}
           height={140}
           className="absolute top-2 group-hover:translate-y-4 size-[8.75rem]

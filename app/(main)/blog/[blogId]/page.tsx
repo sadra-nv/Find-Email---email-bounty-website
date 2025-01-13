@@ -1,18 +1,24 @@
 // import HeroSection from "@/app/components/templates/home/HeroSection/HeroSection";
-// import FilterableCard from "@/app/components/templates/blog/FilterableCardGallery/FiltrableCard";
+import FilterableCard from "@/app/components/templates/blog/FilterableCardGallery/FiltrableCard";
 import CategoriesSec from "@/app/components/templates/blog/FilterableCardGallery/CategoriesSec";
 import PostsSide from "@/app/components/templates/blog/FilterableCardGallery/PostsSide";
 import StarsSection from "@/app/components/templates/UI/StarsSection/StarsSection";
+import { getBlogRelated } from "@/lib/services/blogs/getBlogRelated";
 import { getBlogSingle } from "@/lib/services/blogs/getBlogSingle";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Halo from "@/app/components/templates/UI/Halo/Halo";
 
 export default async function page({ params }: { params: { blogId: string } }) {
   const data = await getBlogSingle(params.blogId);
   // console.log(data, params);
   if (!data) return;
+
+  const related = await getBlogRelated(params.blogId);
+
+  // console.log(related);
 
   return (
     <div className="z-20 relative">
@@ -89,17 +95,27 @@ export default async function page({ params }: { params: { blogId: string } }) {
           </div>
         </div>
       </div>
-      {/* <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
-        <FilterableCard />
-        <div className="justify-center items-center hidden xl:flex">
-          <img src="/images/home/mon.png" alt="" />
+      {related && (
+        <div className="container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 mb-16 gap-y-10">
+          <FilterableCard className="mx-auto" data={related.data.posts[0]} />
+
+          {related.data.posts[1] && (
+            <div className="justify-center items-center hidden xl:flex">
+              <Halo className="size-40" />
+            </div>
+          )}
+
+          <FilterableCard className="mx-auto" data={related.data.posts[1]} />
+
+          {related.data.posts[2] && (
+            <div className="justify-center items-center hidden xl:flex">
+              <Halo className="size-40" />
+            </div>
+          )}
+
+          <FilterableCard className="mx-auto" data={related.data.posts[2]} />
         </div>
-        <FilterableCard />
-        <div className="justify-center items-center hidden xl:flex">
-          <img src="/images/home/mon.png" alt="" />
-        </div>
-        <FilterableCard />
-      </div> */}
+      )}
     </div>
   );
 }
