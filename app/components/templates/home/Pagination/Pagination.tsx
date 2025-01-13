@@ -25,16 +25,15 @@ export default function Pagination({
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const pageValue = event.currentTarget.getAttribute("data-page"); // Accessing the data attribute
-    console.log("Data Value:", pageValue);
+    // console.log("Data Value:", pageValue);
 
-    // Add your logic here, e.g., navigating or updating state
     const params = new URLSearchParams(searchParams.toString());
     params.set("page", pageValue as string);
     router.push(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   //   const newMetaPage = meta.page + 1;
-  console.log(meta.page);
+  //   console.log(meta.page);
   return (
     <>
       {meta.prev && (

@@ -1,6 +1,6 @@
 import { getBlogStats } from "@/lib/services/blogs/getBlogsStats";
-import Link from "next/link";
 import React from "react";
+import CatItems from "./CatItems";
 
 export default async function CategoriesSec() {
   const data = await getBlogStats();
@@ -14,17 +14,7 @@ export default async function CategoriesSec() {
         Categories
       </div>
       <ul className="flex flex-col gap-4 p-4">
-        {data.data.categories.top.map((data, i) => (
-          <li key={i}>
-            <Link
-              href={"/"}
-              className="flex justify-between items-center p-4 bg-[#131332] rounded-lg"
-            >
-              <span className="text-xs">{data.name}</span>
-              <span className="text-[10px]">({data.count})</span>
-            </Link>
-          </li>
-        ))}
+        <CatItems data={data.data.categories.top} />
         {/* <li>
           <Link
             href={"/"}
