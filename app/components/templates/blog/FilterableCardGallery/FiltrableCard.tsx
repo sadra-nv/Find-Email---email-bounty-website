@@ -3,10 +3,17 @@ import Image from "next/image";
 import speaker from "@/public/images/speaker 1.png";
 import calender from "@/public/images/calender.png";
 import { SinglePostCard } from "@/lib/services/blogs/getBlogPosts";
+import { cn } from "@/lib/utils";
 
-export default function FilterableCard({ data }: { data: SinglePostCard }) {
+export default function FilterableCard({
+  data,
+  className,
+}: {
+  data: SinglePostCard;
+  className?: string;
+}) {
   return (
-    <div className="filter-card group w-fit">
+    <div className={cn("filter-card group w-fit", className)}>
       <div className="relative flex justify-center items-center ">
         <div className="justify-center items-start flex flex-col relative">
           <div

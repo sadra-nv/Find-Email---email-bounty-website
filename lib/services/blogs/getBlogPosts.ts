@@ -27,17 +27,34 @@ export interface BlogPosts {
       per_page: number;
       total_pages: number;
       total_items: number;
-      next: null;
-      prev: null;
+      next: null | number;
+      prev: null | number;
     };
   };
 }
 
-export async function getBlogPosts(): Promise<BlogPosts | false> {
+export async function getBlogPosts({
+  page,
+  query,
+  filter_method,
+}: {
+  filter_method?: "search" | "tags" | "category" | null;
+  page?: number | null;
+  query?: string | null;
+}): Promise<BlogPosts | false> {
   const blogStatsAPI = process.env.BLOG_POSTS_URL as string;
+  const filterMethod = filter_method ? `filter_type=${filter_method}&` : "";
+  const filterQuery = query ? `filter=${query}&` : "";
+  const pageNumber = page ? `page=${page}&` : "1&";
 
+  // # http://5.255.116.133/blog/posts?filter_type=tags&filter=logs&page=1&per_page=4
+  // console.log(
+  //   `${blogStatsAPI}?${filterMethod}${filterQuery}${pageNumber}&per_page=4`
+  // );
   try {
-    const response = await fetch(blogStatsAPI);
+    const response = await fetch(
+      `${blogStatsAPI}?${filterMethod}${filterQuery}${pageNumber}per_page=4`
+    );
     const result = await response.json();
 
     if (!response.ok) {

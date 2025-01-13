@@ -1,6 +1,6 @@
 import Image from "next/image";
-import FilterableCard from "../../blog/FilterableCardGallery/FiltrableCard";
-import Halo from "../../UI/Halo/Halo";
+// import FilterableCard from "../../blog/FilterableCardGallery/FiltrableCard";
+// import Halo from "../../UI/Halo/Halo";
 import pic from "@/public/icons/email-icon.png";
 import Link from "next/link";
 
@@ -37,7 +37,7 @@ export default function BlogList() {
         />
         <h2 className="text-center font-bold text-lg sm:text-3xl ">Blog</h2>
       </div>
-      <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 grid gap-4">
+      {/* <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 grid gap-4">
         <FilterableCard />
         <div className="hidden xl:flex justify-center items-start pt-9">
           <Halo className="size-36" />
@@ -47,7 +47,7 @@ export default function BlogList() {
           <Halo className="size-36" />
         </div>
         <FilterableCard />
-      </div>
+      </div> */}
       <div className="w-full mt-6 lg:mt-8">
         <Link
           className="block  sm:hidden text-base group lg:text-sm w-fit mx-auto px-6 py-3

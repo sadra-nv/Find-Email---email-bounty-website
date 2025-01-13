@@ -4,9 +4,9 @@ import React from "react";
 
 export default async function CategoriesSec() {
   const data = await getBlogStats();
-  //   console.log(data);
 
   if (!data) return;
+  // console.log(data.data.categories);
 
   return (
     <div className="flex flex-col rounded-lg overflow-hidden bg-[#0B0B25]">
