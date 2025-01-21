@@ -16,7 +16,7 @@ export default function SearchCircleBtn({
   className?: string;
   id: number;
   focusId: number;
-  pic: StaticImageData;
+  pic: StaticImageData | string;
   style?: CSSProperties;
   children?: ReactNode;
   rotateWheel: (id: number) => void;
@@ -38,8 +38,11 @@ export default function SearchCircleBtn({
         "border-2 border-neutral-50 flex justify-center items-center",
         "absolute left-1/2 top-1/2 origin-top-left ",
         className,
+
+        // "orange-grad-btn": "linear-gradient(90deg, #C24B76 0%, #FD8330 100%)",
+
         {
-          "bg-orange-grad-btn border-transparent ": id === focusId,
+          "bg-orange-grad-btn border-none ": id === focusId,
         }
       )}
     >
@@ -49,7 +52,7 @@ export default function SearchCircleBtn({
         src={pic}
         width={26}
         height={26}
-        alt="icon"
+        alt="filter button"
         className="w-full h-auto"
       />
     </button>

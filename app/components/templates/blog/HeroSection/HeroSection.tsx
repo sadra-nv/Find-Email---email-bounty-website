@@ -24,7 +24,7 @@ export default function HeroSection() {
             <source src="/videos/q-c3d7becf.webm" type="video/webm" />
             Your browser does not support the video playback.
           </video>
-          <div className="absolute flex items-center gap-1 top-24 sm:top-40 lg:top-52 left-1/2 -translate-x-1/2 ">
+          <div className="absolute z-20 flex items-center gap-1 top-24 sm:top-40 lg:top-52 left-1/2 -translate-x-1/2 ">
             <Image
               className="w-4 sm:w-8 "
               src={email}
