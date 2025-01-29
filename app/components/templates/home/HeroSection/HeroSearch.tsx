@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import SearchCircleBtn from "./SearchCircleBtn";
 import {
   Select,
@@ -14,6 +14,8 @@ import {
   DialogTitle,
   DialogPanel,
   Description,
+  DialogBackdrop,
+  Button,
 } from "@headlessui/react";
 import { cn } from "@/lib/utils";
 // import email from "@/public/icons/email-icon.png";
@@ -24,7 +26,12 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { setTimeout } from "timers";
 import { HeroQueries } from "@/lib/services/home/HeroSection/getHeroQueries";
-import { submitQuerySearch } from "@/lib/services/home/HeroSection/submitQuerySearch";
+import {
+  QuerySearchOthers,
+  QuerySearchTechnology,
+  submitQuerySearch,
+} from "@/lib/services/home/HeroSection/submitQuerySearch";
+import Link from "next/link";
 
 // type QueryTag = {
 //   id: number;
@@ -220,8 +227,8 @@ export default function HeroSearch({
   }, [order]);
 
   // SEARCH BAR
-  const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState("");
+  const [query, setQuery] = useState<string | null>("");
+  // const [selected, setSelected] = useState<string | null>("");
   const [selectedCategory, setSelectedCategory] = useState(
     queryTags[0].queries[0].key
   );
@@ -233,9 +240,10 @@ export default function HeroSearch({
       : queryTags
           .map((tag) => ({
             ...tag,
-            queries: tag.queries.filter((q) =>
-              q.key.toLowerCase().includes(query.toLowerCase())
-            ),
+            queries: tag.queries.filter((q) => {
+              if (!query) return queryTags;
+              return q.key.toLowerCase().includes(query.toLowerCase());
+            }),
           }))
           .filter((tag) => tag.queries.length > 0);
 
@@ -249,6 +257,12 @@ export default function HeroSearch({
 
   const [submiting, setSubmiting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showResult, setShowResult] = useState(false);
+  const [resultData, setResultData] = useState<
+    QuerySearchOthers | QuerySearchTechnology | null
+  >(null);
+  const [paginationID, setPaginationID] = useState(0);
+
   const submitHandler = async (event: React.FormEvent) => {
     event.preventDefault();
 
@@ -268,11 +282,21 @@ export default function HeroSearch({
     // {"method": "leak", "type": "domain", "data": "test.com"}
     setSubmiting(true);
 
+    // const reqBody = {
+    //   method: btnTitles[id].type,
+    //   type: selectedCategory,
+    //   data: query,
+    // };
     const reqBody = {
-      method: btnTitles[id].type,
-      type: selectedCategory,
-      data: query,
+      method: "technology",
+      type: "security",
+      data: "hsts",
     };
+    // const reqBody = {
+    //   method: "leak",
+    //   type: "type",
+    //   data: "test.com",
+    // };
 
     console.log(reqBody);
 
@@ -280,9 +304,10 @@ export default function HeroSearch({
       ? patterns[selectedCategory]
       : patterns.else;
 
-    if (regex && !regex.test(query)) {
+    if (regex && query && !regex.test(query)) {
       setError("Invalid input data. Please check your query.");
       setSubmiting(false);
+      // setSelected(null);
 
       setTimeout(() => {
         setError(null);
@@ -291,11 +316,7 @@ export default function HeroSearch({
       return;
     }
 
-    const result = await submitQuerySearch(
-      btnTitles[id].type,
-      selectedCategory,
-      query
-    );
+    const result = await submitQuerySearch(reqBody);
 
     if (!result) {
       setError("Failed to get a response from server, please check your query");
@@ -314,13 +335,246 @@ export default function HeroSearch({
       return;
     }
 
-    console.log(result);
+    console.log(result.data);
+
+    setPaginationID(0);
+    setResultData(result.data);
+
+    setShowResult(true);
+
     setSubmiting(false);
   };
 
   return (
     <div className=" w-full  h-fit relative flex flex-col items-center justify-center">
       {/* <TopKeyword /> */}
+      <Dialog open={showResult} onClose={() => {}} className="relative z-50   ">
+        <DialogBackdrop className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
+        <div className="fixed inset-0 w-screen overflow-y-auto py-8 px-4">
+          <div className="flex min-h-full items-center justify-center">
+            {resultData && (
+              <DialogPanel
+                transition
+                className="w-full sm:w-[41.875rem] 
+            bg-background sm:rounded-2xl rounded-xl
+            ease-out duration-300  data-[closed]:transform-[scale(95%)] 
+            data-[closed]:opacity-0 data-[closed]:translate-y-6"
+              >
+                <div
+                  className="h-14 bg-blue-grad-btn w-full sm:rounded-t-2xl rounded-t-xl
+              px-4 flex justify-start items-center text-sm gap-4 font-semibold"
+                >
+                  <span>{resultData.data}</span>
+                  <span>
+                    <span>Record : </span>
+                    <span>{resultData.count}</span>
+                  </span>
+
+                  <Button
+                    onClick={() => setShowResult(false)}
+                    className="flex gap-1 items-center justify-between bg-white/20 
+               ml-auto rounded-md px-3 py-1 btn-hover"
+                  >
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                      <path
+                        d="M6.25 12.5C2.80233 12.5 0 9.69767 0 6.25C0 2.80233 2.80233 0 6.25 0C9.69767 0 12.5 2.80233 12.5 6.25C12.5 9.69767 9.69767 12.5 6.25 12.5ZM6.25 0.872093C3.28488 0.872093 0.872093 3.28488 0.872093 6.25C0.872093 9.21512 3.28488 11.6279 6.25 11.6279C9.21512 11.6279 11.6279 9.21512 11.6279 6.25C11.6279 3.28488 9.21512 0.872093 6.25 0.872093Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M8.75591 8.01939C8.95952 8.2231 8.95952 8.55222 8.75591 8.75591C8.70759 8.80435 8.65018 8.84276 8.58698 8.86895C8.52377 8.89513 8.45601 8.90857 8.3876 8.9085C8.2543 8.9085 8.12097 8.85747 8.01938 8.75591L6.45432 7.19075L4.88926 8.75593C4.84095 8.80436 4.78355 8.84277 4.72036 8.86896C4.65717 8.89515 4.58942 8.90859 4.52102 8.90852C4.45261 8.90859 4.38486 8.89515 4.32166 8.86897C4.25845 8.84278 4.20105 8.80437 4.15273 8.75593C3.94912 8.55222 3.94912 8.2231 4.15273 8.01939L5.7179 6.45432L4.15271 4.88926C3.9491 4.68555 3.9491 4.35642 4.15271 4.15273C4.35642 3.94912 4.68555 3.94912 4.88926 4.15273L6.45432 5.7179L8.01938 4.15271C8.2231 3.9491 8.55222 3.9491 8.75591 4.15271C8.95952 4.35642 8.95952 4.68555 8.75591 4.88926L7.19075 6.45432L8.75591 8.01939Z"
+                        fill="white"
+                      />
+                    </svg>
+
+                    <span>Close</span>
+                  </Button>
+                </div>
+
+                <ul
+                  className="text-sm grid px-4 sm:px-12 pt-8 pb-4 grid-cols-1 gap-x-9 gap-y-4 sm:grid-cols-2
+                 h-96 overflow-y-auto thin-bar"
+                >
+                  {resultData?.method === "technology" && (
+                    <Fragment>
+                      {/* <div className="text-center text-lg font-bold">
+                        {resultData.result[paginationID].domain}
+                      </div> */}
+
+                      {resultData.result[paginationID].technology_info[
+                        "web-servers"
+                      ] && (
+                        <li className="space-y-2">
+                          <div className="font-bold">Web Servers</div>
+                          {resultData.result[paginationID].technology_info[
+                            "web-servers"
+                          ].map((server) => (
+                            <div key={server}>{server}</div>
+                          ))}
+                        </li>
+                      )}
+
+                      {resultData.result[paginationID].technology_info
+                        .security && (
+                        <li className="space-y-4">
+                          <div className="font-bold">Security</div>
+                          {resultData.result[
+                            paginationID
+                          ].technology_info.security.map((server) => (
+                            <div key={server}>{server}</div>
+                          ))}
+                        </li>
+                      )}
+
+                      {resultData.result[paginationID].technology_info[
+                        "programming-languages"
+                      ] && (
+                        <li className="space-y-4">
+                          <div className="font-bold">Programming Languages</div>
+                          {resultData.result[paginationID].technology_info[
+                            "programming-languages"
+                          ].map((server) => (
+                            <div key={server}>{server}</div>
+                          ))}
+                        </li>
+                      )}
+
+                      {resultData.result[paginationID].technology_info[
+                        "marketing-automation"
+                      ] && (
+                        <li className="space-y-4">
+                          <div className="font-bold">Marketing Automation</div>
+                          {resultData.result[paginationID].technology_info[
+                            "marketing-automation"
+                          ].map((server) => (
+                            <div key={server}>{server}</div>
+                          ))}
+                        </li>
+                      )}
+
+                      {resultData.result[paginationID].technology_info[
+                        "javascript-frameworks"
+                      ] && (
+                        <li className="space-y-4">
+                          <div className="font-bold">Javascript Frameworks</div>
+                          {resultData.result[paginationID].technology_info[
+                            "javascript-frameworks"
+                          ].map((server) => (
+                            <div key={server}>{server}</div>
+                          ))}
+                        </li>
+                      )}
+
+                      {resultData.result[paginationID].technology_info[
+                        "css-frameworks"
+                      ] && (
+                        <li className="space-y-4">
+                          <div className="font-bold">CSS Frameworks</div>
+                          {resultData.result[paginationID].technology_info[
+                            "css-frameworks"
+                          ].map((server) => (
+                            <div key={server}>{server}</div>
+                          ))}
+                        </li>
+                      )}
+
+                      {resultData.result[paginationID].technology_info.cms && (
+                        <li className="space-y-4">
+                          <div className="font-bold">CMS</div>
+                          {resultData.result[
+                            paginationID
+                          ].technology_info.cms.map((server) => (
+                            <div key={server}>{server}</div>
+                          ))}
+                        </li>
+                      )}
+                    </Fragment>
+                  )}
+
+                  {resultData?.method !== "technology" && (
+                    <>
+                      {resultData.result.map((data, i) => (
+                        <li key={i} className="font-semibold space-y-2">
+                          {data.split("\n").map((line: string, i: number) => (
+                            <p key={i}>{line}</p>
+                          ))}
+                        </li>
+                      ))}
+                      {/* {resultData.result[paginationID]
+                          .split("\n")
+                          .map((line: string, i: number) => (
+                            <p key={i}>{line}</p>
+                          ))} */}
+                    </>
+                  )}
+                </ul>
+                {resultData?.method === "technology" && (
+                  <div className="flex gap-6 justify-center items-center pb-8 border-neutral-500 border-b">
+                    <Button
+                      onClick={() => {
+                        if (paginationID > 0) {
+                          setPaginationID((prevState) => (prevState -= 1));
+                        }
+                      }}
+                    >
+                      <svg
+                        className="fill-neutral-50 size-6"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                      </svg>
+                    </Button>
+
+                    <Button
+                      onClick={() => {
+                        console.log(
+                          paginationID,
+                          resultData.result.length,
+                          resultData.result[4],
+                          resultData.result[5]
+                        );
+                        if (paginationID < resultData.result.length - 1) {
+                          setPaginationID((prevState) => (prevState += 1));
+                        }
+                      }}
+                    >
+                      <svg
+                        className="fill-neutral-50 size-6"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                      </svg>
+                    </Button>
+                  </div>
+                )}
+
+                <div className="px-4 sm:px-12 text-sm py-8 space-y-2 font-semibold">
+                  <p className="text-center">
+                    [{resultData.count}] more results for
+                    <span className="bg-neutral-50/5 rounded-md ml-2 py-1 px-3">
+                      {resultData.data}
+                    </span>
+                  </p>
+                  <p className="text-center pb-3">
+                    Create an account to get the full results, search filters,
+                    and more.
+                  </p>
+                  <Link
+                    href="/auth"
+                    className="bg-orange-grad-btn btn-hover py-3 px-4 rounded-lg block mt-3 mx-auto w-fit"
+                  >
+                    Login/Register
+                  </Link>
+                </div>
+              </DialogPanel>
+            )}
+          </div>
+        </div>
+      </Dialog>
+
       <div className="w-full flex-col lg:flex-row  h-fit relative flex items-center justify-center">
         <div
           ref={wheelRef}
@@ -541,13 +795,13 @@ export default function HeroSearch({
                 // onChange={handleCategory}
                 immediate
                 name="query"
-                value={selected}
+                value={query}
                 onChange={(value: string) => {
                   // console.log(value);
                   // handleCategory();
                   // console.log(value);
                   // 'todoadding the category to value then slicing it
-                  setSelected(value);
+                  setQuery(value);
                 }}
                 // onClose={() => setQuery("")}
               >
@@ -562,7 +816,7 @@ export default function HeroSearch({
                       "lg:-translate-y-1 w-full rounded-lg text-xs min-h-10 py-2 lg:py-4  border-none bg-transparent block  text-neutral-400",
                       "focus:outline-none "
                     )}
-                    displayValue={() => selected}
+                    displayValue={() => (query ? query : "")}
                     onChange={(event) => {
                       // console.log(filtredTags);
                       return setQuery(event.target.value);

@@ -10,10 +10,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Halo from "@/app/components/templates/UI/Halo/Halo";
+import LikeBtn from "@/app/components/templates/blog/LikeBtn";
 
 export default async function page({ params }: { params: { blogId: string } }) {
   const data = await getBlogSingle(params.blogId);
-  // console.log(data, params);
+  console.log(data, params);
   if (!data) return;
 
   const related = await getBlogRelated(params.blogId);
@@ -77,6 +78,7 @@ export default async function page({ params }: { params: { blogId: string } }) {
                     </Link>
                   ))}
                 </div>
+                <LikeBtn isLiked={data.data.liked} id={data.data.id} />
               </div>
               <div className="xl:col-span-2 flex flex-col gap-6">
                 <CategoriesSec />
@@ -118,4 +120,18 @@ export default async function page({ params }: { params: { blogId: string } }) {
       )}
     </div>
   );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { blogId: string };
+}) {
+  const details = await getBlogSingle(params.blogId);
+  if (!details) return;
+  return {
+    title: details.data.title,
+    describtion: details.data.meta_description,
+    keywords: details.data.meta_keywords,
+  };
 }

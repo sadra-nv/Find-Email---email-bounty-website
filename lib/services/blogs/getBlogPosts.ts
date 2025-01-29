@@ -45,7 +45,7 @@ export async function getBlogPosts({
   const blogStatsAPI = process.env.BLOG_POSTS_URL as string;
   const filterMethod = filter_method ? `filter_type=${filter_method}&` : "";
   const filterQuery = query ? `filter=${query}&` : "";
-  const pageNumber = page ? `page=${page}&` : "1&";
+  const pageNumber = page ? `page=${page}&` : "page=1&";
 
   // # http://5.255.116.133/blog/posts?filter_type=tags&filter=logs&page=1&per_page=4
   // console.log(
