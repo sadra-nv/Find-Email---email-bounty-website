@@ -115,6 +115,12 @@ export default function HeroSearch({
     { left: string; transform: string }[] | null
   >(null);
 
+  // SEARCH BAR
+  const [selectedCategory, setSelectedCategory] = useState(
+    queryTags[0].queries[0].key
+  );
+  const [query, setQuery] = useState<string | null>("");
+
   const handleID = (id: number) => {
     const newAngleOffset = 360 - pos[id];
     setAngleOffset(newAngleOffset);
@@ -126,6 +132,8 @@ export default function HeroSearch({
     );
 
     setOrder(newOrder);
+    setSelectedCategory(queryTags[id].queries[0].key);
+    setQuery("");
   };
 
   const rotateWheel = (id: number) => {
@@ -227,11 +235,9 @@ export default function HeroSearch({
   }, [order]);
 
   // SEARCH BAR
-  const [query, setQuery] = useState<string | null>("");
+  // const [query, setQuery] = useState<string | null>("");
   // const [selected, setSelected] = useState<string | null>("");
-  const [selectedCategory, setSelectedCategory] = useState(
-    queryTags[0].queries[0].key
-  );
+
   const formRef = useRef<null | HTMLInputElement>(null);
 
   const filtredTags =
@@ -282,16 +288,16 @@ export default function HeroSearch({
     // {"method": "leak", "type": "domain", "data": "test.com"}
     setSubmiting(true);
 
-    // const reqBody = {
-    //   method: btnTitles[id].type,
-    //   type: selectedCategory,
-    //   data: query,
-    // };
     const reqBody = {
-      method: "technology",
-      type: "security",
-      data: "hsts",
+      method: btnTitles[id].type,
+      type: selectedCategory,
+      data: query ? query : "",
     };
+    // const reqBody = {
+    //   method: "technology",
+    //   type: "security",
+    //   data: "hsts",
+    // };
     // const reqBody = {
     //   method: "leak",
     //   type: "type",

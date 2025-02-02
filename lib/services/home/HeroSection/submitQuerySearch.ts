@@ -1,4 +1,4 @@
-"use server";
+// "use server";
 
 export interface TechnologyInfo {
   "web-servers": string[];
@@ -56,7 +56,9 @@ export interface QuerySearchSubmit {
 //   }
 // }
 
-const searchApiUrl = process.env.HOME_HERO_QUERIES_SEARCH_URL as string;
+const searchApiUrl = process.env
+  .NEXT_PUBLIC_HOME_HERO_QUERIES_SEARCH_URL as string;
+
 export async function submitQuerySearch(reqBody: {
   method: string;
   type: string;
@@ -83,7 +85,7 @@ export async function submitQuerySearch(reqBody: {
       new Error(`somthing went wrong => ${result}`);
     }
 
-    console.log(reqBody, result);
+    // console.log(reqBody, result);
 
     return result;
   } catch (error) {

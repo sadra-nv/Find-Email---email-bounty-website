@@ -1,5 +1,7 @@
 // import Link from "next/link";
+import Image from "next/image";
 import React from "react";
+import FooterForm from "./FooterForm";
 
 export default function Footer() {
   return (
@@ -25,48 +27,64 @@ export default function Footer() {
                 <div className="flex items-center">
                   <ul className="flex flex-col items-center justify-center  gap-5 md:gap-3  text-xs font-normal md:grid md:grid-cols-2 h-fit">
                     <li className="">
-                      <img
-                        className="md:hidden"
+                      <Image
+                        width={75}
+                        height={75}
+                        className="md:hidden size-8"
                         src="/icons/Twitter1.svg"
                         alt=""
                       />
-                      <img
+                      <Image
+                        width={75}
+                        height={75}
                         className="hidden md:block"
                         src="/icons/Twitter1md.svg"
                         alt=""
                       />
                     </li>
                     <li className="">
-                      <img
-                        className="md:hidden"
+                      <Image
+                        width={75}
+                        height={75}
+                        className="md:hidden size-8"
                         src="/icons/Instagram1.svg"
                         alt=""
                       />
-                      <img
+                      <Image
+                        width={75}
+                        height={75}
                         className="hidden md:block"
                         src="/icons/Instagrammd1.svg"
                         alt=""
                       />
                     </li>
                     <li className="">
-                      <img
-                        className="md:hidden"
+                      <Image
+                        width={75}
+                        height={75}
+                        className="md:hidden size-8"
                         src="/icons/Facebook2.svg"
                         alt=""
                       />
-                      <img
+                      <Image
+                        width={75}
+                        height={75}
                         className="hidden md:block"
                         src="/icons/Facebookmd2.svg"
                         alt=""
                       />
                     </li>
                     <li className="">
-                      <img
-                        className="md:hidden"
+                      <Image
+                        width={75}
+                        height={75}
+                        className="md:hidden size-8"
                         src="/icons/LinkedIn.svg"
                         alt=""
                       />
-                      <img
+                      <Image
+                        width={75}
+                        height={75}
                         className="hidden md:block"
                         src="/icons/LinkedInmd.svg"
                         alt=""
@@ -83,28 +101,7 @@ export default function Footer() {
                 <p className="text-xs opacity-75 md:text-base">
                   Subscribe to newsletter
                 </p>
-                <div className="flex w-[248px] h-10 rounded-md overflow-hidden">
-                  <input
-                    placeholder="Your email"
-                    className="w-full h-full px-3 text-black placeholder:text-sm"
-                    type="text"
-                    name=""
-                    id=""
-                  />
-                  <button className="w-14 bg-neutral-900 group">
-                    <svg
-                      width="16"
-                      height="16"
-                      className="fill-neutral-50  inline-block tran-fast group-hover:translate-x-1"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                      />
-                    </svg>
-                  </button>
-                </div>
+                <FooterForm />
               </div>
             </div>
           </div>
