@@ -35,10 +35,12 @@ export default function ContactForm() {
     if (result && result.ok) {
       setSuccess(true);
       // setSubscribe(true);
-    } else if (result && !result.ok) {
-      setError("message", {
-        type: "manual",
-        message: result.message,
+    } else if (result && result.code == 422) {
+      result.errors?.map((error) => {
+        setError(error.name, {
+          type: "manual",
+          message: error.msg,
+        });
       });
       setSuccess(false);
     } else {

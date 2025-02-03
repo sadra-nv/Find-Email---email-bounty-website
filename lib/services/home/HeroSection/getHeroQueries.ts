@@ -28,6 +28,7 @@ export async function getHeroQueries(): Promise<HeroQueries | false> {
     }
 
     const data = await response.json();
+    // console.log(data);
 
     return data;
   } catch (error) {

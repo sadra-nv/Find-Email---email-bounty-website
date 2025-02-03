@@ -1,4 +1,4 @@
-import MainInput from "../UI/Inputs/MainInput";
+// import MainInput from "../UI/Inputs/MainInput";
 import Link from "next/link";
 import NewPassInput from "./NewPassInput";
 
@@ -22,25 +22,20 @@ export default function NewPasswordForm() {
          backdrop-blur rounded-xl  sm:rounded-2xl"
         >
           <form>
-            {/* <MainInput
-              type="password"
-              label="New Password"
-              placeholder="Enter New Password"
-              className="w-full"
-            /> */}
-
             <NewPassInput
               label="Password"
               placeholder="Enter Your Password"
               className="w-full"
             />
+            {/* // todo conenct these to hook form /*}
 
-            <MainInput
+
+            {/* <MainInput
               type="password"
               label="Repeat New Password"
               placeholder="Repeat New Password  "
               className="w-full mt-8"
-            />
+            /> */}
 
             <Link
               href="/auth/new-password"

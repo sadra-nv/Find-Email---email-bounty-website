@@ -1,5 +1,5 @@
 import { Button } from "@headlessui/react";
-import MainInput from "../../UI/Inputs/MainInput";
+// import MainInput from "../../UI/Inputs/MainInput";
 import StarsSection from "../../UI/StarsSection/StarsSection";
 
 export default function HeroSec() {
@@ -37,7 +37,8 @@ export default function HeroSec() {
            border border-neutral-700/30 "
         >
           <div className="sm:grid-cols-2 grid grid-cols-1 gap-6 sm:gap-16 sm:gap-y-12">
-            <MainInput label="Smtp Server" placeholder="Company Email" />
+            {/* // todo conenct these to hook form /*}
+            {/* <MainInput label="Smtp Server" placeholder="Company Email" />
             <MainInput label="Port" placeholder="9612287444" />
             <MainInput label="Username" placeholder="Alireza" />
             <MainInput
@@ -49,7 +50,7 @@ export default function HeroSec() {
               type="email"
               label="Email"
               placeholder="ar.sing7979@gmail.com"
-            />
+            /> */}
           </div>
           <Button
             className="mx-auto flex gap-1 justify-center items-center py-3 lg:py-4 

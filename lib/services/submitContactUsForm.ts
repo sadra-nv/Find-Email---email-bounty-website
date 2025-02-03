@@ -3,6 +3,11 @@ interface FooterFormResponse {
   code: number;
   message: string;
   data: object;
+  errors?: {
+    name: "message" | "email" | "full_name";
+    msg: string;
+    type: string;
+  }[];
 }
 
 // # {
@@ -31,9 +36,14 @@ export async function submitContactUsForm(reqBody: {
     const response = await fetch(searchApiUrl, body);
     const result = await response.json();
 
-    if (!response.ok) {
+    if (response.status == 422) {
       // new Error(`somthing went wrong => ${result}`);
       return result;
+    }
+
+    if (!response.ok) {
+      new Error(`somthing went wrong => ${result}`);
+      // return result;
     }
 
     // console.log(reqBody, result);

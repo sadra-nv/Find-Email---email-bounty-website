@@ -1,8 +1,4 @@
-"use server";
-
-import { revalidatePath } from "next/cache";
-
-const blogStatsAPI = process.env.BLOG_POST_LIKE as string;
+const blogStatsAPI = process.env.NEXT_PUBLIC_BLOG_POST_LIKE as string;
 
 export async function submitLike({
   id,
@@ -25,8 +21,7 @@ export async function submitLike({
       return false;
     }
 
-    console.log("liked");
-    revalidatePath("/blog/[blogId]", "page");
+    console.log("liked", await response.json());
     return true;
   } catch (error) {
     console.error("Error:", error);

@@ -1,4 +1,4 @@
-import MainInput from "../UI/Inputs/MainInput";
+// import MainInput from "../UI/Inputs/MainInput";
 import Link from "next/link";
 
 export default function ForgotPasswordForm() {
@@ -21,12 +21,14 @@ export default function ForgotPasswordForm() {
          backdrop-blur rounded-xl  sm:rounded-2xl"
         >
           <form>
-            <MainInput
+            {/* // todo conenct these to hook form /*}
+
+            {/* <MainInput
               type="email"
               label="Email"
               placeholder="Enter Your Email"
               className="w-full"
-            />
+            /> */}
 
             <Link
               href="/auth/new-password"

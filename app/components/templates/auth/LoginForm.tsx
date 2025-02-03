@@ -2,14 +2,16 @@
 import { Button, Checkbox } from "@headlessui/react";
 import Link from "next/link";
 import { useState } from "react";
-import MainInput from "../UI/Inputs/MainInput";
+// import MainInput from "../UI/Inputs/MainInput";
 
 export default function LoginForm() {
   const [enabled, setEnabled] = useState(false);
 
   return (
     <form>
-      <MainInput
+      {/* // todo conenct these to hook form /*}
+
+      {/* <MainInput
         type="email"
         label="Email or Username"
         placeholder="Enter Your Email Or Username..."
@@ -20,7 +22,7 @@ export default function LoginForm() {
         label="Password"
         placeholder="**********"
         className="w-full mt-8"
-      />
+      /> */}
       <div className="flex justify-between gap-4 items-center mt-4">
         <div>
           <Checkbox
