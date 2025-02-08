@@ -33,3 +33,19 @@ export const ContactUsFormSchema = z.object({
 });
 
 export type ContactUsForm = z.infer<typeof ContactUsFormSchema>;
+
+export const md5Schema = z.string().regex(/^[a-f0-9]{32}$/, "Invalid MD5 hash");
+
+const md5ListSchema = z
+  .string()
+  .transform((input) => input.split("\n").map((line) => line.trim())); // Split by lines
+// .refine(
+//   (lines) => lines.every((line) => md5Schema.safeParse(line).success), // Validate each line
+//   { message: "Each line must be a valid MD5 hash" }
+// );
+
+export const CrackerFormSchema = z.object({
+  hashes: md5ListSchema,
+});
+
+export type CrackerForm = z.infer<typeof CrackerFormSchema>;

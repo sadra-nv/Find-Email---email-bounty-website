@@ -14,18 +14,18 @@ import LikeBtn from "@/app/components/templates/blog/LikeBtn";
 
 export default async function page({ params }: { params: { blogId: string } }) {
   const data = await getBlogSingle(params.blogId);
-  console.log(data, params);
-  if (!data) return;
+  // console.log(data, params);
+  if (!data) return <div className="h-screen w-full"></div>;
 
   const related = await getBlogRelated(params.blogId);
 
   // console.log(related);
 
   return (
-    <div className="z-20 relative">
+    <div className="z-20 relative min-h-screen">
       <StarsSection isStatic />
       <div className="">
-        <div className="container">
+        <div className="container ">
           <div className="md:pt-52 pt-32">
             <div className="mb-8">
               <h1 className="text-xl xl:text-4xl font-bold mb-5">

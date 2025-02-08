@@ -52,6 +52,7 @@ export async function getBlogSingle(
   slug: string
 ): Promise<ArticleSingle | false> {
   const ip = headers().get("x-forwarded-for") || "127.0.0.1";
+  console.log("client ip", ip);
   const encryptedIP = encryptData(ip);
 
   // console.log("ip", encryptedIP);
@@ -69,6 +70,7 @@ export async function getBlogSingle(
   try {
     const response = await fetch(articleApiUrl, body);
     const result = await response.json();
+    console.log(result);
 
     if (!response.ok) {
       return false;

@@ -52,17 +52,17 @@ export default function LikeBtn({
   const [isLiked, setIsLiked] = useState(initialIsLiked);
 
   const clickHandler = async () => {
-    if (initialIsLiked) return;
+    // if (initialIsLiked) return;
 
     startTransition(() => {
-      setIsLiked(true);
+      setIsLiked((prevState) => !prevState);
     });
 
     try {
       await submitLike({ id });
     } catch (error) {
       startTransition(() => {
-        setIsLiked(false);
+        setIsLiked((prevState) => !prevState);
       });
       console.error("Error submitting like:", error);
     }
