@@ -40,7 +40,7 @@ export async function submitCrackerForm(
   try {
     const response = await fetch(searchApiUrl, body);
     const result = await response.json();
-    console.log(result);
+    // console.log(result);
 
     if (!response.ok) {
       new Error(`somthing went wrong => ${result}`);

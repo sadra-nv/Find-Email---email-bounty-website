@@ -49,3 +49,13 @@ export const CrackerFormSchema = z.object({
 });
 
 export type CrackerForm = z.infer<typeof CrackerFormSchema>;
+
+export const SMTPFormSchema = z.object({
+  smtp_server: z.string().min(2, { message: "Server is not valid" }),
+  smtp_port: z.string().min(2, { message: "Port is not valid" }),
+  smtp_username: z.string().min(2, { message: "Username is not valid" }),
+  smtp_password: z.string().min(2, { message: "Password is not valid" }),
+  receiver_email: EmailSchema,
+});
+
+export type SMTPForm = z.infer<typeof SMTPFormSchema>;
