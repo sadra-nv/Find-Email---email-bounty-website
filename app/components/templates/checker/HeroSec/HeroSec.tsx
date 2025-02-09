@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Transition } from "@headlessui/react";
+import { Button } from "@headlessui/react";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
@@ -19,7 +19,7 @@ export default function HeroSec() {
   } = useForm<SMTPForm>({
     defaultValues: {
       smtp_server: "",
-      smtp_port: "",
+      smtp_port: 0,
       smtp_username: "",
       smtp_password: "",
       receiver_email: "",
@@ -27,21 +27,13 @@ export default function HeroSec() {
     resolver: zodResolver(SMTPFormSchema),
   });
 
-  const [success, setSuccess] = useState<
-    "Failed to get any Results from server" | "SMTP server is working." | null
-  >(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
   const submitHandler: SubmitHandler<SMTPForm> = async (formData) => {
-    console.log("mkwdkowdk");
-    const result = await submitSMTPForm(formData);
     setSuccess(null);
+    const result = await submitSMTPForm(formData);
     // setSubscribe(false);
-
-    if (result) {
-      setSuccess("SMTP server is working.");
-    } else {
-      setSuccess("Failed to get any Results from server");
-    }
+    setSuccess(result);
   };
 
   return (
@@ -116,27 +108,20 @@ w-full rounded-lg bg-orange-grad-btn xs:w-40 btn-hover group lg:mt-9 mt-4"
 
           {isSubmitting && (
             <span className="text-xs font-bold lg:text-base text-white">
-              Submiting ....
+              Submiting....
             </span>
           )}
         </Button>
-      </form>
 
-      <Transition show={success === "SMTP server is working."}>
-        <div
-          className="p-6 lg:py-11 backdrop-blur rounded-xl lg:rounded-3xl
-     bg-[#0a081ec0] relative z-30 mb-20 lg:mb-32
- border border-neutral-700/30 
- data-[closed]:opacity-0 transition ease-in-out duration-300 "
-        >
+        {success && (
           <p
             className="text-justify w-fit mx-auto lg:text-xl font-semibold text-sm leading-7 
-           lg:mb-9   mb-5"
+           lg:mt-9   mt-5"
           >
             <span className="font-bold text-highlight-med">{success}</span>
           </p>
-        </div>
-      </Transition>
+        )}
+      </form>
     </>
   );
 }

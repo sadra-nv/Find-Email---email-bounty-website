@@ -1,45 +1,99 @@
 "use client";
 
-import { Checkbox } from "@headlessui/react";
-import { useState } from "react";
+import { Button } from "@headlessui/react";
 // import MainInput from "../UI/Inputs/MainInput";
-import Link from "next/link";
+// import Link from "next/link";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { RegisterForm, RegisterFormSchema } from "@/lib/zod-schemas";
+import MainInput from "../UI/Inputs/MainInput";
+import { submitRegisterForm } from "@/lib/services/auth/submitRegisterForm";
+import NewPassInput from "./NewPassInput";
 // import NewPassInput from "./NewPassInput";
 
 export default function SignupForm() {
-  const [enabled, setEnabled] = useState(false);
+  // const [enabled, setEnabled] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    setError,
+    setValue,
+    formState: { errors, isSubmitting, dirtyFields },
+  } = useForm<RegisterForm>({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+    resolver: zodResolver(RegisterFormSchema),
+  });
+
+  const [success, setSuccess] = useState<string | null>(null);
+
+  const submitHandler: SubmitHandler<RegisterForm> = async (formData) => {
+    // console.log(formData);
+    setSuccess(null);
+    const result = await submitRegisterForm(formData);
+    // setSubscribe(false);
+
+    if (result && result.ok) {
+      setSuccess(result.message);
+      // setSubscribe(true);
+    } else if (result && result.code == 422) {
+      result.errors?.map((error) => {
+        setError(error.name, {
+          type: "manual",
+          message: error.msg,
+        });
+      });
+      setSuccess(null);
+    } else if (result && !result.ok) {
+      setError("repeat_password", {
+        type: "manual",
+        message: result.message,
+      });
+      setSuccess(null);
+    } else {
+      setError("repeat_password", {
+        type: "manual",
+        message: "Failed to connect to server",
+      });
+      setSuccess(null);
+    }
+  };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit(submitHandler)}>
       <div className="space-y-6">
-        {/* // todo conenct these to hook form /*}
-
-        {/* <MainInput
-          type="email"
+        <MainInput
+          {...register("email")}
+          dirty={dirtyFields.email}
+          error={errors.email}
           label="Enter Your Email"
           placeholder="Enter Your Email"
           className="w-full"
         />
-        <MainInput
-          type="text"
-          label="Enter Your Username"
-          placeholder="Enter Your Username"
-          className="w-full"
-        />
-       
         <NewPassInput
+          {...register("password")}
+          dirty={dirtyFields.password}
+          error={errors.password}
           label="Password"
           placeholder="Enter Your Password"
           className="w-full"
+          setValue={setValue}
         />
         <MainInput
           type="password"
+          error={errors.repeat_password}
+          dirty={dirtyFields.repeat_password}
+          {...register("repeat_password")}
           label="Repeat Password"
-          placeholder="Repeat Your Password"
-          className="w-full "
-        /> */}
+          placeholder="Enter Your Password"
+          className="w-full"
+        />
       </div>
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <Checkbox
           name="agree-to-terms"
           checked={enabled}
@@ -60,14 +114,41 @@ p-1 bg-neutral-100 data-[checked]:bg-orange-grad-btn"
         <span className="text-xs font-bold  text-white">
           I agree to privacy policy & terms
         </span>
-      </div>
+      </div> */}
 
-      <Link
+      <Button
+        disabled={isSubmitting}
+        type="submit"
+        className="bg-orange-grad-btn block rounded-lg font-bold text-white text-sm text-center py-4 mt-8 w-full btn-hover"
+      >
+        {!isSubmitting && (
+          <span className="text-xs font-bold lg:text-base text-white">
+            Submit
+          </span>
+        )}
+
+        {isSubmitting && (
+          <span className="text-xs font-bold lg:text-base text-white">
+            Submiting....
+          </span>
+        )}
+      </Button>
+
+      {success && (
+        <p
+          className="text-justify w-fit mx-auto lg:text-xl font-semibold text-sm leading-7 
+           lg:mt-9   mt-5"
+        >
+          <span className="font-bold text-highlight-med">{success}</span>
+        </p>
+      )}
+
+      {/* <Link
         href="/auth/activate-account"
         className="bg-orange-grad-btn block rounded-lg font-bold text-white text-sm text-center py-4 mt-8 w-full btn-hover"
       >
         Sign Up
-      </Link>
+      </Link> */}
     </form>
   );
 }

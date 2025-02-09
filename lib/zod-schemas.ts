@@ -6,6 +6,13 @@ const EmailSchema = z
   .min(4, { message: "Email is not valid" })
   .max(255, { message: "Email is not valid" });
 
+const UsernameSchema = z
+  .string()
+  .regex(
+    /^(?=[a-zA-Z0-9._-]{4,20}$)(?!.*[_.-]{2})[^_.-].*[^_.-]$/,
+    "Username is not valid"
+  );
+
 export const HomeHeroSecSearchSchema = z.object({
   method: z.string().min(1, "Method is required"),
   type: z.string().min(1, "Type is required"),
@@ -51,11 +58,74 @@ export const CrackerFormSchema = z.object({
 export type CrackerForm = z.infer<typeof CrackerFormSchema>;
 
 export const SMTPFormSchema = z.object({
-  smtp_server: z.string().min(2, { message: "Server is not valid" }),
-  smtp_port: z.string().min(2, { message: "Port is not valid" }),
-  smtp_username: z.string().min(2, { message: "Username is not valid" }),
-  smtp_password: z.string().min(2, { message: "Password is not valid" }),
+  smtp_server: z
+    .string()
+    .min(4, { message: "Server is not valid" })
+    .max(255, { message: "Server is not valid" }),
+  smtp_port: z
+    .string()
+    .regex(/^\d+$/, "Must contain only numbers")
+    .max(255, { message: "Port is not valid" })
+    .transform((val) => Number(val)),
+  // .number()
+  // .min(4, { message: "Port is not valid" })
+  // .max(255, { message: "Port is not valid" }),
+  smtp_username: z
+    .string()
+    .min(4, { message: "Username is not valid" })
+    .max(255, { message: "Username is not valid" }),
+  smtp_password: z
+    .string()
+    .min(4, { message: "Password is not valid" })
+    .max(255, { message: "Password is not valid" }),
   receiver_email: EmailSchema,
 });
 
 export type SMTPForm = z.infer<typeof SMTPFormSchema>;
+
+export const RegisterFormSchema = z
+  .object({
+    email: EmailSchema,
+    repeat_password: z
+      .string()
+      .regex(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!@#$%&*?]{8,}$/,
+        "Password is not valid"
+      )
+      .min(8, { message: "Password is not valid" })
+      .max(255, { message: "Password is not valid" }),
+    password: z
+      .string()
+      .regex(
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!@#$%&*?]{8,}$/,
+        "Password is not valid"
+      )
+      .min(8, { message: "Password is not valid" })
+      .max(255, { message: "Password is not valid" }),
+  })
+  .superRefine(({ repeat_password, password }, ctx) => {
+    if (repeat_password !== password) {
+      ctx.addIssue({
+        code: "custom",
+        message: "Passwords are not the same",
+        path: ["repeat_password"],
+      });
+    }
+  });
+
+export type RegisterForm = z.infer<typeof RegisterFormSchema>;
+
+export const LoginFormSchema = z.object({
+  username: EmailSchema.or(UsernameSchema),
+
+  password: z
+    .string()
+    .regex(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d!@#$%&*?]{8,}$/,
+      "Password is not valid"
+    )
+    .min(8, { message: "Password is not valid" })
+    .max(255, { message: "Password is not valid" }),
+});
+
+export type LoginForm = z.infer<typeof LoginFormSchema>;
