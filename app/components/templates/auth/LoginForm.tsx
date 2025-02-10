@@ -7,6 +7,7 @@ import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { LoginFormSchema, type LoginForm } from "@/lib/zod-schemas";
 import { submitLoginForm } from "@/lib/services/auth/submitLoginForm";
+import { useRouter } from "next/navigation";
 // import MainInput from "../UI/Inputs/MainInput";
 
 export default function LoginForm() {
@@ -19,13 +20,14 @@ export default function LoginForm() {
     formState: { errors, isSubmitting, dirtyFields },
   } = useForm<LoginForm>({
     defaultValues: {
-      username: "",
-      password: "",
+      username: "dwqaggqaflaauhualk@gmail.com",
+      password: "65456446d65wda231sd5wW",
     },
     resolver: zodResolver(LoginFormSchema),
   });
 
   const [success, setSuccess] = useState<string | null>(null);
+  const router = useRouter();
 
   const submitHandler: SubmitHandler<LoginForm> = async (formData) => {
     console.log(formData, enabled);
@@ -35,6 +37,7 @@ export default function LoginForm() {
 
     if (result && result.ok) {
       setSuccess(result.message);
+      router.push("/dashboard/profile");
       // setSubscribe(true);
     } else if (result && result.code == 422) {
       result.errors?.map((error) => {

@@ -1,6 +1,6 @@
 // import MainInput from "../UI/Inputs/MainInput";
 import Link from "next/link";
-import NewPassInput from "./NewPassInput";
+// import NewPassInput from "./NewPassInput";
 
 export default function NewPasswordForm() {
   return (
@@ -22,13 +22,12 @@ export default function NewPasswordForm() {
          backdrop-blur rounded-xl  sm:rounded-2xl"
         >
           <form>
-            <NewPassInput
+            {/* // todo conenct these to hook form /*}
+            {/* <NewPassInput
               label="Password"
               placeholder="Enter Your Password"
               className="w-full"
-            />
-            {/* // todo conenct these to hook form /*}
-
+            /> */}
 
             {/* <MainInput
               type="password"

@@ -1,8 +1,17 @@
+import { saveSession, UserSession } from "./saveSession";
+import { saveTokens } from "./saveTokens";
+
+interface RegisterFormData extends UserSession {
+  exp_time: number;
+  status: string;
+  token: string;
+}
+
 interface RegisterFormResponse {
   ok: boolean;
   code: number;
   message: string;
-  data: object;
+  data: RegisterFormData;
   errors?: {
     name: "password" | "username";
     msg: string;
@@ -16,10 +25,13 @@ export async function submitLoginForm(reqBody: {
   password: string;
   remember_me: boolean;
 }): Promise<RegisterFormResponse | false> {
+  const userAgent = window ? navigator.userAgent : "Next.js App";
+
   const body: RequestInit = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "User-Agent": userAgent,
     },
 
     body: JSON.stringify({
@@ -30,8 +42,8 @@ export async function submitLoginForm(reqBody: {
 
   try {
     const response = await fetch(searchApiUrl, body);
-    const result = await response.json();
-    console.log(result);
+    const result = (await response.json()) as RegisterFormResponse;
+    // console.log(result);
 
     if (response.status == 422) {
       // new Error(`somthing went wrong => ${result}`);
@@ -44,6 +56,16 @@ export async function submitLoginForm(reqBody: {
     }
 
     // console.log(reqBody, result);
+
+    await saveSession(
+      { username: result.data.username, email: result.data.email },
+      result.data.exp_time
+    );
+
+    await saveTokens({
+      access: result.data.token,
+      access_expire: result.data.exp_time,
+    });
 
     return result;
   } catch (error) {
