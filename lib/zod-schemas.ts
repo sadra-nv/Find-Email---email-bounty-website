@@ -129,3 +129,23 @@ export const LoginFormSchema = z.object({
 });
 
 export type LoginForm = z.infer<typeof LoginFormSchema>;
+
+export const LeakSearchFormSchema = z.object({
+  filter: z.string().min(1, {
+    message: "Filter is not valid",
+  }),
+
+  data: z.string().min(1, { message: "Input is empty" }),
+});
+
+export type LeakSearchForm = z.infer<typeof LeakSearchFormSchema>;
+
+export const LogsSearchFormSchema = z.object({
+  filter: z.string().min(1, {
+    message: "Filter is not valid",
+  }),
+
+  data: z.string().min(1, { message: "Input is empty" }),
+});
+
+export type LogsSearchForm = z.infer<typeof LogsSearchFormSchema>;

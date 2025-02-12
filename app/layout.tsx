@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 // import { Merriweather, Poppins } from "next/font/google";
 import { Poppins } from "next/font/google";
+import AuthClientTokenLoader from "./components/templates/auth/AuthClientTokenLoader";
 
 // const merriweather = Merriweather({
 //   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
       <body
         className={`${poppins.className}  relative bg-[#030014] text-white`}
       >
+        <AuthClientTokenLoader />
         {children}
       </body>
     </html>
