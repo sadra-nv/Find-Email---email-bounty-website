@@ -149,3 +149,9 @@ export const LogsSearchFormSchema = z.object({
 });
 
 export type LogsSearchForm = z.infer<typeof LogsSearchFormSchema>;
+
+export const DomainFormSchema = z.object({
+  domain: z.string().min(1, { message: "Input is empty" }),
+});
+
+export type DomainForm = z.infer<typeof DomainFormSchema>;
