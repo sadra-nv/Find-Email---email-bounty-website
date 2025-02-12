@@ -125,7 +125,7 @@ export default function LeakSearchForm({
             <ul className="space-y-5 divide-y divide-[#21212133] dark:divide-white/20  px-4 lg:px-5">
               {success.data.result.map((data, i) => (
                 <li key={i} className="space-y-3 pt-4 font-semibold">
-                  <div>Domain : {data.domain}</div>
+                  <div>Domain: {data.domain}</div>
                   <div>Email: {data.email}</div>
                 </li>
               ))}

@@ -26,7 +26,7 @@ export default async function DataSearchSec() {
         text-lg font-semibold mt-12  mb-7"
       >
         <span className=" inline-block text-fe-c-text-title ">
-          Search in Logs Database.
+          Search in Leaked Database.
         </span>
         <span className="text-green-700 inline-block font-sans">
           [ Record : 2,070,284,200 ]
