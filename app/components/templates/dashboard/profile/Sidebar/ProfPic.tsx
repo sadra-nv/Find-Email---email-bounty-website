@@ -1,8 +1,9 @@
-import guy from "@/public/images/guy.png";
-import { Button } from "@headlessui/react";
+import { UserSession } from "@/lib/services/auth/saveSession";
+import guy from "@/public/images/user.png";
+// import { Button } from "@headlessui/react";
 import Image from "next/image";
 
-export default function ProfPic() {
+export default function ProfPic({ session }: { session: UserSession }) {
   return (
     <div className="w-full ">
       <div className="relative  w-fit h-fit mx-auto text-center">
@@ -14,7 +15,7 @@ export default function ProfPic() {
           placeholder="blur"
           alt="User's profile picture"
         />
-        <Button
+        {/* <Button
           className="p-2 size-8 flex justify-center items-center  
         overflow-hidden rounded-full bg-white hover:bg-neutral-200
          shadow-lg right-2 bottom-0 absolute z-10 tran-fast"
@@ -29,10 +30,10 @@ export default function ProfPic() {
               fill="black"
             />
           </svg>
-        </Button>
+        </Button> */}
       </div>
       <h2 className="font-bold text-lg mt-6 text-fe-c-text-title mx-auto w-fit">
-        Alireza Rahmani
+        {session.username}
       </h2>
       <div className="text-xs font-bold flex justify-between xs:gap-4 sm:gap-8 mt-9">
         <div>

@@ -23,7 +23,9 @@ export default function InfoItem({
       >
         {title}
       </h4>
-      <p className="text-fe-c-text-title font-semibold text-sm ">{desc}</p>
+      <p className="text-fe-c-text-title font-semibold text-sm overflow-x-auto thin-bar">
+        {desc}
+      </p>
     </div>
   );
 }

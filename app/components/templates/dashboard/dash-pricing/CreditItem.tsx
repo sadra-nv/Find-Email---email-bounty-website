@@ -13,7 +13,7 @@ export default function CreditItem({
     <div className={cn("", className)}>
       <div className="flex gap-2 justify-start items-center lg:text-lg font-bold text-sm mb-4">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <g clip-path="url(#clip0_327_8357)">
+          <g clipPath="url(#clip0_327_8357)">
             <path
               d="M10.9987 22.8308C16.9804 22.8308 21.8295 17.9817 21.8295 12C21.8295 6.01835 16.9804 1.16925 10.9987 1.16925C5.01707 1.16925 0.167969 6.01835 0.167969 12C0.167969 17.9817 5.01707 22.8308 10.9987 22.8308Z"
               fill="#41C19E"

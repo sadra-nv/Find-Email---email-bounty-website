@@ -1,10 +1,16 @@
 import { Menu, MenuButton, MenuItems } from "@headlessui/react";
-import guy from "@/public/images/guy.png";
+import guy from "@/public/images/user.png";
 import Image from "next/image";
 import Link from "next/link";
 import LogoutBtn from "./LogoutBtn";
+import { cookies } from "next/headers";
 
 export default function UserBox() {
+  const sessionCookie = cookies().get("USER_SESSION");
+  if (!sessionCookie) return;
+
+  const session = JSON.parse(sessionCookie?.value);
+
   return (
     <div className="relative">
       <Menu>
@@ -25,7 +31,7 @@ export default function UserBox() {
               className="xs:text-xs text-[0.625rem]  max-w-8 xs:max-w-14
              md:max-w-24 lg:max-w-36 truncate font-bold  text-fe-c-text-title"
             >
-              Alireza Rahmani
+              {session.username}
             </h2>
             <span className="xs:text-xs text-[0.5rem] max-w-8 lg:max-w-20  xs:max-w-14 truncate text-fe-c-text-normal w-fit">
               Welcome!

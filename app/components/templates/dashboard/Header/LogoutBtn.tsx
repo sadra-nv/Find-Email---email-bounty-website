@@ -5,6 +5,7 @@ import { Button } from "@headlessui/react";
 import SecurityModal from "../../UI/Modal/SecurityModal";
 import { useState } from "react";
 import Image from "next/image";
+import { logout } from "@/lib/services/auth/logout";
 
 export default function LogoutBtn() {
   const [modal, setModal] = useState(false);
@@ -14,6 +15,10 @@ export default function LogoutBtn() {
   };
   const closeModal = () => {
     setModal(false);
+  };
+
+  const clickhandler = async () => {
+    await logout();
   };
 
   return (
@@ -61,6 +66,7 @@ export default function LogoutBtn() {
             Cancel
           </Button>
           <Button
+            onClick={clickhandler}
             className="h-10 lg:h-12 text-center bg-[#FF0D00] 
           rounded-lg w-32 btn-hover text-white text-sm font-semibold"
           >

@@ -11,8 +11,9 @@ import {
 import { useState } from "react";
 import { TabGroup } from "@headlessui/react";
 import InfoItem from "./InfoItem";
+import { UserSession } from "@/lib/services/auth/saveSession";
 
-export default function AccountInfo() {
+export default function AccountInfo({ session }: { session: UserSession }) {
   const [enabled, setEnabled] = useState(false);
 
   // keep sans font for numbers and api key should be font 12px
@@ -33,8 +34,8 @@ export default function AccountInfo() {
       <TabPanels className="mt-12">
         <TabPanel>
           <div className="animate-pop-in space-y-9">
-            <InfoItem title="Username" desc="Alireza Rahmani" />
-            <InfoItem title="Email" desc="Ar.sing7979@gmail.com" />
+            <InfoItem title="Username" desc={session.username} />
+            <InfoItem title="Email" desc={session.email} />
 
             <div>
               <Checkbox
@@ -84,7 +85,7 @@ export default function AccountInfo() {
             <div className="flex justify-between gap-4 items-center -translate-y-5">
               <Button className="flex justify-center items-center gap-2">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_322_2488)">
+                  <g clipPath="url(#clip0_322_2488)">
                     <path
                       d="M9.69967 14.9467C9.47967 14.9467 9.27301 14.8 9.21301 14.5734C9.13967 14.3067 9.29967 14.0334 9.57301 13.96C12.2797 13.2467 14.1663 10.7934 14.1663 7.99337C14.1663 4.59337 11.3997 1.82671 7.99967 1.82671C5.11301 1.82671 3.21967 3.51337 2.33301 4.53337H4.29301C4.56634 4.53337 4.79301 4.76004 4.79301 5.03337C4.79301 5.30671 4.57301 5.54004 4.29301 5.54004H1.33967C1.30634 5.54004 1.24634 5.53337 1.19967 5.52004C1.13967 5.50004 1.08634 5.47337 1.03967 5.44004C0.979674 5.40004 0.933008 5.34671 0.899674 5.28671C0.866341 5.22671 0.839674 5.15337 0.833008 5.08004C0.833008 5.06004 0.833008 5.04671 0.833008 5.02671V2.00004C0.833008 1.72671 1.05967 1.50004 1.33301 1.50004C1.60634 1.50004 1.83301 1.72671 1.83301 2.00004V3.59337C2.91967 2.42671 4.96634 0.833374 7.99967 0.833374C11.953 0.833374 15.1663 4.04671 15.1663 8.00004C15.1663 11.2534 12.973 14.1067 9.82634 14.9334C9.78634 14.94 9.73967 14.9467 9.69967 14.9467Z"
                       className="fill-fe-c-text-title"
@@ -106,7 +107,7 @@ export default function AccountInfo() {
               </Button>
               <Button className="flex justify-center items-center gap-2">
                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none">
-                  <g clip-path="url(#clip0_322_2492)">
+                  <g clipPath="url(#clip0_322_2492)">
                     <path
                       d="M7.86283 16.1145H4.88783C2.11824 16.1145 0.885742 14.882 0.885742 12.1125V9.13746C0.885742 6.36788 2.11824 5.13538 4.88783 5.13538H7.86283C10.6324 5.13538 11.8649 6.36788 11.8649 9.13746V12.1125C11.8649 14.882 10.6324 16.1145 7.86283 16.1145ZM4.88783 6.19788C2.69199 6.19788 1.94824 6.94163 1.94824 9.13746V12.1125C1.94824 14.3083 2.69199 15.052 4.88783 15.052H7.86283C10.0587 15.052 10.8024 14.3083 10.8024 12.1125V9.13746C10.8024 6.94163 10.0587 6.19788 7.86283 6.19788H4.88783Z"
                       className="fill-fe-c-text-title"
