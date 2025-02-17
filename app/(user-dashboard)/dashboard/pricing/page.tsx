@@ -2,8 +2,11 @@ import PaymentForm from "@/app/components/templates/dashboard/dash-pricing/Payme
 import PricingCredit from "@/app/components/templates/dashboard/dash-pricing/PricingCredit";
 import Header from "@/app/components/templates/dashboard/Header/Header";
 import QAList from "@/app/components/templates/UI/QA/dashboard/QAList";
+import getAuthToken from "@/lib/services/auth/getAuthToken";
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const auth = await getAuthToken();
+
   return (
     <div className="w-full lg:ms-52 lg:w-[calc(100%_-_13rem)]">
       <div className="w-full lg:w-[80.5%] mx-auto h-full  sm:pt-0 pt-40">
@@ -35,7 +38,12 @@ export default function PricingPage() {
               </span>
             </p>
 
-            <PaymentForm />
+            <PaymentForm
+              auth={auth}
+              conversion={Number(
+                process.env.NEXT_PUBLIC_PAYMENT_CONVERSION_RATE
+              )}
+            />
           </section>
           <PricingCredit />
 

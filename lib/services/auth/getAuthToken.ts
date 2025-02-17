@@ -2,10 +2,10 @@
 
 import { cookies } from "next/headers";
 
-export default async function getAuthToken() {
+export default async function getAuthToken(): Promise<string | null> {
   const cookieStore = cookies();
   const tokenCookie = cookieStore.get("ACCESS_TOKEN");
-  if (!tokenCookie) return;
+  if (!tokenCookie) return null;
 
   const token = JSON.parse(tokenCookie.value).token;
 

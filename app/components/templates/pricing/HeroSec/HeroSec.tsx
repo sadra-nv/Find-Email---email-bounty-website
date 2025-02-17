@@ -1,7 +1,10 @@
+import getAuthToken from "@/lib/services/auth/getAuthToken";
 import StarsSection from "../../UI/StarsSection/StarsSection";
 import PaymentType from "./PaymentType";
 
-export default function HeroSec() {
+export default async function HeroSec() {
+  const auth = await getAuthToken();
+
   return (
     <section
       className="bg-gradient-to-b from-[#030014] via-[#030014] to-[#030014] 
@@ -37,7 +40,10 @@ export default function HeroSec() {
           </div>
         </div>
 
-        <PaymentType />
+        <PaymentType
+          auth={auth}
+          conversion={Number(process.env.NEXT_PUBLIC_PAYMENT_CONVERSION_RATE)}
+        />
       </div>
     </section>
   );
