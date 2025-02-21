@@ -155,3 +155,16 @@ export const DomainFormSchema = z.object({
 });
 
 export type DomainForm = z.infer<typeof DomainFormSchema>;
+
+export const NewTicketFormSchema = z.object({
+  subject: z
+    .string()
+    .min(5, { message: "Subject is not valid" })
+    .max(50, { message: "Subject is too long" }),
+  message: z
+    .string()
+    .min(10, { message: "message is not valid" })
+    .max(4096, { message: "message is too long" }),
+});
+
+export type NewTicketForm = z.infer<typeof NewTicketFormSchema>;

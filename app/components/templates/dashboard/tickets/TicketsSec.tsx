@@ -1,11 +1,15 @@
 import TicketNavBtn from "./TicketNavBtn";
-import TicketsItem from "./TicketsItem";
 import Link from "next/link";
+import TicketsList from "./TicketsList";
+import { Suspense } from "react";
+import SpinnerSec from "../../UI/Loading/SpinnerSec";
 
 export default function TicketsSec({
   activeTag,
+  page,
 }: {
-  activeTag: "all" | "open" | "close" | null;
+  page: string;
+  activeTag: "all" | "open" | "closed" | "pending" | null;
 }) {
   return (
     <section
@@ -27,10 +31,14 @@ export default function TicketsSec({
           <TicketNavBtn activeTag={activeTag} tag="all" title="All Ticketes">
             <div></div>
           </TicketNavBtn>
+          <TicketNavBtn activeTag={activeTag} tag="pending" title="pending">
+            <div></div>
+          </TicketNavBtn>
           <TicketNavBtn activeTag={activeTag} tag="open" title="Open">
             <div></div>
           </TicketNavBtn>
-          <TicketNavBtn activeTag={activeTag} tag="close" title="Closed">
+
+          <TicketNavBtn activeTag={activeTag} tag="closed" title="Closed">
             <div></div>
           </TicketNavBtn>
         </div>
@@ -59,14 +67,9 @@ export default function TicketsSec({
         <span className="">Add new ticked</span>
       </Link>
 
-      <div className="divide-y divide-[#CDCDCD]/50 ">
-        <TicketsItem className="bg-[#F3F3F3] dark:bg-white/10" />
-        <TicketsItem />
-        <TicketsItem className="bg-[#F3F3F3] dark:bg-white/10" />
-        <TicketsItem />
-        <TicketsItem />
-        <TicketsItem />
-      </div>
+      <Suspense key={activeTag + page} fallback={<SpinnerSec />}>
+        <TicketsList page={page} activeTag={activeTag} />
+      </Suspense>
     </section>
   );
 }

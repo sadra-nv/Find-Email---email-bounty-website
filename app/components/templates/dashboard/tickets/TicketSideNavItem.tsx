@@ -12,8 +12,8 @@ export default function TicketSideNavItem({
   activeTag,
   tag,
 }: {
-  tag: "all" | "open" | "close";
-  activeTag: "all" | "open" | "close" | null;
+  tag: "all" | "open" | "closed" | "pending";
+  activeTag: "all" | "open" | "closed" | "pending" | null;
   children: ReactNode;
   className?: string;
   count: number;

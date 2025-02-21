@@ -24,7 +24,7 @@ export default function Pagination({
   const pathname = usePathname();
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const pageValue = event.currentTarget.getAttribute("data-page"); // Accessing the data attribute
+    const pageValue = event.currentTarget.getAttribute("data-page");
     // console.log("Data Value:", pageValue);
 
     const params = new URLSearchParams(searchParams.toString());

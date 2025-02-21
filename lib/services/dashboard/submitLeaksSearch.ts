@@ -45,7 +45,7 @@ export async function submitLeaksSearch(
   try {
     const response = await fetch(searchUrl, body);
     const result = await response.json();
-    console.log(result);
+    // console.log(result);
 
     if (response.status == 422) {
       // new Error(`somthing went wrong => ${result}`);

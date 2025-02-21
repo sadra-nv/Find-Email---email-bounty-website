@@ -2,19 +2,29 @@
 
 import { cn } from "@/lib/utils";
 import { Button, Field, Input, Label } from "@headlessui/react";
-import { HTMLInputTypeAttribute, useState } from "react";
+import { forwardRef, InputHTMLAttributes, useState } from "react";
+import { FieldError } from "react-hook-form";
 
-export default function DashInput({
-  className,
-  label,
-  placeholder,
-  type,
-}: {
+interface MainInputType extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
+  dirty: boolean | undefined;
+  error: FieldError | undefined;
   label: string;
   placeholder: string;
-  type?: HTMLInputTypeAttribute;
-}) {
+}
+
+export default forwardRef<HTMLInputElement, MainInputType>(function DashInput(
+  {
+    className,
+    label,
+    dirty,
+    error,
+    placeholder,
+    type,
+    ...props
+  }: MainInputType,
+  ref
+) {
   const [passwordVisiblity, setPasswordVisibility] = useState(false);
 
   const showPasswordHandler = () => {
@@ -30,11 +40,35 @@ export default function DashInput({
       </Label>
       <div className="relative w-full">
         <Input
+          placeholder={placeholder}
+          ref={ref}
+          {...props}
           className="w-full rounded-lg bg-neutral-400/25 dark:bg-white/15
            py-3 h-12 px-4 lg:py-3 lg:px-5 text-fe-c-text-title text-xs/3 "
           type={passwordVisiblity ? "text" : inputType}
-          placeholder={placeholder}
         />
+
+        {error && dirty && (
+          <p
+            className={cn(
+              "hidden gap-2 justify-start items-center text-sm text-red-500  ",
+              {
+                " mt-3 flex ": error,
+              }
+            )}
+          >
+            <svg
+              width="16"
+              height="16"
+              className="fill-red-500"
+              viewBox="0 0 16 16"
+            >
+              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+            </svg>
+            {error?.message}
+          </p>
+        )}
+
         {type === "password" && (
           <Button
             onClick={showPasswordHandler}
@@ -68,4 +102,4 @@ export default function DashInput({
       </div>
     </Field>
   );
-}
+});

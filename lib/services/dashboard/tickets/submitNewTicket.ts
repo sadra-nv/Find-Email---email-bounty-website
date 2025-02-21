@@ -1,8 +1,11 @@
-import { LogsSearchForm } from "@/lib/zod-schemas";
+"use server";
 
-const searchUrl = process.env.NEXT_PUBLIC_LOGS_URL as string;
+import { NewTicketForm } from "@/lib/zod-schemas";
+import { revalidatePath } from "next/cache";
 
-export interface LogsFormResponse {
+const searchUrl = process.env.NEXT_PUBLIC_TICKETS_NEW_URL as string;
+
+export interface NewTicketFormResponse {
   ok: boolean;
   code: number;
   message: string;
@@ -22,16 +25,16 @@ export interface LogsFormResponse {
     }[];
   };
   errors?: {
-    name: "filter" | "data";
+    name: "subject" | "message";
     msg: string;
     type: string;
   }[];
 }
 
-export async function submitLogsSearch(
-  data: LogsSearchForm,
+export async function submitNewTicket(
+  data: NewTicketForm,
   token: string
-): Promise<LogsFormResponse | false | 401> {
+): Promise<NewTicketFormResponse | false | 401> {
   const body: RequestInit = {
     method: "POST",
     headers: {
@@ -39,13 +42,13 @@ export async function submitLogsSearch(
       Authorization: token,
     },
 
-    body: JSON.stringify(data),
+    body: JSON.stringify({ ...data, priority: "high" }),
   };
 
   try {
     const response = await fetch(searchUrl, body);
     const result = await response.json();
-    // console.log(result);
+    console.log(result);
 
     if (response.status == 422) {
       // new Error(`somthing went wrong => ${result}`);
@@ -63,6 +66,7 @@ export async function submitLogsSearch(
 
     // console.log(reqBody, result);
 
+    revalidatePath("/dashboard/tickets");
     return result;
   } catch (error) {
     console.error("Error:", error);

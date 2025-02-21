@@ -12,9 +12,9 @@ export default function TicketNavBtn({
   tag,
   title,
 }: {
-  tag: "all" | "open" | "close";
+  tag: "all" | "open" | "closed" | "pending";
   className?: string;
-  activeTag: "all" | "open" | "close" | null;
+  activeTag: "all" | "open" | "closed" | "pending" | null;
   children: ReactNode;
   title: string;
 }) {
