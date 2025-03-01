@@ -1,8 +1,8 @@
 export const publicRoutes = [
   "/",
-  "/courses",
-  "/courses/**",
-  /^\/courses(\/.*)?$/,
+  // "/courses",
+  // "/courses/**",
+  // /^\/courses(\/.*)?$/,
 ];
 export const protectedRoutes = [/^\/dashboard(\/.*)?$/, "/payment-approval"];
 
