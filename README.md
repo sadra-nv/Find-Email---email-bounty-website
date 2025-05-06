@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FindEmail.io Redesign
 
-## Getting Started
+## Live Demo
+The static version of the site is hosted on Vercel:
+- **Main Site**: [https://find-email33.vercel.app/](https://find-email33.vercel.app/)
+- **User Dashboard**: [https://find-email33.vercel.app/dashboard/profile](https://find-email33.vercel.app/dashboard/profile)
 
-First, run the development server:
+## Technologies Used
+- Next.js 14 - app router , Tailwind CSS, TypeScript
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
+This project is a redesign of the [FindEmail.io](https://findemail.io) website, developed as a freelance job. The project focuses on creating a modern, highly animated, user-friendly interface. However, the project was cancelled approximately halfway through, specifically during the integration with the backend. As a result, some components remain duplicated, and planned refactoring to create dynamic components based on backend data was not completed.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Notes
+- The project was abandoned before full backend connectivity was established, the offline branch is static and the main branch is the latest version.
+- Duplicated components exist in the codebase, which were intended to be refactored into a single dynamic component.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Status
+- **Front-End**: Most styles and UI components are complete, built for a clean and responsive user experience.
+- **Backend Integration**: Initiated but incomplete due to project cancellation.
+- **Code Quality**: Contains some duplicated components and messier code, as refactoring was not performed.
+- **Future Plans**: Originally intended to consolidate duplicated components into a single dynamic component driven by backend data, but this was not implemented.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+As this was a cancelled freelance project, contributions are not actively sought. However, feel free to fork the repository and experiment with improvements
